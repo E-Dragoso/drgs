@@ -1,0 +1,132 @@
+/* タイトル */
+#tytle {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 4px double #619f60;
+  border-radius: 15px;
+}
+
+/* タブメニュー */
+.tab-menu {
+  display: flex;
+  margin: 0 -5px;
+}
+
+.tab-menu__item {
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+input[type="text"]{
+  width:70px;
+  align-content: center;
+}
+
+input[type="checkbox"]{
+  align-content: flex-end;
+}
+
+input:read-only, textarea:read-only {
+  background-color: #ccc;
+}
+
+.tab-trigger { /* label */
+  text-align: left;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  background-color: lightgray;
+  position: relative;
+}
+
+.tab-trigger.is-active {
+  background-color: lightblue;
+}
+
+
+/* タブコンテンツ */
+.tab-content {
+  border: 1px solid #ccc;
+}
+.tab-content__item {
+  box-sizing: border-box;
+  padding: 20px;
+  display: none;
+  text-align: left;
+}
+.tab-content__item.is-active {
+  display: block;
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* テーブルレイアウト */
+table  {
+  border-collapse:  collapse;
+  width: 100%;
+}
+
+th,td {
+  white-space: nowrap;
+  border: solid 1px;
+  vertical-align: middle;
+  text-align: center;
+  align-content: center;
+}
+
+th {
+  background: #8cd9bc;
+  /* 縦スクロール時に固定する */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* tbody内のセルより手前に表示する */
+  z-index: 1;
+}
+
+input {
+  text-align: center;
+  vertical-align: middle;
+  align-content: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.num {
+  width:75%;
+  text-align: center;
+}
+
+.other {
+  width:20px;
+  text-align: center;
+}
+
+input[name="sumexp"] {
+  background-color: aquamarine;
+}
+
+input[name="sumlucre"] {
+  background-color: yellow;
+}
