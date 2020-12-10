@@ -23,24 +23,41 @@
   <div class="tab-content">
     <!--チャート皮算用-->
     <div class="tab-content__item js-tab-target" id="tab01">
-      <p>滝の洞窟からラスボス撃破までの取得経験値とルクを何となく計算できます
-        <br>「ほか」は雑魚相手なら10秒以内（+5%）、ボス相手なら必殺撃破（+1%）になります</p>
+      <p>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。</p>
+      <div>
+        <label for="zakocheckbox">
+          <input type="checkbox" id="zakocheckbox" onChange="zakocheck()">
+          雑魚敵一括チェック</label>
+      </div>
+      <div>
+        <label for="lucrecheckbox">
+          <input type="checkbox" id="lucrecheckbox" onChange="lucrecheck()" checked="true">
+          ルク一括チェック</label>
+      </div>
+      <div>
+        ゴーヴァで生贄にされるのは
+        <input type="radio" name="sacrifice" id="sacrifice_part_1" checked>主人公
+        <input type="radio" name="sacrifice" id="sacrifice_part_2">仲間１
+        <input type="radio" name="sacrifice" id="sacrifice_part_3">仲間２
+      </div>
       <form action="#" name="form1">
         <table id="sumexptbl">
-          <tr>
-            <th>撃破</th>
-            <th id="head_object">対象</th>
-            <th>種別</th>
-            <th>exp</th>
-            <th>ｸｯｷｰ</th>
-            <th>無傷</th>
-            <th>ほか</th>
-            <th>取得exp</th>
-            <th>exp計</th>
-            <th>Lv</th>
-            <th>ルク</th>
-            <th>ルク計</th>
-          </tr>
+          <thead>
+            <tr id="sumexphead">
+              <th id="target">対象</th>
+              <th id="type">種別</th>
+              <th id="object">内容</th>
+              <th id="bonus">ボーナス</th>
+              <th id="getexp">取得exp</th>
+              <th id="principal">主人公</th>
+              <th id="fellow1">仲間１</th>
+              <th id="fellow2">仲間２</th>
+              <th id="lucre">取得ルク</th>
+              <th id="sumlucre">ルク総額</th>
+              <th id="exp" hidden=true>exp</th>
+              <th id="sumexp" hidden=true>exp計</th>
+            </tr>
+          </thead>
         </table>
       </form>
     </div><!-- .tab-content__item -->
@@ -122,6 +139,7 @@
 
   <p>技術参考：
     <br>https://developer.mozilla.org/ja/
+    <br>https://uhyohyo.net/javascript/
     <br>https://blog.pranktone.net/web/javascript/20200304150200.html
     <br>https://www.tagindex.com/javascript/form/comp1a.html</p>
 

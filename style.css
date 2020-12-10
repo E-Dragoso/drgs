@@ -2,11 +2,22 @@
 #tytle {
   text-align: center;
   font-size: 1.5em;
+  display: inline-block;
+  color: #ffffff;
   font-weight: bold;
   padding: 0.5em;
   margin-bottom: 1em;
   border: 4px double #619f60;
   border-radius: 15px;
+  text-shadow:
+     2px  2px 1px #003366,
+    -2px  2px 1px #003366,
+     2px -2px 1px #003366,
+    -2px -2px 1px #003366,
+     2px  0px 1px #003366,
+     0px  2px 1px #003366,
+    -2px  0px 1px #003366,
+     0px -2px 1px #003366;
 }
 
 /* タブメニュー */
@@ -18,19 +29,6 @@
 .tab-menu__item {
   box-sizing: border-box;
   padding: 0 5px;
-}
-
-input[type="text"]{
-  width:70px;
-  align-content: center;
-}
-
-input[type="checkbox"]{
-  align-content: flex-end;
-}
-
-input:read-only, textarea:read-only {
-  background-color: #ccc;
 }
 
 .tab-trigger { /* label */
@@ -49,7 +47,6 @@ input:read-only, textarea:read-only {
 .tab-trigger.is-active {
   background-color: lightblue;
 }
-
 
 /* タブコンテンツ */
 .tab-content {
@@ -90,7 +87,7 @@ th,td {
 }
 
 th {
-  background: #8cd9bc;
+  background:#ffccff;
   /* 縦スクロール時に固定する */
   position: -webkit-sticky;
   position: sticky;
@@ -105,28 +102,11 @@ input {
   align-content: center;
 }
 
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
+input:read-only {
+  background-color: #d3d3d3;
 }
 
 .num {
-  width:75%;
+  width:80%;
   text-align: center;
-}
-
-.other {
-  width:20px;
-  text-align: center;
-}
-
-input[name="sumexp"] {
-  background-color: aquamarine;
-}
-
-input[name="sumlucre"] {
-  background-color: yellow;
 }
