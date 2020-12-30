@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>ToM攻撃力計算</title>
+  <title>聖剣伝説3 TRIALS of MANA RTA向けツール集</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,15 +14,25 @@
 
   <div id="tytle">聖剣伝説3 TRIALS of MANA RTA向けツール集</div>
 
-  <ul class="tab-menu">
-    <li class="tab-menu__item"><span class="tab-trigger js-tab-trigger" data-id="tab01">チャート皮算用</span></li>
-    <li class="tab-menu__item"><span class="tab-trigger js-tab-trigger" data-id="tab02">ダメージシミュレータ</span></li>
-    <li class="tab-menu__item"><span class="tab-trigger js-tab-trigger" data-id="tab03">データ集</span></li>
-  </ul><!-- .tab-menu -->
+  <div class="tab-wrap">
+    <input id="TAB-00" type="radio" name="TAB" class="tab-switch" checked="checked" />
+    <label class="tab-label" for="TAB-00">概要</label>
+    <div class="tab-content">
+      <p>データ参考：
+        <br>https://i-njoy.net/sd3tom_top.html
+        <br>https://docs.google.com/spreadsheets/d/1xGV1Nog209HV1C4xNItI1Au9bvbVUZ9oOQ05amPLXLE
+        <br>https://hyperwiki.jp/seiken3/special/
+      </p>
 
-  <div class="tab-content">
-    <!--チャート皮算用-->
-    <div class="tab-content__item js-tab-target" id="tab01">
+      <p>技術参考：
+        <br>https://developer.mozilla.org/ja/
+        <br>https://uhyohyo.net/javascript/
+        <br>https://web.monogusa-note.com/flexible-tabs-only-css
+      </p>
+    </div>
+    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" /><label class="tab-label"
+      for="TAB-01">チャート皮算用</label>
+    <div class="tab-content">
       <p>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。</p>
       <div>
         <label for="zakocheckbox">
@@ -35,10 +45,10 @@
           ルク一括チェック</label>
       </div>
       <div>
-        ゴーヴァで生贄にされるのは
-        <input type="radio" name="sacrifice" id="sacrifice_part_1" checked>主人公
-        <input type="radio" name="sacrifice" id="sacrifice_part_2">仲間１
-        <input type="radio" name="sacrifice" id="sacrifice_part_3">仲間２
+        幽霊船で生贄にされるのは
+        <input type="radio" name="sacrifice" id="sacrifice_part_1" onChange="calc(this.id)">主人公
+        <input type="radio" name="sacrifice" id="sacrifice_part_2" onChange="calc(this.id)">仲間１
+        <input type="radio" name="sacrifice" id="sacrifice_part_3" onChange="calc(this.id)" checked>仲間２
       </div>
       <form action="#" name="form1">
         <table id="sumexptbl">
@@ -55,15 +65,17 @@
               <th id="lucre">取得ルク</th>
               <th id="sumlucre">ルク総額</th>
               <th id="exp" hidden=true>exp</th>
-              <th id="sumexp" hidden=true>exp計</th>
+              <th id="sumexppri" hidden=true>exp計主人公</th>
+              <th id="sumexpfel1" hidden=true>exp計仲間１</th>
+              <th id="sumexpfel2" hidden=true>exp計仲間２</th>
             </tr>
           </thead>
         </table>
       </form>
-    </div><!-- .tab-content__item -->
-
-    <!--ダメージシミュレータ-->
-    <div class="tab-content__item js-tab-target" id="tab02">
+    </div>
+    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label"
+      for="TAB-02">攻撃力シミュレータ</label>
+    <div class="tab-content">
       <div id="content">
         <select name=”character”>
           <option value=”Riesz”>リース</option>
@@ -125,27 +137,17 @@
       <p></p>
       <label for="hyouji">期待値</label>
       <input id="hyouji" type="text" name="event" value=101 readonly>
-    </div><!-- .tab-content__item -->
-
-    <!--ダメージシミュレータ-->
-    <div class="tab-content__item js-tab-target" id="tab03">
+    </div>
+    <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">データ集</label>
+    <div class="tab-content">
       <p>小ネタとか</p>
-    </div><!-- .tab-content__item -->
-  </div><!-- .tab-content -->
-
-  <p>データ参考：
-    <br>https://i-njoy.net/sd3tom_top.html
-    <br>https://docs.google.com/spreadsheets/d/1xGV1Nog209HV1C4xNItI1Au9bvbVUZ9oOQ05amPLXLE</p>
-
-  <p>技術参考：
-    <br>https://developer.mozilla.org/ja/
-    <br>https://uhyohyo.net/javascript/
-    <br>https://blog.pranktone.net/web/javascript/20200304150200.html
-    <br>https://www.tagindex.com/javascript/form/comp1a.html</p>
+    </div>
+  </div>
 
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
     <br>当該コンテンツの転載・配布は禁止いたします。
-    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved. </p>
+    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
+  </p>
 
 </body>
 

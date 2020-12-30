@@ -2,6 +2,8 @@
 
 // テーブルと列の定義
 let table;
+let perrerow; // フルメタルハガーが存在する行
+let captainrow; // ゴーヴァが存在する行
 const index_target = 0; // 対象
 const index_type = 1; // 種別
 const index_object = 2; // 内容
@@ -13,7 +15,9 @@ const index_fellow2 = 7; // 仲間2
 const index_lucre = 8; // ルク
 const index_sumlucre = 9; // ルク総額
 const index_exp = 10; // exp
-const index_sumexp = 11; // exp計
+const index_sumexppri = 11; // exp計主人公
+const index_sumexpfel1 = 12; // exp計仲間１
+const index_sumexpfel2 = 13; // exp計仲間２
 
 // テーブルに格納するためのデータ、別途excelマクロで出力
 const list_object = ['初期状態', '30ルク', 'バットム<br>ラビ × 2', '40ルク', '8ルク', 'バットム × 4', '10ルク', '20ルク', '80ルク', 'ウェンデル', '17ルク', 'フルメタルハガー', 'バウンドウルフ × 2', 'バウンドウルフ × 3', 'バウンドウルフ × 5', 'バウンドウルフ × 5', 'マイア', 'ゴブリン<br>ラビ', 'ポロン × 3<br>ラビ × 2', 'ポロン × 2', 'アサシンバグ<br>ラビ<br>ポロン', '17ルク', 'アサシンバグ<br>ラビ × 2<br>ポロン', '20ルク', 'ゴブリン<br>ラビ × 2', '30ルク', 'マシンゴーレムR', 'ゴブリン<br>ラビ', 'ポロン × 3<br>ラビ × 2', 'ポロン × 2', 'バットム<br>ラビ<br>ポロン', 'ゾンビ × 3', 'ゾンビ × 2<br>バットム<br>ポロン', 'ゴブリン<br>ラビ × 2', 'ドワーフの村', 'バットム × 3', 'モールベア × 2<br>バットム', 'スライム × 2', 'スライム × 2<br>バットム', 'モールベア × 2', 'スライム × 2', '40ルク', 'ゴブリン × 2<br>モールベア', '40ルク', 'ホブゴブリン × 2<br>バットム × 3', 'ジュエルイーター', 'ゴブリン<br>ラビ × 2', 'ゾンビ × 2<br>バットム<br>ポロン', 'ゾンビ × 3', 'バットム<br>ラビ<br>ポロン', 'ポロン × 2', 'ポロン × 3<br>ラビ × 2', 'ゴブリン<br>ラビ', 'モールベア × 3', '30ルク', 'モールベア × 2<br>バットム × 2', 'モールベア × 3', 'モールベア × 2<br>バットム × 2', 'モールベア × 3<br>バットム', 'モールベアプリズン<br>ｽｷﾅﾀﾞｹﾚﾍﾞﾙｱｹﾞｼﾃ', 'モールベア × 2', 'モールベア × 2', '40ルク', 'ホブゴブリン × 2<br>モールベア', 'モールベア × 2<br>バットム', 'モールベア × 2', 'モールベア × 2<br>バットム', 'モールベア × 3', 'モールベア × 2', 'モールベア × 3<br>バットム', 'ラビ × 2<br>バットム', 'ラビ × 3<br>バットム', 'マシンゴーレム × 2', 'マジシャン × 2', 'マジシャン × 2', 'マシンゴーレム × 4<br>マジシャン', 'ユニコーンヘッド × 2<br>マジシャン × 2', '400ルク', 'ユニコーンヘッド × 2', 'ユニコーンヘッド<br>マジシャン', '170ルク', 'マシンゴーレム × 4<br>マジシャン', 'ゴブリン<br>ラビ', 'ポロン × 3<br>ラビ × 2', 'ポロン × 2', 'アサシンバグ<br>ラビ<br>ポロン', 'バットム<br>ラビ<br>ポロン', 'ゾンビ × 3', 'アサシンバグ<br>ラビ × 2<br>ポロン', 'ゾンビ × 2<br>バットム<br>ポロン', '400ルク', 'アサシンバグ × 2<br>ポロン × 2<br>ゴブリン', 'バットム × 2<br>ポロン × 2<br>ゴブリン', 'ゾンビ × 4', 'アサシンバグ × 2<br>ポロン × 2', 'バットム × 2<br>ポロン × 2', '30ルク', '60ルク', '60ルク', 'バイゼル→パロ', 'パロ', '20ルク', 'ニードルバード × 2', 'ニードルバード × 2<br>ハーピー', 'ニードルバード × 2<br>アーマーナイト', '60ルク', 'ニードルバード × 4', 'ハーピー × 2<br>アーマーナイト<br>チビデビル', '60ルク', '440ルク', '500ルク', 'バイゼル', 'バイゼル→ジャド', 'ラビ × 2<br>ラビリオン', 'ラビ × 2<br>ラビリオン', 'アサシンバグ × 2<br>ラビリオン', 'アサシンバグ<br>ラビリオン<br>ラビ', 'ラビリオン × 3<br>マイコニド', 'アサシンバグ × 2<br>ラビリオン × 2', 'アサシンバグ<br>ラビリオン × 3', 'アサシンバグ<br>ラビリオン × 3', 'アサシンバグ × 2<br>ラビリオン × 2', 'ラビリオン × 3<br>マイコニド', 'アサシンバグ<br>ラビリオン<br>ラビ', 'アサシンバグ × 2<br>ラビリオン', 'ラビ × 2<br>ラビリオン', 'ラビ × 2<br>ラビリオン', 'ジャド→パロ', 'ニードルバード × 2', 'ニードルバード × 2<br>ハーピー', 'ニードルバード × 2<br>アーマーナイト', 'ニードルバード × 4', 'ニードルバード × 2<br>ハーピー', 'チビデビル × 2<br>アーマーナイト', 'ゾンビ × 4<br>ハーピー', '80ルク', 'ゾンビ × 3<br>チビデビル', 'ニードルバード<br>チビデビル<br>ハーピー', 'アーマーナイト', 'ゾンビ × 2', 'ニードルバード × 2<br>ゾンビ', 'ニードルバード × 2<br>アーマーナイト × 2', 'チビデビル × 2', 'ツェンカー', 'チビデビル × 2<br>アーマーナイト', 'ニードルバード × 2<br>ハーピー', 'ハーピー × 2<br>アーマーナイト<br>チビデビル', 'ニンジャ × 2', 'チビデビル × 2<br>イビルソード', 'ニンジャ', 'イビルソード × 2<br>アーマーナイト', 'アーマーナイト × 2<br>チビデビル', 'イビルソード × 2<br>ニンジャ', 'ニンジャ × 2<br>チビデビル', 'ニンジャ × 3', 'ジェノア', 'ビルとベン', 'ゾンビ × 4', 'アーマーナイト × 2', 'チビデビル × 2<br>アーマーナイト', 'ゾンビ × 4<br>ハーピー', 'ニードルバード<br>チビデビル<br>ハーピー', 'アーマーナイト', 'ニードルバード × 3', 'ニードルバード × 2<br>アーマーナイト × 2', 'チビデビル × 2', 'グール<br>ゾンビ × 2', 'ゴーヴァ', '160ルク', '800ルク', '1200ルク', 'サルタン', '200ルク', '170ルク', '200ルク', 'ビルとベンとボブ', '180ルク', '300ルク', '270ルク', '1100ルク', '1500ルク', '180ルク', 'マシンゴーレムS', '240ルク', '150ルク', '970ルク', 'ミントス', '獣人ルガー', 'ポロビンフッド × 2<br>レディビー × 2', 'ディオール', 'ギルダーバイン', '6000ルク', '2200ルク', '800ルク', '500ルク', 'ザン・ビエ', 'チキチータ1', '2500ルク', '4000ルク', 'ライトゲイザー', '3400ルク', '1200ルク', 'ミスポルム', '3200ルク', '2700ルク', 'ランドアンバー', 'チキチータ2', 'ツクヨミルク', 'ドラン', '1500ルク', 'フィーグムンド', 'ダンガード', 'ペダン', 'ゼーブル・ファー', '邪眼の伯爵', 'フルメタルハガー2', 'ジェノア2', 'ツェンカー2', '美獣'];
@@ -85,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bonus.firstChild.hidden = true;
     // 取得exp
     let getexp = tr.insertCell();
-    getexp.innerHTML = '<input type="number" class="num" id="getexp_' + i + '" value=' + list_exp[i] + ' min=0 max=99999 onChange="calc(this.id)" readonly>';
+    getexp.innerHTML = '<input type="number" class="num" id="getexp_' + i + '" value=' + list_exp[i] + ' min=0 max=99999 onChange="calc(this.id)" disabled>';
     getexp.firstChild.hidden = true;
     // 主人公
     let principal = tr.insertCell();
@@ -98,16 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
     fellow2.id = "fellow2_" + i;
     // 取得ルク
     let getlucre = tr.insertCell();
-    getlucre.innerHTML = '<input type="number" class="num" id="getlucre_' + i + '" value=' + list_lucre[i] + ' min=0 max=99999 onChange="calc(this.id)" readonly>';
+    getlucre.innerHTML = '<input type="number" class="num" id="getlucre_' + i + '" value=' + list_lucre[i] + ' min=0 max=99999 onChange="calc(this.id)" disabled>';
     // ルク計
     let sumlucre = tr.insertCell();
     // 経験値
     let exp = tr.insertCell();
     exp.innerHTML = list_exp[i];
     exp.hidden = true;
-    // exp計
-    let sumexp = tr.insertCell();
-    sumexp.hidden = true;
+    // exp計主人公
+    let sumexppri = tr.insertCell();
+    sumexppri.hidden = true;
+    // exp計仲間１
+    let sumexpfel1 = tr.insertCell();
+    sumexpfel1.hidden = true;
+    // exp計仲間２
+    let sumexpfel2 = tr.insertCell();
+    sumexpfel2.hidden = true;
 
     // 種別に応じた制御
     let objexp = document.getElementById("getexp_" + i);
@@ -116,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (list_type[i]) {
       // 雑魚
       case "雑魚":
-        type.style.backgroundColor = "#90ee90";
+        type.innerHTML = '<img src="sfc_seikenndennsetu3_rabi.gif">';
         bonus.firstChild.hidden = false;
         getexp.firstChild.hidden = false;
         tr.name = "zako";
@@ -128,14 +138,19 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       // 買物行表示
       case "支出":
-        type.style.backgroundColor = "#00fff2";
+        type.innerHTML = '<img src="sfc_seikenndennsetu3_nikita_mae_motion.gif">';
         getlucre.firstChild.style.color = "#dc143c";
-        objlucre.readOnly = false;
+        objlucre.disabled = false;
         target.firstChild.hidden = true;
         break;
       // ボス行表示
       case "ボス":
+        type.innerHTML = '<img src="sfc_seikenndennsetu3_gova.gif">';
+        bonus.firstChild.hidden = false;
+        getexp.firstChild.hidden = false;
+        break;
       case "強制":
+        type.innerHTML = '<img src="sfc_seikenndennsetu3_rabi.gif">';
         type.style.backgroundColor = "#ffae00";
         bonus.firstChild.hidden = false;
         getexp.firstChild.hidden = false;
@@ -145,20 +160,29 @@ document.addEventListener('DOMContentLoaded', () => {
         type.style.backgroundColor = "#333333";
         object.style.color = "#dc143c";
         type.style.color = "#dc143c";
-        objexp.readOnly = false;
-        objlucre.readOnly = false;
+        objexp.disabled = false;
+        objlucre.disabled = false;
         getexp.firstChild.hidden = false;
         break;
       default:
         target.firstChild.hidden = true;
     }
+    // 1行目だけ手動で設定
     if (i == 0) {
       principal.innerHTML = "Lv :1<br>tNL:30";
       fellow1.innerHTML = "Lv :4<br>tNL:463";
       fellow2.innerHTML = "-";
       sumlucre.innerHTML = 4;
     }
+    // フルメタルハガーとゴーヴァは行番号を保持
+    if (object.textContent == "フルメタルハガー") {
+      pierrerow = i + 1;
+    } else if (object.textContent == "ゴーヴァ") {
+      captainrow = i + 1;
+    }
   }
+  // デフォルトで雑魚のチェックを外す処理
+  // ついでにメイン計算も呼び出されてる
   zakocheck();
 });
 
@@ -180,44 +204,48 @@ function calc(elementid) {
       }
     }
     // 経験値とルクの集計
+    // 直上の値をコピー
+    let sumlucre = table.rows[i - 1].cells[index_sumlucre].textContent;
+    let exppri = Number(table.rows[i - 1].cells[index_sumexppri].textContent);
+    // 仲間の経験値を計算
+    // 仲間１は加入時点でレベル4なので経験値補正
+    let expfel1 = exppri + Number(359);
+    // 仲間２は加入時点でレベル6＆ジャド以前の戦闘をしていないため経験値補正
+    let expfel2 = exppri + Number(1924) - Number(table.rows[pierrerow].cells[index_sumexppri].textContent);
+
     // 先頭行がチェック状態なら加算
     if (table.rows[i].cells[index_target].firstChild.checked) {
-      table.rows[i].cells[index_sumexp].textContent
-        = Number(table.rows[i - 1].cells[index_sumexp].textContent) + Number(table.rows[i].cells[index_getexp].firstChild.value);
+      // ルク計算
       // 支出タイプの時はルクを減算
-      if (table.rows[i].cells[index_type].textContent == "支出") {
-        table.rows[i].cells[index_sumlucre].textContent
-          = Number(table.rows[i - 1].cells[index_sumlucre].textContent) - Number(table.rows[i].cells[index_lucre].firstChild.value);
+      if (list_type[i] == "支出") {
+        sumlucre = Number(sumlucre) - Number(table.rows[i].cells[index_lucre].firstChild.value);
       } else {
-        table.rows[i].cells[index_sumlucre].textContent
-          = Number(table.rows[i - 1].cells[index_sumlucre].textContent) + Number(table.rows[i].cells[index_lucre].firstChild.value);
+        sumlucre = Number(sumlucre) + Number(table.rows[i].cells[index_lucre].firstChild.value);
       }
-    } else {
-      table.rows[i].cells[index_sumexp].textContent = Number(table.rows[i - 1].cells[index_sumexp].textContent);
-      table.rows[i].cells[index_sumlucre].textContent = Number(table.rows[i - 1].cells[index_sumlucre].textContent);
-    }
+      // 経験値再計算
+      exppri = exppri + Number(table.rows[i].cells[index_getexp].firstChild.value);
+      expfel1 = exppri + Number(359);
+      expfel2 = exppri + Number(1924) - Number(table.rows[pierrerow].cells[index_sumexppri].textContent);
 
-    // 集計値を基にレベルとtNLを計算
-    // 主人公
-    let exppri = Number(table.rows[i].cells[index_sumexp].textContent);
-    if (i > 167 && document.getElementById("sacrifice_part_1").checked) {
-      exppri = Number(exppri) - Number(table.rows[168].cells[index_getexp].textContent);
+      // ゴーヴァの生贄分を減算
+      if (i >= captainrow) {
+        if (document.getElementById("sacrifice_part_1").checked) {
+          exppri = exppri - Number(table.rows[captainrow].cells[index_getexp].firstChild.value);
+        } else if (document.getElementById("sacrifice_part_2").checked) {
+          expfel1 = expfel1 - Number(table.rows[captainrow].cells[index_getexp].firstChild.value);
+        } else if (document.getElementById("sacrifice_part_3").checked) {
+          expfel2 = expfel2 - Number(table.rows[captainrow].cells[index_getexp].firstChild.value);
+        }
+      }
     }
-    levelup(i, exppri, index_principal);
-
-    // 仲間1
-    let expfel1 = Number(table.rows[i].cells[index_sumexp].textContent) + Number(359);
-    levelup(i, expfel1, index_fellow1);
-
-    // 仲間2
-    let l = 0;
-    let expfel2 = Number(table.rows[i].cells[index_sumexp].textContent) + Number(1924) - Number(table.rows[12].cells[index_sumexp].textContent);
-    if (i > 12) {
-      levelup(i, expfel2, index_fellow2);
-    } else {
-      table.rows[i].cells[index_fellow2].innerHTML = table.rows[i - 1].cells[index_fellow2].innerHTML;
-    }
+    // 集計結果を反映
+    table.rows[i].cells[index_sumlucre].textContent = sumlucre;
+    table.rows[i].cells[index_sumexppri].textContent = exppri;
+    table.rows[i].cells[index_sumexpfel1].textContent = expfel1;
+    table.rows[i].cells[index_sumexpfel2].textContent = expfel2;
   }
+  // 集計値を基にレベルとtNLを計算
+  levelcalc();
 }
 
 // 雑魚敵一括チェック用
@@ -226,10 +254,10 @@ function zakocheck() {
     if (table.rows[i].name == "zako") {
       if (document.getElementById("zakocheckbox").checked) {
         table.rows[i].cells[index_target].firstChild.checked = true;
-        table.rows[i].cells[index_bonus].firstChild.readOnly = false;
+        table.rows[i].cells[index_bonus].firstChild.disabled = false;
       } else {
         table.rows[i].cells[index_target].firstChild.checked = false;
-        table.rows[i].cells[index_bonus].firstChild.readOnly = true;
+        table.rows[i].cells[index_bonus].firstChild.disabled = true;
       }
     }
   }
@@ -250,20 +278,31 @@ function lucrecheck() {
   calc("sumexptbl");
 }
 
-// レベルアップ色替え
-function levelup(tableindex, exp, index) {
-  let j = 0;
-  while (exp >= Number(list_level[j])) {
-    let lv = "Lv :" + Number(j + 1);
-    let tnl = Number(list_level[j + 1]) - exp;
-    table.rows[tableindex].cells[index].innerHTML = lv + "<br>tNL:" + tnl;
-    j++;
-  }
-  if (table.rows[tableindex].cells[index].textContent.substring(0, 6)
-    != table.rows[tableindex - 1].cells[index].textContent.substring(0, 6)) {
-    table.rows[tableindex].cells[index].style.backgroundColor = "#ff99ff";
-  } else {
-    table.rows[tableindex].cells[index].style.backgroundColor = "#ffffff";
+// レベル計算
+function levelcalc() {
+  // 2行目から計算
+  for (i = 2; i < table.rows.length; i++) {
+    for (j = 0; j < 3; j++) {
+      // 仲間２はジャドまで集計しない
+      if (i <= pierrerow && j == 2) {
+        table.rows[i].cells[index_principal + j].innerHTML = "-";
+      } else {
+        let exp = table.rows[i].cells[index_sumexppri + j].textContent;
+        let k = 0;
+        while (exp >= Number(list_level[k])) {
+          let lv = "Lv :" + Number(k + 1);
+          let tnl = Number(list_level[k + 1]) - exp;
+          table.rows[i].cells[index_principal + j].innerHTML = lv + "<br>tNL:" + tnl;
+          k++;
+        }
+      }
+      if (table.rows[i].cells[index_principal + j].textContent.substring(0, 6)
+        != table.rows[i - 1].cells[index_principal + j].textContent.substring(0, 6)) {
+        table.rows[i].cells[index_principal + j].style.backgroundColor = "#ff99ff";
+      } else {
+        table.rows[i].cells[index_principal + j].style.backgroundColor = "#ffffff";
+      }
+    }
   }
 }
 
