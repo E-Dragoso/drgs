@@ -79,8 +79,17 @@
   display: none;
 }
 
+/* 概要部 */
+#voyage{
+  font-size: 1.5em;
+  color: #ffffff;
+  border: double;
+  background: darkgreen;
+  padding: 0.5em;
+}
+
 /* テーブルレイアウト */
-table  {
+#sumexptbl {
   border-collapse:  collapse;
   width: 100%;
   font-family: 'PixelMplus10-Regular';
@@ -111,3 +120,5 @@ input {
   width:80%;
   text-align: center;
 }
+
+/* ダメージ計算用 */

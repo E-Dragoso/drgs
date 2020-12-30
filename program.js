@@ -26,6 +26,43 @@ const list_exp = ['0', '0', '29', '0', '0', '44', '0', '0', '0', '0', '0', '1200
 const list_lucre = ['4', '30', '19', '40', '8', '28', '10', '20', '80', '0', '17', '210', '16', '24', '40', '40', '0', '22', '57', '26', '33', '17', '42', '20', '31', '30', '220', '22', '57', '26', '33', '39', '50', '31', '0', '45', '47', '32', '47', '36', '32', '40', '50', '40', '79', '480', '31', '50', '39', '33', '26', '57', '22', '66', '30', '84', '66', '84', '86', '0', '44', '44', '40', '70', '65', '44', '65', '66', '44', '86', '57', '75', '50', '46', '46', '124', '94', '400', '48', '48', '170', '124', '22', '57', '26', '33', '33', '39', '42', '50', '400', '61', '61', '52', '48', '48', '30', '60', '60', '150', '0', '20', '50', '75', '75', '60', '100', '101', '60', '440', '500', '0', '270', '68', '68', '78', '73', '110', '106', '81', '81', '106', '110', '73', '78', '68', '68', '210', '50', '75', '75', '100', '75', '81', '173', '80', '137', '98', '34', '70', '101', '134', '64', '990', '81', '75', '101', '80', '118', '41', '125', '176', '125', '118', '123', '1200', '2800', '108', '56', '81', '173', '98', '34', '99', '134', '64', '140', '3290', '160', '800', '1200', '0', '200', '170', '200', '2160', '180', '300', '270', '1100', '1500', '180', '6300', '240', '150', '970', '0', '5570', '370', '0', '2730', '6000', '2200', '800', '500', '4200', '0', '2500', '4000', '3200', '3400', '1200', '3800', '3200', '2700', '9300', '0', '2943', '3900', '1500', '5500', '5000', '0', '6480', '8640', '6930', '9240', '8100', '10400'];
 const list_level = [0, 30, 123, 359, 822, 1924, 3220, 4712, 6406, 8307, 10421, 12755, 15315, 18111, 21149, 24440, 27992, 31816, 35923, 40324, 45031, 50057, 55480, 61183, 67247, 73685, 80515, 87751, 95411, 103512, 112072, 121110, 130644, 140696, 151284, 162431, 174157, 186485, 199438, 213039, 227312, 242282, 257974, 274413, 291627, 309641, 328485, 348185, 368771, 390272, 412718, 436140, 460568, 486036, 512574, 540217, 568997, 598949, 630108, 662509, 707537, 754448, 803296, 854138, 907033, 962038, 1019214, 1078620, 1140317, 1204368, 1270836, 1339784, 1411277, 1485382, 1562164, 1641692, 1724033, 1809256, 1897433, 1988634, 2082931, 2180398, 2281107, 2385133, 2492553, 2603442, 2717879, 2835941, 2957707, 3083258, 3212675, 3346039, 3483433, 3624942, 3770649, 3920641, 4075003, 4233822, 4397188];
 
+// ダメージ計算部
+let character = document.getElementById("character");
+let baseatk;
+const list_classatk = [
+  ['161', '168', '187', '202', '215', '221', '240', '249', '275'],
+  ['123', '129', '129', '151', '144', '151', '157', '166', '172'],
+  ['174', '187', '206', '234', '221', '240', '253', '268', '294'],
+  ['129', '129', '136', '144', '151', '221', '157', '166', '223'],
+  ['148', '168', '148', '189', '202', '183', '215', '230', '230'],
+  ['148', '161', '174', '183', '183', '228', '208', '211', '255']
+];
+let basemag;
+const list_classmag = [
+  ['116', '123', '129', '144', '151', '163', '151', '172', '178'],
+  ['174', '200', '187', '247', '240', '228', '253', '288', '288'],
+  ['123', '136', '129', '157', '157', '170', '151', '178', '185'],
+  ['148', '161', '161', '196', '189', '176', '202', '223', '223'],
+  ['142', '148', '168', '189', '163', '202', '183', '204', '223'],
+  ['136', '142', '142', '157', '176', '170', '196', '191', '211']
+];
+const list_weaponatk = [
+  [4, 8, 15, 22, 28, 33, 37, 42, 44, 47, 49, 51, 53, 55, 57, 59, 61, 63, 66, 68, 70, 74, 76, 78, 82, 91, 102, 108, 112, 122, 143, 215, 160, 240],
+  [3, 6, 11, 16, 21, 25, 28, 32, 33, 34, 35, 36, 37, 40, 41, 42, 43, 45, 46, 48, 50, 51, 54, 56, 57, 66, 70, 72, 74, 77, 88, 132, 92, 138],
+  [4, 8, 16, 23, 31, 36, 40, 45, 49, 53, 54, 56, 58, 60, 62, 65, 67, 69, 71, 73, 75, 77, 79, 82, 91, 101, 114, 118, 130, 126, 155, 233, 172, 258],
+  [4, 6, 12, 17, 22, 26, 29, 33, 34, 35, 36, 37, 38, 42, 43, 44, 46, 47, 48, 51, 52, 53, 57, 58, 60, 68, 70, 74, 94, 98, 88, 132, 126, 189],
+  [4, 7, 14, 20, 26, 30, 34, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 81, 94, 98, 100, 103, 129, 194, 133, 200],
+  [4, 7, 14, 20, 26, 30, 34, 38, 42, 45, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 77, 86, 91, 93, 108, 110, 118, 177, 147, 221]
+];
+const list_weaponmag = [
+  [0, 5, 10, 15, 20, 24, 26, 40, 32, 33, 33, 34, 36, 37, 40, 42, 42, 43, 46, 46, 48, 51, 51, 54, 57, 64, 70, 74, 76, 78, 92, 138, 97, 146],
+  [3, 8, 16, 23, 31, 36, 40, 45, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 75, 77, 80, 83, 86, 99, 124, 126, 128, 130, 168, 252, 168, 252],
+  [0, 6, 11, 16, 21, 25, 28, 32, 34, 35, 36, 37, 38, 40, 42, 43, 43, 46, 47, 48, 51, 52, 54, 58, 59, 68, 76, 77, 80, 78, 97, 146, 101, 152],
+  [2, 7, 14, 20, 26, 30, 34, 38, 42, 43, 44, 46, 47, 48, 52, 53, 55, 57, 58, 59, 64, 65, 66, 71, 72, 82, 94, 98, 99, 100, 126, 188, 126, 189],
+  [0, 6, 13, 19, 25, 29, 32, 37, 38, 44, 45, 46, 48, 49, 50, 52, 53, 55, 60, 61, 63, 66, 68, 69, 74, 81, 94, 94, 98, 99, 114, 171, 126, 189],
+  [0, 6, 12, 18, 24, 28, 31, 35, 37, 37, 38, 40, 40, 44, 46, 46, 48, 50, 50, 53, 56, 56, 60, 62, 62, 73, 77, 88, 90, 95, 105, 158, 118, 177]
+];
+
 //#endregion
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -184,6 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // デフォルトで雑魚のチェックを外す処理
   // ついでにメイン計算も呼び出されてる
   zakocheck();
+
+  // ダメージ計算部分
+  characheck();
 });
 
 // メイン計算部分
@@ -307,3 +347,210 @@ function levelcalc() {
 }
 
 //#endregion
+
+// 選択キャラ変更
+function characheck() {
+  // セレクトボックスの可視状態変更
+  let selectedchara = document.getElementById('character').value;
+  document.getElementById("DuranClass").hidden = true;
+  document.getElementById("DuranWeapon").hidden = true;
+  document.getElementById("AngelaClass").hidden = true;
+  document.getElementById("AngelaWeapon").hidden = true;
+  document.getElementById("KevinClass").hidden = true;
+  document.getElementById("KevinWeapon").hidden = true;
+  document.getElementById("CharlotteClass").hidden = true;
+  document.getElementById("CharlotteWeapon").hidden = true;
+  document.getElementById("HawkeyeClass").hidden = true;
+  document.getElementById("HawkeyeWeapon").hidden = true;
+  document.getElementById("RieszClass").hidden = true;
+  document.getElementById("RieszWeapon").hidden = true;
+  switch (selectedchara) {
+    case "Duran":
+      document.getElementById("DuranClass").hidden = false;
+      document.getElementById("DuranWeapon").hidden = false;
+      break;
+    case "Angela":
+      document.getElementById("AngelaClass").hidden = false;
+      document.getElementById("AngelaWeapon").hidden = false;
+      break;
+    case "Kevin":
+      document.getElementById("KevinClass").hidden = false;
+      document.getElementById("KevinWeapon").hidden = false;
+      break;
+    case "Charlotte":
+      document.getElementById("CharlotteClass").hidden = false;
+      document.getElementById("CharlotteWeapon").hidden = false;
+      break;
+    case "Hawkeye":
+      document.getElementById("HawkeyeClass").hidden = false;
+      document.getElementById("HawkeyeWeapon").hidden = false;
+      break;
+    case "Riesz":
+      document.getElementById("RieszClass").hidden = false;
+      document.getElementById("RieszWeapon").hidden = false;
+      break;
+    default:
+  }
+  classcheck();
+}
+
+// クラス変更
+function classcheck() {
+  let chara = document.getElementById('character');
+  let selectedclass = 0;
+  switch (chara.value) {
+    case "Duran":
+      selectedclass = document.getElementById("DuranClass").value;
+      break;
+    case "Angela":
+      selectedclass = document.getElementById("AngelaClass").value;
+      break;
+    case "Kevin":
+      selectedclass = document.getElementById("KevinClass").value;
+      break;
+    case "Charlotte":
+      selectedclass = document.getElementById("CharlotteClass").value;
+      break;
+    case "Hawkeye":
+      selectedclass = document.getElementById("HawkeyeClass").value;
+      break;
+    case "Riesz":
+      selectedclass = document.getElementById("RieszClass").value;
+      break;
+    default:
+  }
+  // クラスのステータスを基礎値に格納
+  let baseatkrow = list_classatk[chara.selectedIndex];
+  baseatk = baseatkrow[selectedclass];
+  let basemagrow = list_classmag[chara.selectedIndex];
+  basemag = basemagrow[selectedclass];
+
+  // 装備の数値を加算
+  weapon();
+
+  // 基礎値を基に攻撃力計算
+  atkcalc();
+}
+
+// 武器変更
+function weapon() {
+  let chara = document.getElementById('character');
+  let weaponatk = document.getElementById("weaponatk");
+  let weaponmag = document.getElementById("weaponmag");
+  let selectedweapon = 0;
+
+  // キャラに応じて加算元を変更
+  switch (chara.value) {
+    case "Duran":
+      selectedweapon = document.getElementById("DuranWeapon").value;
+      break;
+    case "Angela":
+      selectedweapon = document.getElementById("AngelaWeapon").value;
+      break;
+    case "Kevin":
+      selectedweapon = document.getElementById("KevinWeapon").value;
+      break;
+    case "Charlotte":
+      selectedweapon = document.getElementById("CharlotteWeapon").value;
+      break;
+    case "Hawkeye":
+      selectedweapon = document.getElementById("HawkeyeWeapon").value;
+      break;
+    case "Riesz":
+      selectedweapon = document.getElementById("RieszWeapon").value;
+      break;
+    default:
+  }
+
+  // 武器攻撃力を表示
+  let weaponatkrow = list_weaponatk[chara.selectedIndex];
+  weaponatk.value = weaponatkrow[selectedweapon];
+  let weaponmagrow = list_weaponmag[chara.selectedIndex];
+  weaponmag.value = weaponmagrow[selectedweapon];
+
+  atkcalc();
+}
+
+// 攻撃力計算
+function atkcalc() {
+  // 各コントロールを取得
+  let weaponatk = document.getElementById("weaponatk");
+  let weaponmag = document.getElementById("weaponmag");
+  let atk = document.getElementById("atk");
+  let mag = document.getElementById("mag");
+  let crit_prob = document.getElementById("crit_prob");
+  let crit_magn = document.getElementById("crit_magn");
+  let atkexpected = document.getElementById("atkexpected");
+  let magexpected = document.getElementById("magexpected");
+
+  // 攻撃力加算タイプを計算
+  var atk_add = weaponatk.value;
+  var chk_atk_add = document.getElementsByClassName('atk_add');
+  for (i = 0; i < chk_atk_add.length; i++) {
+    if (chk_atk_add[i].checked == true) {
+      atk_add += Number(chk_atk_add[i].value);
+    }
+  }
+
+  // 攻撃力乗算タイプを計算
+  var atk_multi = 100;
+  var chk_atk_multi = document.getElementsByClassName('atk_multi');
+  for (i = 0; i < chk_atk_multi.length; i++) {
+    if (chk_atk_multi[i].checked == true) {
+      atk_multi += Number(chk_atk_multi[i].value);
+    }
+  }
+
+  // ダメージアップタイプを計算
+  var dmg = 100;
+  var chk_dmg = document.getElementsByClassName('dmg');
+  for (i = 0; i < chk_dmg.length; i++) {
+    if (chk_dmg[i].checked == true) {
+      dmg += Number(chk_dmg[i].value);
+    }
+  }
+
+  // クリティカル確率タイプを計算
+  var crit_add = 5;
+  var chk_crit_add = document.getElementsByClassName('crit_add');
+  for (i = 0; i < chk_crit_add.length; i++) {
+    if (chk_crit_add[i].checked == true) {
+      crit_add += Number(chk_crit_add[i].value);
+    }
+  }
+  // クリティカル上限オーバーの場合は80に設定
+  if (crit_add > 80) {
+    crit_add = 80;
+  }
+
+  // クリティカル倍率タイプを計算
+  var crit_multi = 120;
+  var chk_crit_multi = document.getElementsByClassName('crit_multi');
+  for (i = 0; i < chk_crit_multi.length; i++) {
+    if (chk_crit_multi[i].checked == true) {
+      crit_multi += Number(chk_crit_multi[i].value);
+    }
+  }
+
+  // 計算結果を各コントロールに反映
+  atk.value = Math.floor((Number(baseatk) + Number(atk_add)) * Number(atk_multi / 100));
+  mag.value = Number(basemag) + Number(weaponmag.value);
+  crit_prob.value = crit_add;
+  crit_magn.value = Number(crit_multi / 100);
+
+  // 最終期待値の計算
+  // ダメージ倍率を乗算値に変換
+  let dmg_calc = dmg / 100;
+  // クリティカル部分の計算
+  // クリティカル確率から非クリティカル確率を計算
+  let not_crit_prob = 100 - Number(crit_prob.value);
+  // 非クリティカル時のダメージとクリティカル時のダメージで期待値を計算
+  let crit_prob_calc = Number(crit_prob.value) / 100;
+  let crit_calc = crit_magn.value * crit_prob_calc;
+
+  let atk_calc = (Number(atk.value) * (not_crit_prob / 100) + Number(atk.value) * dmg_calc * Number(crit_calc));
+  let mag_calc = (Number(mag.value) * (not_crit_prob / 100) + Number(mag.value) * dmg_calc * Number(crit_calc));
+  // 小数点第二まで求める
+  atkexpected.value = Math.floor(atk_calc * 100) / 100;
+  magexpected.value = Math.floor(mag_calc * 100) / 100;
+}
