@@ -76,67 +76,70 @@
     <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label"
       for="TAB-02">攻撃力シミュレータ</label>
     <div class="tab-content">
-      <div id="content">
-        <select name=”character”>
-          <option value=”Riesz”>リース</option>
-          <option value=”Kevin”>ケヴィン</option>
-          <option value=”Duran”>デュラン</option>
-          <option value=”Hawkeye”>ホークアイ</option>
-          <option value=”Angela”>アンジェラ（未実装）</option>
-          <option value=”Charlotte”>シャルロット（未実装）</option>
-        </select>
+      <table id="dmgcalctbl">
+        <div id="content">
+          <label for="character">キャラ</label>
+          <select name="character">
+            <option value="Riesz">リース</option>
+            <option value="Kevin">ケヴィン</option>
+            <option value="Duran">デュラン</option>
+            <option value="Hawkeye">ホークアイ</option>
+            <option value="Angela">アンジェラ（未実装）</option>
+            <option value="Charlotte">シャルロット（未実装）</option>
+          </select>
 
-        <select name=”Rclass”>
-          <option value=”1”>アマゾネス</option>
-          <option value=”2”>ワルキューレ</option>
-          <option value=”3”>ルーンメイデン</option>
-          <option value=”4”>ヴァナディース</option>
-          <option value=”5”>スターランサー</option>
-          <option value=”6”>ドラゴンマスター</option>
-          <option value=”7”>フェンリルナイト</option>
-          <option value=”8”>ミーティア</option>
-          <option value=”9”>フレースヴェルグ</option>
-        </select>
-        <input type="checkbox" name="riyu" value="C1" disabled=true>守りのルーン（ステータスダウンの効果時間を40%短縮）
-        <select name=”Kclass” hidden=true>
-          <option value=”1”>クラス1</option>
-          <option value=”2”>クラス2</option>
-          <option value=”3”>クラス3</option>
-          <option value=”4”>クラス4</option>
-        </select>
-        <select name=”Dclass” hidden=true>
-          <option value=”1”>クラス1</option>
-          <option value=”2”>クラス2</option>
-          <option value=”3”>クラス3</option>
-          <option value=”4”>クラス4</option>
-        </select>
-      </div>
+          <select name="Rclass">
+            <option value="1">アマゾネス</option>
+            <option value="2">ワルキューレ</option>
+            <option value="3">ルーンメイデン</option>
+            <option value="4">ヴァナディース</option>
+            <option value="5">スターランサー</option>
+            <option value="6">ドラゴンマスター</option>
+            <option value="7">フェンリルナイト</option>
+            <option value="8">ミーティア</option>
+            <option value="9">フレースヴェルグ</option>
+          </select>
+          <input type="checkbox" name="riyu" value="C1" disabled=true>守りのルーン（ステータスダウンの効果時間を40%短縮）
+          <select name="Kclass" hidden=true>
+            <option value="1">クラス1</option>
+            <option value="2">クラス2</option>
+            <option value="3">クラス3</option>
+            <option value="4">クラス4</option>
+          </select>
+          <select name="Dclass" hidden=true>
+            <option value="1">クラス1</option>
+            <option value="2">クラス2</option>
+            <option value="3">クラス3</option>
+            <option value="4">クラス4</option>
+          </select>
+        </div>
 
-      <p></p>
-      <div>＜固有アビリティ＞</div>
-      <input type="checkbox" name="riyu" value="U1">不意打ちⅡ
-      <input type="checkbox" name="riyu" value="U2">攻乃型
-      <input type="checkbox" name="riyu" value="U3">集中
-      <p></p>
-      <div>＜リンクアビリティ＞</div>
-      <input type="checkbox" name="riyu" value="L1">獣の咆哮
-      <input type="checkbox" name="riyu" value="L2">闘魂
-      <input type="checkbox" name="riyu" value="L3">クリティカルアップ
-      <p></p>
-      <div>＜キャラ特性＞</div>
-      <input type="checkbox" name="riyu" value="C1" disabled=true>獣人化
-      <p></p>
-      <label for="i_event">攻撃力</label>
-      <input id="i_event" type="text" name="event" value=100 readonly>
-      <label for="i_event">ダメージ倍率</label>
-      <input id="i_event" type="text" name="event" value=1.10 readonly>
-      <label for="i_event">クリティカル倍率</label>
-      <input id="i_event" type="text" name="event" value=1.20 readonly>
-      <label for="i_event">クリティカル確率</label>
-      <input id="i_event" type="text" name="event" value=15 readonly>
-      <p></p>
-      <label for="hyouji">期待値</label>
-      <input id="hyouji" type="text" name="event" value=101 readonly>
+        <p></p>
+        <div>＜固有アビリティ＞</div>
+        <input type="checkbox" name="riyu" value="U1">不意打ちⅡ
+        <input type="checkbox" name="riyu" value="U2">攻乃型
+        <input type="checkbox" name="riyu" value="U3">集中
+        <p></p>
+        <div>＜リンクアビリティ＞</div>
+        <input type="checkbox" name="riyu" value="L1">獣の咆哮
+        <input type="checkbox" name="riyu" value="L2">闘魂
+        <input type="checkbox" name="riyu" value="L3">クリティカルアップ
+        <p></p>
+        <div>＜キャラ特性＞</div>
+        <input type="checkbox" name="riyu" value="C1" disabled=true>獣人化
+        <p></p>
+        <label for="i_event">攻撃力</label>
+        <input id="i_event" type="text" name="event" value=100 readonly>
+        <label for="i_event">ダメージ倍率</label>
+        <input id="i_event" type="text" name="event" value=1.10 readonly>
+        <label for="i_event">クリティカル倍率</label>
+        <input id="i_event" type="text" name="event" value=1.20 readonly>
+        <label for="i_event">クリティカル確率</label>
+        <input id="i_event" type="text" name="event" value=15 readonly>
+        <p></p>
+        <label for="hyouji">期待値</label>
+        <input id="hyouji" type="text" name="event" value=101 readonly>
+      </table>
     </div>
     <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">データ集</label>
     <div class="tab-content">
