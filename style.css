@@ -1,14 +1,17 @@
 /* タイトル */
 #tytle {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
   display: inline-block;
   color: #ffffff;
   font-weight: bold;
-  padding: 0.5em;
-  margin-bottom: 1em;
+  padding-top: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
   border: 4px double #619f60;
-  border-radius: 15px;
+  border-radius: 0.5em;
   text-shadow:
      2px  2px 1px #003366,
     -2px  2px 1px #003366,
@@ -20,17 +23,13 @@
      0px -2px 1px #003366;
 }
 
-/* フォント設定 */
-@font-face {
-  font-family: 'PixelMplus10-Regular'; 
-  src: url('../PixelMplus10-Regular.ttf') format('ttf');
-}
-
 /* タブ用設定*/
 .tab-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin:10px 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80em;
 }
 .tab-wrap:after {
   content: '';
@@ -56,7 +55,7 @@
   flex: 1;
 }
 .tab-label:not(:last-of-type) {
-  margin-right: 5px;
+  margin-right: 0.2em;
 }
 .tab-content {
   width: 100%;
@@ -70,7 +69,7 @@
 .tab-switch:checked+.tab-label+.tab-content {
   height: auto;
   overflow: auto;
-  padding: 15px;
+  padding: 0.5em;
   opacity: 1;
   transition: .5s opacity;
   box-shadow: 0 0 3px rgba(0,0,0,.2);
@@ -80,19 +79,20 @@
 }
 
 /* 概要部 */
-#voyage{
-  font-size: 1.5em;
+/* ワシの説明 */
+#voyage {
+  font-size: 1.2em;
   color: #ffffff;
   border: double;
   background: darkgreen;
   padding: 0.5em;
 }
 
+/* チャート皮算用 */
 /* テーブルレイアウト */
 #sumexptbl {
-  border-collapse:  collapse;
+  border-collapse: collapse;
   width: 100%;
-  font-family: 'PixelMplus10-Regular';
 }
 th,td {
   white-space: nowrap;
@@ -104,12 +104,6 @@ th,td {
 }
 th {
   background:#ffccff;
-  /* 縦スクロール時に固定する */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  /* tbody内のセルより手前に表示する */
-  z-index: 1;
 }
 input {
   text-align: center;
@@ -120,5 +114,37 @@ input {
   width:80%;
   text-align: center;
 }
+/* フッタ表示固定 */
+footer {
+  position: fixed;
+  bottom: 0.5em;
+  left: auto;
+  background: lightgreen;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
 
-/* ダメージ計算用 */
+/* 攻撃力シミュレータ */
+/* ヘッダ*/
+.dmgcalchead {
+  background:#ffccff;
+  padding: 0.5em;
+  border: solid 1px;
+}
+
+/* 数値項目 */
+.dmgcalc {
+  width:3em;
+  text-align: center;
+}
+.dmgcalcres {
+  font-size: 1.1em;
+  width:5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* グループ分け */
+.dmg_group{
+  background: lightgreen;
+}

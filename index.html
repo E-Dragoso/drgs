@@ -48,22 +48,6 @@
       for="TAB-01">チャート皮算用</label>
     <div class="tab-content">
       <p>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。</p>
-      <div>
-        <label for="zakocheckbox">
-          <input type="checkbox" id="zakocheckbox" onChange="zakocheck()">
-          雑魚敵一括チェック</label>
-      </div>
-      <div>
-        <label for="lucrecheckbox">
-          <input type="checkbox" id="lucrecheckbox" onChange="lucrecheck()" checked="true">
-          ルク一括チェック</label>
-      </div>
-      <div>
-        幽霊船で生贄にされるのは
-        <input type="radio" name="sacrifice" id="sacrifice_part_1" onChange="calc(this.id)">主人公
-        <input type="radio" name="sacrifice" id="sacrifice_part_2" onChange="calc(this.id)">仲間１
-        <input type="radio" name="sacrifice" id="sacrifice_part_3" onChange="calc(this.id)" checked>仲間２
-      </div>
       <form action="#" name="form1">
         <table id="sumexptbl">
           <thead>
@@ -86,327 +70,352 @@
           </thead>
         </table>
       </form>
+      <footer>
+        <div>
+          <label for="zakocheckbox">
+            <input type="checkbox" id="zakocheckbox" onChange="zakocheck()">
+            雑魚敵一括チェック</label>
+          <label for="lucrecheckbox">
+            <input type="checkbox" id="lucrecheckbox" onChange="lucrecheck()">
+            ルク一括チェック</label>
+        </div>
+        <div>
+          幽霊船で生贄にされるのは
+          <input type="radio" name="sacrifice" id="sacrifice_part_1" onChange="calc(this.id)">主人公
+          <input type="radio" name="sacrifice" id="sacrifice_part_2" onChange="calc(this.id)">仲間１
+          <input type="radio" name="sacrifice" id="sacrifice_part_3" onChange="calc(this.id)" checked>仲間２
+        </div>
+      </footer>
     </div>
     <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label"
       for="TAB-02">攻撃力シミュレータ</label>
     <div class="tab-content">
-      <div>
-        <label>キャラ
-          <select id="character" onChange="characheck()">
-            <option value="Duran">デュラン</option>
-            <option value="Angela">アンジェラ</option>
-            <option value="Kevin">ケヴィン</option>
-            <option value="Charlotte">シャルロット</option>
-            <option value="Hawkeye">ホークアイ</option>
-            <option value="Riesz" selected>リース</option>
-          </select>
-        </label>
-      </div>
-      <div>
-        <label>クラス
-          <select id="DuranClass" onChange="classcheck()">
-            <option value=0>ファイター</option>
-            <option value=1>ナイト</option>
-            <option value=2>グラディエーター</option>
-            <option value=3>パラディン</option>
-            <option value=4>ロード</option>
-            <option value=5>ソードマスター</option>
-            <option value=6>デュエリスト</option>
-            <option value=7>セイヴァー</option>
-            <option value=8>ベルセルク</option>
-          </select>
-          <select id="AngelaClass" onChange="classcheck()">
-            <option value=0>マジシャン</option>
-            <option value=1>ソーサレス</option>
-            <option value=2>デルヴァー</option>
-            <option value=3>グランデヴィナ</option>
-            <option value=4>アークメイジ</option>
-            <option value=5>ルーンマスター</option>
-            <option value=6>メイガス</option>
-            <option value=7>ウィッチクィーン</option>
-            <option value=8>スペルキャスター</option>
-          </select>
-          <select id="KevinClass" onChange="classcheck()">
-            <option value=0>グラップラー</option>
-            <option value=1>モンク</option>
-            <option value=2>バシュカー</option>
-            <option value=3>ゴッドハンド</option>
-            <option value=4>ウォーリアモンク</option>
-            <option value=5>デルヴィッシュ</option>
-            <option value=6>デスハンド</option>
-            <option value=7>ビーストキング</option>
-            <option value=8>デストロイヤー</option>
-          </select>
-          <select id="CharlotteClass" onChange="classcheck()">
-            <option value=0>クレリック</option>
-            <option value=1>プリーステス</option>
-            <option value=2>エンチャントレス</option>
-            <option value=3>ビショップ</option>
-            <option value=4>セージ</option>
-            <option value=5>ネクロマンサー</option>
-            <option value=6>イビルシャーマン</option>
-            <option value=7>ハイプリーステス</option>
-            <option value=8>カオスメイカー</option>
-          </select>
-          <select id="HawkeyeClass" onChange="classcheck()">
-            <option value=0>シーフ</option>
-            <option value=1>レンジャー</option>
-            <option value=2>ニンジャ</option>
-            <option value=3>ワンダラー</option>
-            <option value=4>ローグ</option>
-            <option value=5>ニンジャマスター</option>
-            <option value=6>ナイトブレード</option>
-            <option value=7>スプリガン</option>
-            <option value=8>アヴェンジャー</option>
-          </select>
-          <select id="RieszClass" onChange="classcheck()">
-            <option value=0>アマゾネス</option>
-            <option value=1>ワルキューレ</option>
-            <option value=2>ルーンメイデン</option>
-            <option value=3>ヴァナディース</option>
-            <option value=4>スターランサー</option>
-            <option value=5>ドラゴンマスター</option>
-            <option value=6>フェンリルナイト</option>
-            <option value=7>ミーティア</option>
-            <option value=8>フレースヴェルグ</option>
-          </select>
-        </label>
-      </div>
-      <div>
-        <label>武器
-          <select id="DuranWeapon" onChange="weapon()">
-            <option value=0>ブロンズソード</option>
-            <option value=1>アイアンソード</option>
-            <option value=2>グラディウス</option>
-            <option value=3>ブロードソード</option>
-            <option value=4>サーベル</option>
-            <option value=5>スティールソード</option>
-            <option value=6>バスタードソード</option>
-            <option value=7>シルバーブレード</option>
-            <option value=8>エストック</option>
-            <option value=9>フォールション</option>
-            <option value=10>ブランベルジェ</option>
-            <option value=11>コリシュマルド</option>
-            <option value=12>シャムシール</option>
-            <option value=13>ペイルストーム</option>
-            <option value=14>ミスリルソード</option>
-            <option value=15>カッツバルゲル</option>
-            <option value=16>バルムンク</option>
-            <option value=17>ヴァーラルソード</option>
-            <option value=18>クサナギブレード</option>
-            <option value=19>テュルヴィング</option>
-            <option value=20>ディフェンダー</option>
-            <option value=21>ムラマサブレード</option>
-            <option value=22>クラウ・ソラス</option>
-            <option value=23>エクスカリバー</option>
-            <option value=24>レーヴァテイン</option>
-            <option value=25>ドラゴンベイン</option>
-            <option value=26>ブレイブブレード</option>
-            <option value=27>シグムンド</option>
-            <option value=28>ラグナロク</option>
-            <option value=29>デスブリンガー</option>
-            <option value=30>勝利の剣</option>
-            <option value=31>勝利の剣（橙）</option>
-            <option value=32>フルンティング</option>
-            <option value=33>フルンティング（橙）</option>
-          </select>
-          <select id="AngelaWeapon" onChange="weapon()">
-            <option value=0>木の杖</option>
-            <option value=1>スタッフ</option>
-            <option value=2>ウィッチスタッフ</option>
-            <option value=3>樫の杖</option>
-            <option value=4>ピューターロッド</option>
-            <option value=5>ルビーの杖</option>
-            <option value=6>クリスタルロッド</option>
-            <option value=7>ソウルロッド</option>
-            <option value=8>バーシュスタッフ</option>
-            <option value=9>カニングスタッフ</option>
-            <option value=10>トネリコの杖</option>
-            <option value=11>ウィルスタッフ</option>
-            <option value=12>トートの杖</option>
-            <option value=13>ラージンの杖</option>
-            <option value=14>ミスリルロッド</option>
-            <option value=15>スカルロッド</option>
-            <option value=16>ミーミルロッド</option>
-            <option value=17>ドルイドの杖</option>
-            <option value=18>妖の杖</option>
-            <option value=19>ネビュラスタッフ</option>
-            <option value=20>世界樹の杖</option>
-            <option value=21>古のロッド</option>
-            <option value=22>ミズナラの杖</option>
-            <option value=23>エターナルロッド</option>
-            <option value=24>ケルヌンノスの杖</option>
-            <option value=25>ケーリュイケオン</option>
-            <option value=26>ガンバンテイン</option>
-            <option value=27>精霊の杖</option>
-            <option value=28>ルーンスタッフ</option>
-            <option value=29>ドラゴンロッド</option>
-            <option value=30>クイーンセプター</option>
-            <option value=31>クイーンセプター（橙）</option>
-            <option value=32>カオスパーサー</option>
-            <option value=33>カオスパーサー（橙）</option>
-          </select>
-          <select id="KevinWeapon" onChange="weapon()">
-            <option value=0>レザーグローブ</option>
-            <option value=1>アイアンナックル</option>
-            <option value=2>ニードルグローブ</option>
-            <option value=3>モールベアの爪</option>
-            <option value=4>チェイングローブ</option>
-            <option value=5>バグナグ</option>
-            <option value=6>フィーンズクロー</option>
-            <option value=7>シルバーソーン</option>
-            <option value=8>モーグリの爪</option>
-            <option value=9>キーンナックル</option>
-            <option value=10>パワーグローブ</option>
-            <option value=11>カイザーナックル</option>
-            <option value=12>アシッドクロー</option>
-            <option value=13>サイクロンクロー</option>
-            <option value=14>ミスリルナックル</option>
-            <option value=15>ボーンナックル</option>
-            <option value=16>ケルベロスクロー</option>
-            <option value=17>ダイヤナックル</option>
-            <option value=18>ゴーストハンド</option>
-            <option value=19>ロッククロー</option>
-            <option value=20>グリームグローブ</option>
-            <option value=21>ジャグパンチャー</option>
-            <option value=22>バンパイアクロー</option>
-            <option value=23>オーラグローブ</option>
-            <option value=24>ロトンナックル</option>
-            <option value=25>ドラゴンクロー</option>
-            <option value=26>スパイラルクロー</option>
-            <option value=27>ホーリーグローブ</option>
-            <option value=28>ギガースグローブ</option>
-            <option value=29>スカルディセクト</option>
-            <option value=30>スファライ</option>
-            <option value=31>スファライ（橙）</option>
-            <option value=32>リンドヴルム</option>
-            <option value=33>リンドヴルム（橙）</option>
-          </select>
-          <select id="CharlotteWeapon" onChange="weapon()">
-            <option value=0>殻竿</option>
-            <option value=1>ウッドフレイル</option>
-            <option value=2>ボールチェイン</option>
-            <option value=3>ライトフレイル</option>
-            <option value=4>ウォーハンマー</option>
-            <option value=5>スティールモール</option>
-            <option value=6>ダックの鉄球</option>
-            <option value=7>シルバーフレイル</option>
-            <option value=8>ヘヴィフレイル</option>
-            <option value=9>ハンマーフレイル</option>
-            <option value=10>モーニングスター</option>
-            <option value=11>ヒエロフレイル</option>
-            <option value=12>パペットフレイル</option>
-            <option value=13>ブロックバスター</option>
-            <option value=14>ミスリルモール</option>
-            <option value=15>トロウルモール</option>
-            <option value=16>キュニアルモール</option>
-            <option value=17>ホーリーフレイル</option>
-            <option value=18>シビュラフレイル</option>
-            <option value=19>グラビティモール</option>
-            <option value=20>アルティマモール</option>
-            <option value=21>ブラッドサッカー</option>
-            <option value=22>メテオフレイル</option>
-            <option value=23>ミョルニル</option>
-            <option value=24>サタンフレイル</option>
-            <option value=25>ベルティナモール</option>
-            <option value=26>ジャジメンテス</option>
-            <option value=27>ギガースフレイル</option>
-            <option value=28>死者の槌矛</option>
-            <option value=29>ジャガーノート</option>
-            <option value=30>セイクリッド</option>
-            <option value=31>セイクリッド（橙）</option>
-            <option value=32>ヘルヘイム</option>
-            <option value=33>ヘルヘイム（橙）</option>
-          </select>
-          <select id="HawkeyeWeapon" onChange="weapon()">
-            <option value=0>フリントナイフ</option>
-            <option value=1>ダガー</option>
-            <option value=2>バゼラード</option>
-            <option value=3>ロンデルダガー</option>
-            <option value=4>シャークティース</option>
-            <option value=5>スティールダガー</option>
-            <option value=6>ミゼリコード</option>
-            <option value=7>カタール</option>
-            <option value=8>マインゴーシュ</option>
-            <option value=9>迦楼羅</option>
-            <option value=10>水晶のダガー</option>
-            <option value=11>エルフの短剣</option>
-            <option value=12>阿修羅</option>
-            <option value=13>ブルーゲイル</option>
-            <option value=14>ミスリルナイフ</option>
-            <option value=15>夜叉</option>
-            <option value=16>ダンシングダガー</option>
-            <option value=17>フィールドダガー</option>
-            <option value=18>毘沙門</option>
-            <option value=19>メルキールダガー</option>
-            <option value=20>シルヴァンナイフ</option>
-            <option value=21>帝釈</option>
-            <option value=22>シェオルの短刀</option>
-            <option value=23>クレセントナイフ</option>
-            <option value=24>不動明王</option>
-            <option value=25>クリムゾングレア</option>
-            <option value=26>オリハルコン</option>
-            <option value=27>マンスローター</option>
-            <option value=28>金剛羅漢</option>
-            <option value=29>デスストローク</option>
-            <option value=30>ファフニール</option>
-            <option value=31>ファフニール（橙）</option>
-            <option value=32>アグニ</option>
-            <option value=33>アグニ（橙）</option>
-          </select>
-          <select id="RieszWeapon" onChange="weapon()">
-            <option value=0>ブロンズランス</option>
-            <option value=1>ロングスピア</option>
-            <option value=2>フラメア</option>
-            <option value=3>コルセスカ</option>
-            <option value=4>パルティザン</option>
-            <option value=5>スティールランス</option>
-            <option value=6>グレイヴ</option>
-            <option value=7>シルバーランス</option>
-            <option value=8>ウィングスピア</option>
-            <option value=9>妖魔の槍</option>
-            <option value=10>プルームランス</option>
-            <option value=11>ダークピアサー</option>
-            <option value=12>トレントスピア</option>
-            <option value=13>ゴールデンスピア</option>
-            <option value=14>ミスリルスピア</option>
-            <option value=15>ブレインレッカー</option>
-            <option value=16>グリフィンランス</option>
-            <option value=17>スタッグホーン</option>
-            <option value=18>ウルヴスファング</option>
-            <option value=19>メイデンリーフ</option>
-            <option value=20>バルキリースピア</option>
-            <option value=21>ミディールの槍</option>
-            <option value=22>ブリューナク</option>
-            <option value=23>グングニル</option>
-            <option value=24>ペイントゥース</option>
-            <option value=25>ブレイズピアサー</option>
-            <option value=26>トゥルースピア</option>
-            <option value=27>スターゲイザー</option>
-            <option value=28>ドラゴンランス</option>
-            <option value=29>巨人の槍</option>
-            <option value=30>ブリュンヒルド</option>
-            <option value=31>ブリュンヒルド（橙）</option>
-            <option value=32>ヴェズルフェルニル</option>
-            <option value=33>ヴェズルフェルニル（橙）</option>
-          </select>
-        </label>
-        <label>武器物攻 <input type="number" id="weaponatk" readonly></label>
-        <label>武器魔攻 <input type="number" id="weaponmag" readonly></label>
+      <div class="dmgcalchead">
+        <div>
+          <label>キャラ
+            <select id="character" onChange="characheck()">
+              <option value="Duran">デュラン</option>
+              <option value="Angela">アンジェラ</option>
+              <option value="Kevin">ケヴィン</option>
+              <option value="Charlotte">シャルロット</option>
+              <option value="Hawkeye">ホークアイ</option>
+              <option value="Riesz" selected>リース</option>
+            </select>
+          </label>
+          <label>クラス
+            <select id="DuranClass" onChange="classcheck()">
+              <option value=0>ファイター</option>
+              <option value=1>ナイト</option>
+              <option value=2>グラディエーター</option>
+              <option value=3>パラディン</option>
+              <option value=4>ロード</option>
+              <option value=5>ソードマスター</option>
+              <option value=6>デュエリスト</option>
+              <option value=7>セイヴァー</option>
+              <option value=8>ベルセルク</option>
+            </select>
+            <select id="AngelaClass" onChange="classcheck()">
+              <option value=0>マジシャン</option>
+              <option value=1>ソーサレス</option>
+              <option value=2>デルヴァー</option>
+              <option value=3>グランデヴィナ</option>
+              <option value=4>アークメイジ</option>
+              <option value=5>ルーンマスター</option>
+              <option value=6>メイガス</option>
+              <option value=7>ウィッチクィーン</option>
+              <option value=8>スペルキャスター</option>
+            </select>
+            <select id="KevinClass" onChange="classcheck()">
+              <option value=0>グラップラー</option>
+              <option value=1>モンク</option>
+              <option value=2>バシュカー</option>
+              <option value=3>ゴッドハンド</option>
+              <option value=4>ウォーリアモンク</option>
+              <option value=5>デルヴィッシュ</option>
+              <option value=6>デスハンド</option>
+              <option value=7>ビーストキング</option>
+              <option value=8>デストロイヤー</option>
+            </select>
+            <select id="CharlotteClass" onChange="classcheck()">
+              <option value=0>クレリック</option>
+              <option value=1>プリーステス</option>
+              <option value=2>エンチャントレス</option>
+              <option value=3>ビショップ</option>
+              <option value=4>セージ</option>
+              <option value=5>ネクロマンサー</option>
+              <option value=6>イビルシャーマン</option>
+              <option value=7>ハイプリーステス</option>
+              <option value=8>カオスメイカー</option>
+            </select>
+            <select id="HawkeyeClass" onChange="classcheck()">
+              <option value=0>シーフ</option>
+              <option value=1>レンジャー</option>
+              <option value=2>ニンジャ</option>
+              <option value=3>ワンダラー</option>
+              <option value=4>ローグ</option>
+              <option value=5>ニンジャマスター</option>
+              <option value=6>ナイトブレード</option>
+              <option value=7>スプリガン</option>
+              <option value=8>アヴェンジャー</option>
+            </select>
+            <select id="RieszClass" onChange="classcheck()">
+              <option value=0>アマゾネス</option>
+              <option value=1>ワルキューレ</option>
+              <option value=2>ルーンメイデン</option>
+              <option value=3>ヴァナディース</option>
+              <option value=4>スターランサー</option>
+              <option value=5>ドラゴンマスター</option>
+              <option value=6>フェンリルナイト</option>
+              <option value=7>ミーティア</option>
+              <option value=8>フレースヴェルグ</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>武器
+            <select id="DuranWeapon" onChange="weapon()">
+              <option value=0>ブロンズソード</option>
+              <option value=1>アイアンソード</option>
+              <option value=2>グラディウス</option>
+              <option value=3>ブロードソード</option>
+              <option value=4>サーベル</option>
+              <option value=5>スティールソード</option>
+              <option value=6>バスタードソード</option>
+              <option value=7>シルバーブレード</option>
+              <option value=8>エストック</option>
+              <option value=9>フォールション</option>
+              <option value=10>ブランベルジェ</option>
+              <option value=11>コリシュマルド</option>
+              <option value=12>シャムシール</option>
+              <option value=13>ペイルストーム</option>
+              <option value=14>ミスリルソード</option>
+              <option value=15>カッツバルゲル</option>
+              <option value=16>バルムンク</option>
+              <option value=17>ヴァーラルソード</option>
+              <option value=18>クサナギブレード</option>
+              <option value=19>テュルヴィング</option>
+              <option value=20>ディフェンダー</option>
+              <option value=21>ムラマサブレード</option>
+              <option value=22>クラウ・ソラス</option>
+              <option value=23>エクスカリバー</option>
+              <option value=24>レーヴァテイン</option>
+              <option value=25>ドラゴンベイン</option>
+              <option value=26>ブレイブブレード</option>
+              <option value=27>シグムンド</option>
+              <option value=28>ラグナロク</option>
+              <option value=29>デスブリンガー</option>
+              <option value=30>勝利の剣</option>
+              <option value=31>勝利の剣（橙）</option>
+              <option value=32>フルンティング</option>
+              <option value=33>フルンティング（橙）</option>
+            </select>
+            <select id="AngelaWeapon" onChange="weapon()">
+              <option value=0>木の杖</option>
+              <option value=1>スタッフ</option>
+              <option value=2>ウィッチスタッフ</option>
+              <option value=3>樫の杖</option>
+              <option value=4>ピューターロッド</option>
+              <option value=5>ルビーの杖</option>
+              <option value=6>クリスタルロッド</option>
+              <option value=7>ソウルロッド</option>
+              <option value=8>バーシュスタッフ</option>
+              <option value=9>カニングスタッフ</option>
+              <option value=10>トネリコの杖</option>
+              <option value=11>ウィルスタッフ</option>
+              <option value=12>トートの杖</option>
+              <option value=13>ラージンの杖</option>
+              <option value=14>ミスリルロッド</option>
+              <option value=15>スカルロッド</option>
+              <option value=16>ミーミルロッド</option>
+              <option value=17>ドルイドの杖</option>
+              <option value=18>妖の杖</option>
+              <option value=19>ネビュラスタッフ</option>
+              <option value=20>世界樹の杖</option>
+              <option value=21>古のロッド</option>
+              <option value=22>ミズナラの杖</option>
+              <option value=23>エターナルロッド</option>
+              <option value=24>ケルヌンノスの杖</option>
+              <option value=25>ケーリュイケオン</option>
+              <option value=26>ガンバンテイン</option>
+              <option value=27>精霊の杖</option>
+              <option value=28>ルーンスタッフ</option>
+              <option value=29>ドラゴンロッド</option>
+              <option value=30>クイーンセプター</option>
+              <option value=31>クイーンセプター（橙）</option>
+              <option value=32>カオスパーサー</option>
+              <option value=33>カオスパーサー（橙）</option>
+            </select>
+            <select id="KevinWeapon" onChange="weapon()">
+              <option value=0>レザーグローブ</option>
+              <option value=1>アイアンナックル</option>
+              <option value=2>ニードルグローブ</option>
+              <option value=3>モールベアの爪</option>
+              <option value=4>チェイングローブ</option>
+              <option value=5>バグナグ</option>
+              <option value=6>フィーンズクロー</option>
+              <option value=7>シルバーソーン</option>
+              <option value=8>モーグリの爪</option>
+              <option value=9>キーンナックル</option>
+              <option value=10>パワーグローブ</option>
+              <option value=11>カイザーナックル</option>
+              <option value=12>アシッドクロー</option>
+              <option value=13>サイクロンクロー</option>
+              <option value=14>ミスリルナックル</option>
+              <option value=15>ボーンナックル</option>
+              <option value=16>ケルベロスクロー</option>
+              <option value=17>ダイヤナックル</option>
+              <option value=18>ゴーストハンド</option>
+              <option value=19>ロッククロー</option>
+              <option value=20>グリームグローブ</option>
+              <option value=21>ジャグパンチャー</option>
+              <option value=22>バンパイアクロー</option>
+              <option value=23>オーラグローブ</option>
+              <option value=24>ロトンナックル</option>
+              <option value=25>ドラゴンクロー</option>
+              <option value=26>スパイラルクロー</option>
+              <option value=27>ホーリーグローブ</option>
+              <option value=28>ギガースグローブ</option>
+              <option value=29>スカルディセクト</option>
+              <option value=30>スファライ</option>
+              <option value=31>スファライ（橙）</option>
+              <option value=32>リンドヴルム</option>
+              <option value=33>リンドヴルム（橙）</option>
+            </select>
+            <select id="CharlotteWeapon" onChange="weapon()">
+              <option value=0>殻竿</option>
+              <option value=1>ウッドフレイル</option>
+              <option value=2>ボールチェイン</option>
+              <option value=3>ライトフレイル</option>
+              <option value=4>ウォーハンマー</option>
+              <option value=5>スティールモール</option>
+              <option value=6>ダックの鉄球</option>
+              <option value=7>シルバーフレイル</option>
+              <option value=8>ヘヴィフレイル</option>
+              <option value=9>ハンマーフレイル</option>
+              <option value=10>モーニングスター</option>
+              <option value=11>ヒエロフレイル</option>
+              <option value=12>パペットフレイル</option>
+              <option value=13>ブロックバスター</option>
+              <option value=14>ミスリルモール</option>
+              <option value=15>トロウルモール</option>
+              <option value=16>キュニアルモール</option>
+              <option value=17>ホーリーフレイル</option>
+              <option value=18>シビュラフレイル</option>
+              <option value=19>グラビティモール</option>
+              <option value=20>アルティマモール</option>
+              <option value=21>ブラッドサッカー</option>
+              <option value=22>メテオフレイル</option>
+              <option value=23>ミョルニル</option>
+              <option value=24>サタンフレイル</option>
+              <option value=25>ベルティナモール</option>
+              <option value=26>ジャジメンテス</option>
+              <option value=27>ギガースフレイル</option>
+              <option value=28>死者の槌矛</option>
+              <option value=29>ジャガーノート</option>
+              <option value=30>セイクリッド</option>
+              <option value=31>セイクリッド（橙）</option>
+              <option value=32>ヘルヘイム</option>
+              <option value=33>ヘルヘイム（橙）</option>
+            </select>
+            <select id="HawkeyeWeapon" onChange="weapon()">
+              <option value=0>フリントナイフ</option>
+              <option value=1>ダガー</option>
+              <option value=2>バゼラード</option>
+              <option value=3>ロンデルダガー</option>
+              <option value=4>シャークティース</option>
+              <option value=5>スティールダガー</option>
+              <option value=6>ミゼリコード</option>
+              <option value=7>カタール</option>
+              <option value=8>マインゴーシュ</option>
+              <option value=9>迦楼羅</option>
+              <option value=10>水晶のダガー</option>
+              <option value=11>エルフの短剣</option>
+              <option value=12>阿修羅</option>
+              <option value=13>ブルーゲイル</option>
+              <option value=14>ミスリルナイフ</option>
+              <option value=15>夜叉</option>
+              <option value=16>ダンシングダガー</option>
+              <option value=17>フィールドダガー</option>
+              <option value=18>毘沙門</option>
+              <option value=19>メルキールダガー</option>
+              <option value=20>シルヴァンナイフ</option>
+              <option value=21>帝釈</option>
+              <option value=22>シェオルの短刀</option>
+              <option value=23>クレセントナイフ</option>
+              <option value=24>不動明王</option>
+              <option value=25>クリムゾングレア</option>
+              <option value=26>オリハルコン</option>
+              <option value=27>マンスローター</option>
+              <option value=28>金剛羅漢</option>
+              <option value=29>デスストローク</option>
+              <option value=30>ファフニール</option>
+              <option value=31>ファフニール（橙）</option>
+              <option value=32>アグニ</option>
+              <option value=33>アグニ（橙）</option>
+            </select>
+            <select id="RieszWeapon" onChange="weapon()">
+              <option value=0>ブロンズランス</option>
+              <option value=1>ロングスピア</option>
+              <option value=2>フラメア</option>
+              <option value=3>コルセスカ</option>
+              <option value=4>パルティザン</option>
+              <option value=5>スティールランス</option>
+              <option value=6>グレイヴ</option>
+              <option value=7>シルバーランス</option>
+              <option value=8>ウィングスピア</option>
+              <option value=9>妖魔の槍</option>
+              <option value=10>プルームランス</option>
+              <option value=11>ダークピアサー</option>
+              <option value=12>トレントスピア</option>
+              <option value=13>ゴールデンスピア</option>
+              <option value=14>ミスリルスピア</option>
+              <option value=15>ブレインレッカー</option>
+              <option value=16>グリフィンランス</option>
+              <option value=17>スタッグホーン</option>
+              <option value=18>ウルヴスファング</option>
+              <option value=19>メイデンリーフ</option>
+              <option value=20>バルキリースピア</option>
+              <option value=21>ミディールの槍</option>
+              <option value=22>ブリューナク</option>
+              <option value=23>グングニル</option>
+              <option value=24>ペイントゥース</option>
+              <option value=25>ブレイズピアサー</option>
+              <option value=26>トゥルースピア</option>
+              <option value=27>スターゲイザー</option>
+              <option value=28>ドラゴンランス</option>
+              <option value=29>巨人の槍</option>
+              <option value=30>ブリュンヒルド</option>
+              <option value=31>ブリュンヒルド（橙）</option>
+              <option value=32>ヴェズルフェルニル</option>
+              <option value=33>ヴェズルフェルニル（橙）</option>
+            </select>
+          </label>
+          <label>武器物攻 <input type="number" class="dmgcalc" id="weaponatk" readonly></label>
+          <label>武器魔攻 <input type="number" class="dmgcalc" id="weaponmag" readonly></label>
+        </div>
+        <div>
+          <label>物理攻撃力 <input type="number" class="dmgcalc" id="atk" readonly></label>
+          <label>魔法攻撃力 <input type="number" class="dmgcalc" id="mag" readonly></label>
+          <label>クリティカル確率 <input type="number" class="dmgcalc" id="crit_prob" readonly>%</label>
+          <label>クリティカル倍率 <input type="number" class="dmgcalc" id="crit_magn" readonly>倍</label>
+        </div>
+        <div>
+          <label>物理期待値 <input type="number" class="dmgcalcres" id="atkexpected" readonly></label>
+          <label>魔法期待値 <input type="number" class="dmgcalcres" id="magexpected" readonly></label>
+        </div>
       </div>
 
       <p></p>
-      <div class="dmg_group">＜攻撃力加算＞</div>
+      <div class='dmg_group'>＜物理攻撃加算＞</div>
       <label title=常時、攻撃力が50アップ><input type='checkbox' class='atk_add' value=50 onChange='atkcalc()'>本能の絆</label>
       <label title=常時、攻撃力を30アップ、防御力を30ダウン><input type='checkbox' class='atk_add' value=30
           onChange='atkcalc()'>アタッカー</label>
       <label title=常時、攻撃力を40アップ、防御力を40ダウン><input type='checkbox' class='atk_add' value=40
           onChange='atkcalc()'>アタッカーⅡ</label>
-
       <p></p>
-      <div class="dmg_group">＜攻撃力乗算＞</div>
-      <label title=攻撃力20％アップ><input type='checkbox' class='atk_multi' value=20 onChange='atkcalc()'>パワーアップ</label>
-      <label title=攻撃力28％アップ><input type='checkbox' class='atk_multi' value=28 onChange='atkcalc()'>パワーアップ（強化）</label>
+      <div class='dmg_group'>＜物理攻撃乗算＞</div>
+      <label title=攻撃力を20％アップ><input type='checkbox' class='atk_multi' value=20 onChange='atkcalc()'>パワーアップ</label>
+      <label title=攻撃力を28％アップ><input type='checkbox' class='atk_multi' value=28 onChange='atkcalc()'>パワーアップ（強化）</label>
       <label title=バトル中、攻撃力40%アップ、防御力40%ダウン><input type='checkbox' class='atk_multi' value=40
           onChange='atkcalc()'>攻乃型</label>
       <label title=バトル中、味方全員の攻撃力を3%アップ><input type='checkbox' class='atk_multi' value=3
@@ -455,50 +464,110 @@
           onChange='atkcalc()'>ピンチアタックⅡ</label>
       <label title=HP30%以下の時、攻撃力を40%アップ><input type='checkbox' class='atk_multi' value=40
           onChange='atkcalc()'>ピンチアタックⅢ</label>
-
       <p></p>
-      <div class="dmg_group">＜ダメージアップ＞</div>
-      <label title=セイバー魔法の消費MPを4アップ、効果中与ダメージを15%アップ><input type='checkbox' class='dmg' value=15
+      <div class='dmg_group'>＜物理ダメージアップ＞</div>
+      <label title=セイバー魔法の消費MPを4アップ、効果中与ダメージを15%アップ><input type='checkbox' class='dmg_atk' value=15
           onChange='atkcalc()'>アタックセイバー</label>
-      <label title=セイバー魔法の消費MPを8アップ、効果中与ダメージを25%アップ><input type='checkbox' class='dmg' value=25
+      <label title=セイバー魔法の消費MPを8アップ、効果中与ダメージを25%アップ><input type='checkbox' class='dmg_atk' value=25
           onChange='atkcalc()'>アタックセイバーⅡ</label>
-      <label title=ボスへの与ダメージを10%アップ><input type='checkbox' class='dmg' value=10 onChange='atkcalc()'>獣の咆哮</label>
-      <label title=ボスへの与ダメージを20%アップ><input type='checkbox' class='dmg' value=20 onChange='atkcalc()'>裁定者</label>
-      <label title=ボスへの与ダメージを30%アップ><input type='checkbox' class='dmg' value=30 onChange='atkcalc()'>裁定者Ⅱ</label>
-      <label title=HP30%以下の時、与ダメージを15%アップ><input type='checkbox' class='dmg' value=15
-          onChange='atkcalc()'>火事場の馬鹿力</label>
-      <br><label title=自身を狙っていない敵への与ダメージを10%アップ><input type='checkbox' class='dmg' value=10
-          onChange='atkcalc()'>不意打ち</label>
-      <label title=自身を狙っていない敵への与ダメージを15%アップ><input type='checkbox' class='dmg' value=15
-          onChange='atkcalc()'>不意打ちⅡ</label>
-      <label title=自身のレベル未満の敵への、与ダメージを20%アップ><input type='checkbox' class='dmg' value=20
-          onChange='atkcalc()'>アンフェア</label>
-      <label title=自身のレベル未満の敵への、与ダメージを30%アップ><input type='checkbox' class='dmg' value=30
-          onChange='atkcalc()'>アンフェアⅡ</label>
-      <br><label title=HP100%の敵への与ダメージを20%アップ><input type='checkbox' class='dmg' value=20
-          onChange='atkcalc()'>ファーストショット</label>
-      <label title=HP100%の敵への与ダメージを30%アップ><input type='checkbox' class='dmg' value=30
-          onChange='atkcalc()'>ファーストショットⅡ</label>
-      <label title=HP30%以下の敵への与ダメージを30%アップ><input type='checkbox' class='dmg' value=30
-          onChange='atkcalc()'>フィニッシュブロー</label>
-      <label title=HP30%以下の敵への与ダメージを45%アップ><input type='checkbox' class='dmg' value=45
-          onChange='atkcalc()'>フィニッシュブローⅡ</label>
-      <br><label title=弱点属性での与ダメージを15%アップ><input type='checkbox' class='dmg' value=15 onChange='atkcalc()'>弱点特攻</label>
-      <label title=弱点属性での与ダメージを25%アップ><input type='checkbox' class='dmg' value=25 onChange='atkcalc()'>弱点特攻Ⅱ</label>
-      <label title=弱点属性での与ダメージを35%アップ><input type='checkbox' class='dmg' value=35 onChange='atkcalc()'>弱点特攻Ⅲ</label>
-      <label title=味方全員、弱点属性での与ダメージを8%アップ><input type='checkbox' class='dmg' value=8
-          onChange='atkcalc()'>弱点特攻オール</label>
-      <label title=味方全員、弱点属性での与ダメージを12%アップ><input type='checkbox' class='dmg' value=12
-          onChange='atkcalc()'>弱点特攻オールⅡ</label>
-      <br><label title=状態異常の敵への与ダメージを30%アップ><input type='checkbox' class='dmg' value=30
-          onChange='atkcalc()'>状態異常特攻</label>
-      <label title=状態異常の敵への与ダメージを40%アップ><input type='checkbox' class='dmg' value=40 onChange='atkcalc()'>状態異常特攻Ⅱ</label>
-      <label title=状態異常の敵への与ダメージを60%アップ><input type='checkbox' class='dmg' value=60 onChange='atkcalc()'>状態異常特攻Ⅲ</label>
-      <label title=ボス以外への与ダメージを20%アップ><input type='checkbox' class='dmg' value=20 onChange='atkcalc()'>強者</label>
-      <label title=ボス以外への与ダメージを30%アップ><input type='checkbox' class='dmg' value=30 onChange='atkcalc()'>強者Ⅱ</label>
-
+      <label title=夜間の与ダメージが20％アップ><input type='checkbox' class='dmg_atk' value=25 onChange='atkcalc()'>獣人化</label>
       <p></p>
-      <div class="dmg_group">＜クリティカル確率＞</div>
+      <div class='dmg_group'>＜魔法加算＞</div>
+      <label title=常時、魔法攻撃力が50アップ><input type='checkbox' class='mag_add' value=50 onChange='atkcalc()'>激情の絆</label>
+      <p></p>
+      <div class='dmg_group'>＜魔法乗算＞</div>
+      <label title=魔法攻撃力を20%アップ><input type='checkbox' class='mag_multi' value=20 onChange='atkcalc()'>マインドアップ</label>
+      <label title=魔法攻撃力を28%アップ><input type='checkbox' class='mag_multi' value=28
+          onChange='atkcalc()'>マインドアップ（強化）</label>
+      <label title=バトル中、魔法攻撃力を5%アップ><input type='checkbox' class='mag_multi' value=5
+          onChange='atkcalc()'>マジックシフト</label>
+      <label title=バトル中、味方全員の魔法攻撃力を5%アップ><input type='checkbox' class='mag_multi' value=5
+          onChange='atkcalc()'>魔攻アップオール</label>
+      <label title=バトル中、味方全員の魔法攻撃力を10%アップ><input type='checkbox' class='mag_multi' value=10
+          onChange='atkcalc()'>魔攻アップオールⅡ</label>
+      <br><label title=HP100%時、魔法攻撃力を10%アップ><input type='checkbox' class='mag_multi' value=10
+          onChange='atkcalc()'>集気法</label>
+      <label title=HP30%以下の時、魔法攻撃力・魔法防御力を30%アップ><input type='checkbox' class='mag_multi' value=30
+          onChange='atkcalc()'>逆襲</label>
+      <label title=HP30%以下の時、魔法攻撃力・魔法防御力を40%アップ><input type='checkbox' class='mag_multi' value=40
+          onChange='atkcalc()'>逆襲Ⅱ</label>
+      <label title=状態異常時、攻撃力・魔法攻撃力を10%アップ><input type='checkbox' class='mag_multi' value=10
+          onChange='atkcalc()'>ディストレス</label>
+      <label title=味方戦闘不能から30秒、魔法攻撃力を20%アップ（効果重複なし）><input type='checkbox' class='mag_multi' value=20
+          onChange='atkcalc()'>ソウルハント</label>
+      <p></p>
+      <div class='dmg_group'>＜魔法ダメージアップ＞</div>
+      <label title=MP100%時、魔法による与ダメージを15%アップ><input type='checkbox' class='dmg_mag' value=15
+          onChange='atkcalc()'>マジックバースト</label>
+      <label title=魔法の与ダメージを5%アップ><input type='checkbox' class='dmg_mag' value=5 onChange='atkcalc()'>リミットブレイク</label>
+      <label title=魔法の与ダメージを25%アップ><input type='checkbox' class='dmg_mag' value=25
+          onChange='atkcalc()'>リミットブレイクⅡ</label>
+      <label title=魔法の与ダメージを35%アップ><input type='checkbox' class='dmg_mag' value=35
+          onChange='atkcalc()'>リミットブレイクⅢ</label>
+      <br><label title=同属性の魔法を続けて使う度に与ダメージ5%アップ（最大30%）><input type='checkbox' class='dmg_mag' value=30
+          onChange='atkcalc()'>エレメントコンボ</label>
+      <label title=同属性の魔法を続けて使う度に与ダメージ10%アップ（最大30%）><input type='checkbox' class='dmg_mag' value=30
+          onChange='atkcalc()'>エレメントコンボⅡ</label>
+      <label title=魔法攻撃時、HP5%を消費、与ダメージを20%アップ><input type='checkbox' class='dmg_mag' value=20
+          onChange='atkcalc()'>ペインマジック</label>
+      <label title=魔法攻撃時、味方全員のHP2%を消費、与ダメージを消費人数×30%アップ><input type='checkbox' class='dmg_mag' value=90
+          onChange='atkcalc()'>ペインマジックオール</label>
+      <label title=魔法攻撃時、味方全員のHP5%を消費、与ダメージを消費人数×40%アップ><input type='checkbox' class='dmg_mag' value=120
+          onChange='atkcalc()'>ペインマジックオールⅡ</label>
+      <p></p>
+      <div class='dmg_group'>＜物理・魔法乗算＞</div>
+      <label title=必殺技使用から30秒、攻撃力・魔法攻撃力を10%アップ（効果重複なし）><input type='checkbox' class='atk_multi mag_multi' value=10
+          onChange='atkcalc()'>活殺自在</label>
+      <label title=状態異常時、攻撃力・魔法攻撃力を10%アップ><input type='checkbox' class='atk_multi mag_multi' value=10
+          onChange='atkcalc()'>ディストレス</label>
+      <p></p>
+      <div class='dmg_group'>＜物理・魔法ダメージアップ＞</div>
+      <label title=ボスへの与ダメージを10%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=10
+          onChange='atkcalc()'>獣の咆哮</label>
+      <label title=ボスへの与ダメージを20%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=20
+          onChange='atkcalc()'>裁定者</label>
+      <label title=ボスへの与ダメージを30%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=30
+          onChange='atkcalc()'>裁定者Ⅱ</label>
+      <label title=HP30%以下の時、与ダメージを15%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=15
+          onChange='atkcalc()'>火事場の馬鹿力</label>
+      <br><label title=自身を狙っていない敵への与ダメージを10%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=10
+          onChange='atkcalc()'>不意打ち</label>
+      <label title=自身を狙っていない敵への与ダメージを15%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=15
+          onChange='atkcalc()'>不意打ちⅡ</label>
+      <label title=自身のレベル未満の敵への、与ダメージを20%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=20
+          onChange='atkcalc()'>アンフェア</label>
+      <label title=自身のレベル未満の敵への、与ダメージを30%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=30
+          onChange='atkcalc()'>アンフェアⅡ</label>
+      <br><label title=HP100%の敵への与ダメージを20%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=20
+          onChange='atkcalc()'>ファーストショット</label>
+      <label title=HP100%の敵への与ダメージを30%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=30
+          onChange='atkcalc()'>ファーストショットⅡ</label>
+      <label title=HP30%以下の敵への与ダメージを30%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=30
+          onChange='atkcalc()'>フィニッシュブロー</label>
+      <label title=HP30%以下の敵への与ダメージを45%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=45
+          onChange='atkcalc()'>フィニッシュブローⅡ</label>
+      <br><label title=弱点属性での与ダメージを15%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=15
+          onChange='atkcalc()'>弱点特攻</label>
+      <label title=弱点属性での与ダメージを25%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=25
+          onChange='atkcalc()'>弱点特攻Ⅱ</label>
+      <label title=弱点属性での与ダメージを35%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=35
+          onChange='atkcalc()'>弱点特攻Ⅲ</label>
+      <label title=味方全員、弱点属性での与ダメージを8%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=8
+          onChange='atkcalc()'>弱点特攻オール</label>
+      <label title=味方全員、弱点属性での与ダメージを12%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=12
+          onChange='atkcalc()'>弱点特攻オールⅡ</label>
+      <br><label title=状態異常の敵への与ダメージを30%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=30
+          onChange='atkcalc()'>状態異常特攻</label>
+      <label title=状態異常の敵への与ダメージを40%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=40
+          onChange='atkcalc()'>状態異常特攻Ⅱ</label>
+      <label title=状態異常の敵への与ダメージを60%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=60
+          onChange='atkcalc()'>状態異常特攻Ⅲ</label>
+      <label title=ボス以外への与ダメージを20%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=20
+          onChange='atkcalc()'>強者</label>
+      <label title=ボス以外への与ダメージを30%アップ><input type='checkbox' class='dmg_atk dmg_mag' value=30
+          onChange='atkcalc()'>強者Ⅱ</label>
+      <p></p>
+      <div class='dmg_group'>＜クリティカル確率＞</div>
       <label title=クリティカル発生確率を25%アップ><input type='checkbox' class='crit_add' value=25 onChange='atkcalc()'>集中</label>
       <label title=クリティカル発生確率を40%アップ><input type='checkbox' class='crit_add' value=40 onChange='atkcalc()'>集中Ⅱ</label>
       <label title=クリティカル発生確率を10%アップ><input type='checkbox' class='crit_add' value=10
@@ -511,9 +580,8 @@
           onChange='atkcalc()'>クライシスヒット</label>
       <label title=クリティカル発生確率を20%（暫定）アップ><input type='checkbox' class='crit_add' value=20
           onChange='atkcalc()'>エナジーボール</label>
-
       <p></p>
-      <div class="dmg_group">＜クリティカル倍率＞</div>
+      <div class='dmg_group'>＜クリティカル倍率＞</div>
       <label title=クリティカル発生時、与ダメージを30%アップ><input type='checkbox' class='crit_multi' value=30
           onChange='atkcalc()'>一閃</label>
       <label title=クリティカル発生時、与ダメージを40%アップ><input type='checkbox' class='crit_multi' value=40
@@ -522,15 +590,6 @@
           onChange='atkcalc()'>クリティカルダメージ</label>
       <label title=クリティカル発生時、与ダメージを40%アップ><input type='checkbox' class='crit_multi' value=40
           onChange='atkcalc()'>クリティカルダメージⅡ</label>
-
-      <p></p>
-      <label>物理攻撃力 <input type="number" id="atk" readonly></label><br>
-      <label>魔法攻撃力 <input type="number" id="mag" readonly></label><br>
-      <label>クリティカル確率 <input type="number" id="crit_prob" readonly>%</label><br>
-      <label>クリティカル倍率 <input type="number" id="crit_magn" readonly>倍</label>
-      <p></p>
-      <label>物理期待値 <input type="number" id="atkexpected" readonly></label>
-      <label>魔法期待値 <input type="number" id="magexpected" readonly></label>
     </div>
     <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">データ集</label>
     <div class="tab-content">
@@ -546,6 +605,8 @@
     </div>
   </div>
 
+  <p>連絡先：<a href="https://twitter.com/e_dragoso">制作者のtwitter</a>
+  </p>
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
     <br>当該コンテンツの転載・配布は禁止いたします。
     <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
