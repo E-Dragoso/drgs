@@ -115,7 +115,7 @@ input {
   text-align: center;
 }
 /* フッタ表示固定 */
-footer {
+.footer {
   position: fixed;
   bottom: 0.5em;
   left: auto;

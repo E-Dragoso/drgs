@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   table = document.getElementById("sumexptbl");
   for (let i = 0; i < list_exp.length; i++) {
     // 行の追加
-    let tr = table.insertRow(table.length);
+    let tr = table.insertRow();
     tr.id = "tr_" + i;
 
     // 行内の項目追加
@@ -206,8 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (i == 0) {
       principal.innerHTML = "Lv :1<br>tNL:30";
       fellow1.innerHTML = "Lv :4<br>tNL:463";
-      fellow2.innerHTML = "-";
+      fellow2.innerHTML = "<div style='background-color : #a9a9a9;'>Lv :6<br>tNL:1296";
       sumlucre.innerHTML = 4;
+      sumexpfel1.innerHTML = 359;
+      sumexpfel2.innerHTML = 1924;
     }
     // フルメタルハガーとゴーヴァは行番号を保持
     if (object.textContent == "フルメタルハガー") {
@@ -246,11 +248,8 @@ function calc(elementid) {
     // 直上の値をコピー
     let sumlucre = table.rows[i - 1].cells[index_sumlucre].textContent;
     let exppri = Number(table.rows[i - 1].cells[index_sumexppri].textContent);
-    // 仲間の経験値を計算
-    // 仲間１は加入時点でレベル4なので経験値補正
-    let expfel1 = exppri + Number(359);
-    // 仲間２は加入時点でレベル6＆ジャド以前の戦闘をしていないため経験値補正
-    let expfel2 = exppri + Number(1924) - Number(table.rows[pierrerow].cells[index_sumexppri].textContent);
+    let expfel1 = Number(table.rows[i - 1].cells[index_sumexpfel1].textContent);
+    let expfel2 = Number(table.rows[i - 1].cells[index_sumexpfel2].textContent);
 
     // 先頭行がチェック状態なら加算
     if (table.rows[i].cells[index_target].firstChild.checked) {
@@ -263,11 +262,14 @@ function calc(elementid) {
       }
       // 経験値再計算
       exppri = exppri + Number(table.rows[i].cells[index_getexp].firstChild.value);
-      expfel1 = exppri + Number(359);
-      expfel2 = exppri + Number(1924) - Number(table.rows[pierrerow].cells[index_sumexppri].textContent);
+      expfel1 = expfel1 + Number(table.rows[i].cells[index_getexp].firstChild.value);
+      // 仲間2はジャド以降から計算
+      if (i > pierrerow) {
+        expfel2 = expfel2 + Number(table.rows[i].cells[index_getexp].firstChild.value);
+      }
 
       // ゴーヴァの生贄分を減算
-      if (i >= captainrow) {
+      if (i == captainrow) {
         if (document.getElementById("sacrifice_part_1").checked) {
           exppri = exppri - Number(table.rows[captainrow].cells[index_getexp].firstChild.value);
         } else if (document.getElementById("sacrifice_part_2").checked) {
@@ -320,23 +322,24 @@ function levelcalc() {
   // 2行目から計算
   for (i = 2; i < table.rows.length; i++) {
     for (j = 0; j < 3; j++) {
-      // 仲間２はジャドまで集計しない
-      if (i <= pierrerow && j == 2) {
-        table.rows[i].cells[index_principal + j].innerHTML = "-";
-      } else {
-        let exp = table.rows[i].cells[index_sumexppri + j].textContent;
-        let k = 0;
-        while (exp >= Number(list_level[k])) {
-          let lv = "Lv :" + Number(k + 1);
-          let tnl = Number(list_level[k + 1]) - exp;
-          table.rows[i].cells[index_principal + j].innerHTML = lv + "<br>tNL:" + tnl;
-          k++;
-        }
+      let exp = table.rows[i].cells[index_sumexppri + j].textContent;
+      let k = 0;
+      while (exp >= Number(list_level[k])) {
+        let lv = "Lv :" + Number(k + 1);
+        let tnl = Number(list_level[k + 1]) - exp;
+        table.rows[i].cells[index_principal + j].innerHTML = lv + "<br>tNL:" + tnl;
+        k++;
       }
       // レベルアップ時はセルの色を変更
       if (table.rows[i].cells[index_principal + j].textContent.substring(0, 6)
         != table.rows[i - 1].cells[index_principal + j].textContent.substring(0, 6)) {
         table.rows[i].cells[index_principal + j].style.backgroundColor = "#ffff00";
+      } else {
+        table.rows[i].cells[index_principal + j].style.backgroundColor = "#ffffff";
+      }
+      // ジャドまでは仲間2はグレー表示
+      if (i <= pierrerow) {
+        table.rows[i].cells[index_fellow2].style.backgroundColor = "#a9a9a9";
       }
     }
   }
