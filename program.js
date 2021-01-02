@@ -28,7 +28,7 @@ const list_level = [0, 30, 123, 359, 822, 1924, 3220, 4712, 6406, 8307, 10421, 1
 
 // ダメージ計算部
 let character = document.getElementById("character");
-let baseatk;
+let base_atk;
 const list_classatk = [
   ['161', '168', '187', '202', '215', '221', '240', '249', '275'],
   ['123', '129', '129', '151', '144', '151', '157', '166', '172'],
@@ -37,7 +37,7 @@ const list_classatk = [
   ['148', '168', '148', '189', '202', '183', '215', '230', '230'],
   ['148', '161', '174', '183', '183', '228', '208', '211', '255']
 ];
-let basemag;
+let base_mag;
 const list_classmag = [
   ['116', '123', '129', '144', '151', '163', '151', '172', '178'],
   ['174', '200', '187', '247', '240', '228', '253', '288', '288'],
@@ -419,10 +419,10 @@ function classcheck() {
     default:
   }
   // クラスのステータスを基礎値に格納
-  let baseatkrow = list_classatk[chara.selectedIndex];
-  baseatk = baseatkrow[selectedclass];
-  let basemagrow = list_classmag[chara.selectedIndex];
-  basemag = basemagrow[selectedclass];
+  let base_atkrow = list_classatk[chara.selectedIndex];
+  base_atk = base_atkrow[selectedclass];
+  let base_magrow = list_classmag[chara.selectedIndex];
+  base_mag = base_magrow[selectedclass];
 
   // 装備の数値を加算
   weapon();
@@ -559,8 +559,8 @@ function atkcalc() {
   }
 
   // 計算結果を各コントロールに反映
-  atk.value = Math.floor((Number(baseatk) + Number(atk_add)) * Number(atk_multi / 100));
-  mag.value = Math.floor((Number(basemag) + Number(mag_add)) * Number(mag_multi / 100));
+  atk.value = Math.floor((Number(base_atk) + Number(atk_add)) * Number(atk_multi / 100));
+  mag.value = Math.floor((Number(base_mag) + Number(mag_add)) * Number(mag_multi / 100));
   crit_prob.value = crit_add;
   crit_magn.value = Number(crit_multi / 100);
 
@@ -568,16 +568,17 @@ function atkcalc() {
   // ダメージ倍率を乗算値に変換
   let dmg_atk_calc = dmg_atk / 100;
   let dmg_mag_calc = dmg_mag / 100;
+  // 物理攻撃、魔法攻撃にダメージ倍率を乗算
+  let atk_result = atk.value * dmg_atk_calc;
+  let mag_result = mag.value * dmg_mag_calc;
+
   // クリティカル部分の計算
   // クリティカル確率から非クリティカル確率を計算
-  let not_crit_prob = 100 - Number(crit_prob.value);
-  // 非クリティカル時のダメージとクリティカル時のダメージで期待値を計算
-  let crit_prob_calc = Number(crit_prob.value) / 100;
-  let crit_calc = crit_magn.value * crit_prob_calc;
-
-  let atk_calc = (Number(atk.value) * (not_crit_prob / 100) + Number(atk.value) * dmg_atk_calc * Number(crit_calc));
-  let mag_calc = (Number(mag.value) * (not_crit_prob / 100) + Number(mag.value) * dmg_mag_calc * Number(crit_calc));
-  // 小数点第二まで求める
-  atkexpected.value = Math.floor(atk_calc * 100) / 100;
-  magexpected.value = Math.floor(mag_calc * 100) / 100;
+  let not_crit_prob = 100 - Number(crit_add);
+  // 求めたクリ/非クリ率からクリティカル込みの期待値を計算
+  let atk_calc = atk_result * not_crit_prob + atk_result * crit_magn.value * crit_add;
+  let mag_calc = mag_result * not_crit_prob + mag_result * crit_magn.value * crit_add;
+  // 画面上は小数点第二まで表示
+  atkexpected.value = Math.floor(atk_calc) / 100;
+  magexpected.value = Math.floor(mag_calc) / 100;
 }
