@@ -604,6 +604,15 @@
           onChange='atkcalc()'>クリティカルダメージ</label>
       <label title=クリティカル発生時、与ダメージを40%アップ><input type='checkbox' class='crit_multi' value=40
           onChange='atkcalc()'>クリティカルダメージⅡ</label>
+      <p></p>
+      <div class='dmg_group'>画面端の項目の挙動がおかしいので唐突にダメージ計算式の雑な説明</div>
+      <p>
+        キャラ、クラス、武器攻撃力、加算タイプをベースに、<br>
+        乗算タイプ同士を合計してから乗算、<br>
+        求めた数字からクリティカル時と非クリティカル時のダメージを計算し、<br>
+        それぞれの発生確率を掛けて期待値を算出！
+      </p>
+
     </div>
     <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">データ集</label>
     <div class="tab-content">

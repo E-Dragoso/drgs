@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 行の追加
     let tr = table.insertRow();
     tr.id = "tr_" + i;
+    tr.style.backgroundColor = "#ffffff";
 
     // 行内の項目追加
     // 対象
