@@ -14,15 +14,15 @@
 
 <body>
 
-  <div id="tytle">聖剣伝説3 TRIALS of MANA RTA向けツール集</div>
+  <div id="tytle">聖剣伝説3 TRIALS of MANA 攻略ツール集</div>
 
-  <div class="tab-wrap">
-    <input id="TAB-00" type="radio" name="TAB" class="tab-switch" checked="checked" />
-    <label class="tab-label" for="TAB-00">概要</label>
-    <div class="tab-content">
+  <div class="area">
+    <input type="radio" name="tab_name" id="tab1" checked>
+    <label class="tab_class" for="tab1">概要</label>
+    <div class="content_class">
       <p id="voyage">んふっふっ、このサイトは何かと聞きたいのだろう？
-        <br>聖剣3ToMのRTAに関する情報はまとまっていないから、
-        <br>新しく始めようとすると何かとふべん。だが、しかーし！
+        <br>聖剣3ToMの内部データはまとまっていないから、
+        <br>RTAをしようとすると何かとふべん。だが、しかーし！
         <br>ワシが作った『ウルトラゴージャスターボツール２ごう』
         <br>ならすぐにでも必要なデータが手に入る！
         <br>というわけで、ワシのせつめい、おわり！
@@ -37,27 +37,21 @@
       <p>技術参考：
         <br><a href="https://developer.mozilla.org/ja/">MDN web docs</a>
         <br><a href="https://uhyohyo.net/javascript/">uhyohyo.net</a>
-        <br><a href="https://web.monogusa-note.com/flexible-tabs-only-css">ものぐさWEBノート</a>
+        <br><a href="https://style.potepan.com/articles/21437.html">働くエンジニアマガジン「ポテパンスタイル」</a>
       </p>
 
       <p>更新履歴：
         <br>2020/12/30 公開
-        <br>随時バグ修正中
+        <br>随時バグ修正＆機能拡張中
       </p>
 
       <p>連絡先：
         <br><a href="https://twitter.com/e_dragoso">制作者のtwitter</a>
       </p>
-
-      <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
-        <br>当該コンテンツの転載・配布は禁止いたします。
-        <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
-      </p>
-
     </div>
-    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" /><label class="tab-label"
-      for="TAB-01">チャート皮算用</label>
-    <div class="tab-content">
+    <input type="radio" name="tab_name" id="tab2">
+    <label class="tab_class" for="tab2">チャート皮算用</label>
+    <div class="content_class">
       <p>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。</p>
       <table id="sumexptbl">
         <thead>
@@ -79,11 +73,6 @@
           </tr>
         </thead>
       </table>
-      <div>
-        <p>
-          ジェシカちゃん可愛い
-        </p>
-      </div>
       <div class="footer">
         <div>
           <label for="zakocheckbox">
@@ -94,16 +83,16 @@
             ルク一括チェック</label>
         </div>
         <div>
-          幽霊船で生贄にされるのは
+          幽霊船の生贄は
           <input type="radio" name="sacrifice" id="sacrifice_part_1" onChange="calc(this.id)">主人公
           <input type="radio" name="sacrifice" id="sacrifice_part_2" onChange="calc(this.id)">仲間１
           <input type="radio" name="sacrifice" id="sacrifice_part_3" onChange="calc(this.id)" checked>仲間２
         </div>
       </div>
     </div>
-    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label"
-      for="TAB-02">攻撃力シミュレータ</label>
-    <div class="tab-content">
+    <input type="radio" name="tab_name" id="tab3">
+    <label class="tab_class" for="tab3">攻撃力シミュレータ</label>
+    <div class="content_class">
       <div class="dmgcalchead">
         <div>
           <label>キャラ
@@ -604,18 +593,10 @@
           onChange='atkcalc()'>クリティカルダメージ</label>
       <label title=クリティカル発生時、与ダメージを40%アップ><input type='checkbox' class='crit_multi' value=40
           onChange='atkcalc()'>クリティカルダメージⅡ</label>
-      <p></p>
-      <div class='dmg_group'>画面端の項目の挙動がおかしいので唐突にダメージ計算式の雑な説明</div>
-      <p>
-        キャラ、クラス、武器攻撃力、加算タイプをベースに、<br>
-        乗算タイプ同士を合計してから乗算、<br>
-        求めた数字からクリティカル時と非クリティカル時のダメージを計算し、<br>
-        それぞれの発生確率を掛けて期待値を算出！
-      </p>
-
     </div>
-    <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">データ集</label>
-    <div class="tab-content">
+    <input type="radio" name="tab_name" id="tab4">
+    <label class="tab_class" for="tab4">調査物とか</label>
+    <div class="content_class">
       <div>聖剣伝説3 TRIALS of MANA のダメージに関する調査</div>
       <p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Gb4cA4UCw" frameborder="0"
@@ -628,6 +609,11 @@
       </p>
     </div>
   </div>
+
+  <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
+    <br>当該コンテンツの転載・配布は禁止いたします。
+    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
+  </p>
 
 </body>
 
