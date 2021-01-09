@@ -30,7 +30,6 @@
   flex-wrap: wrap;
   display: flex;
 }
- 
 .tab_class {
   width: calc(99%/4);
   height: 2.5em;
@@ -44,21 +43,17 @@
   margin: 1px;
   order: -1;
 }
- 
 input[name="tab_name"] {
   display: none;
 }
- 
 input:checked + .tab_class {
   background-color: deepskyblue;
   color: aliceblue;
 }
- 
 .content_class {
   display: none;
   width: 100%;
 }
- 
 input:checked + .tab_class + .content_class {
   display: block;
   padding: 0.5em;
@@ -88,7 +83,6 @@ th,td {
   vertical-align: middle;
   text-align: center;
   align-content: center;
-  font-family: 'PixelMplus10-Regular';
 }
 th {
   background:#ffccff;
@@ -127,12 +121,18 @@ input {
 .dmgcalc {
   width:3em;
   text-align: center;
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
 }
 .dmgcalcres {
   font-size: 1.1em;
   width:5em;
   font-weight: bold;
   text-align: center;
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
 }
 
 /* グループ分け */

@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bonus.firstChild.hidden = true;
     // 取得exp
     let getexp = tr.insertCell();
-    getexp.innerHTML = '<input type="number" class="num" id="getexp_' + i + '" value=' + list_exp[i] + ' min=0 max=99999 onChange="calc(this.id)" disabled>';
+    getexp.innerHTML = '<input type="number" class="num" id="getexp_' + i + '" value=' + list_exp[i] + ' min=0 max=99999 step=100 onChange="calc(this.id)" disabled>';
     getexp.firstChild.hidden = true;
     // 主人公
     let principal = tr.insertCell();
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fellow2.id = "fellow2_" + i;
     // 取得ルク
     let getlucre = tr.insertCell();
-    getlucre.innerHTML = '<input type="number" class="num" id="getlucre_' + i + '" value=' + list_lucre[i] + ' min=0 max=99999 onChange="calc(this.id)" disabled>';
+    getlucre.innerHTML = '<input type="number" class="num" id="getlucre_' + i + '" value=' + list_lucre[i] + ' min=0 max=99999 step=10 onChange="calc(this.id)" disabled>';
     // ルク計
     let sumlucre = tr.insertCell();
     // 経験値
