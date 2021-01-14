@@ -65,6 +65,8 @@ input:checked + .tab_class + .content_class {
 #voyage {
   font-size: 1.2em;
   width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   color: #ffffff;
   border: double;
   background: darkgreen;
@@ -86,6 +88,8 @@ th,td {
 }
 th {
   background:#ffccff;
+  position: sticky;
+  top: 0em;
 }
 input {
   text-align: center;
@@ -112,11 +116,10 @@ input {
 .dmgcalchead {
   position: sticky;
   top: 0;
-  background:#ffccff;
+  background: lightgoldenrodyellow;
   padding: 0.5em;
   border: solid 1px;
 }
-
 /* 数値項目 */
 .dmgcalc {
   width:3em;
@@ -134,8 +137,11 @@ input {
   margin: 0;
   -moz-appearance:textfield;
 }
-
 /* グループ分け */
 .dmg_group{
   background: lightgreen;
+}
+/* ラベル系表示 */
+label {
+  white-space: nowrap;
 }
