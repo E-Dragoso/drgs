@@ -603,7 +603,7 @@ function atkcalc() {
   }
 
   // クリティカル倍率タイプを計算
-  let crit_multi = 120;
+  let crit_multi = 100;
   let chk_crit_multi = document.getElementsByClassName('crit_multi');
   for (i = 0; i < chk_crit_multi.length; i++) {
     if (chk_crit_multi[i].checked == true) {
@@ -615,13 +615,14 @@ function atkcalc() {
   atk.value = Math.floor((Number(base_atk) + Number(atk_add)) * Number(atk_multi / 100));
   mag.value = Math.floor((Number(base_mag) + Number(mag_add)) * Number(mag_multi / 100));
   crit_prob.value = crit_add;
-  crit_magn.value = Number(crit_multi / 100);
+  crit_magn.value = Number(1.2 * crit_multi / 100);
 
   // 最終期待値の計算
   // ダメージ倍率を乗算値に変換
   let dmg_atk_calc = dmg_atk / 100;
   let dmg_mag_calc = dmg_mag / 100;
   let dmg_cs_calc = dmg_cs / 100;
+
   // 物理攻撃、魔法攻撃にダメージ倍率を乗算
   let atk_result = atk.value * dmg_atk_calc;
   let mag_result = mag.value * dmg_mag_calc;
@@ -634,8 +635,25 @@ function atkcalc() {
   let atk_calc = atk_result * not_crit_prob + atk_result * crit_magn.value * crit_add;
   let mag_calc = mag_result * not_crit_prob + mag_result * crit_magn.value * crit_add;
   let cs_calc = cs_result * not_crit_prob + cs_result * crit_magn.value * crit_add;
+
+  // 防御倍率の計算
+  let pro_down = 0;
+  let chk_pro_down = document.getElementsByClassName('pro_down');
+  for (i = 0; i < chk_pro_down.length; i++) {
+    if (chk_pro_down[i].checked == true) {
+      pro_down += Number(chk_pro_down[i].value);
+    }
+  }
+  let min_down = 0;
+  let chk_min_down = document.getElementsByClassName('min_down');
+  for (i = 0; i < chk_min_down.length; i++) {
+    if (chk_min_down[i].checked == true) {
+      min_down += Number(chk_min_down[i].value);
+    }
+  }
+
   // 画面上は小数点第二まで表示
-  atkexpected.value = Math.floor(atk_calc) / 100;
-  magexpected.value = Math.floor(mag_calc) / 100;
-  csexpected.value = Math.floor(cs_calc) / 100;
+  atkexpected.value = Math.floor(atk_calc / (100 - Number(pro_down)));
+  magexpected.value = Math.floor(mag_calc / (100 - Number(min_down)));
+  csexpected.value = Math.floor(cs_calc / (100 - Number(pro_down)));
 }
