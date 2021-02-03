@@ -57,7 +57,19 @@
     <input type="radio" name="tab_name" id="tab2">
     <label class="tab_class" for="tab2">チャート皮算用</label>
     <div class="content_class">
-      <div>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。</div>
+      <input id="description_chart" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="description_chart">使い方</label>
+      <div class="description_content">
+        <p>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。
+          <br>「対象」にチェックされている項目が集計されます。
+          <br>・ルクアイコン　　：フィールドで拾えるルクを表します。
+          <br>・ラビアイコン　　：雑魚敵との戦闘を表します。経験値にはボーナス値を加算できます。オレンジ背景は強制戦闘ですが、一部はバグで回避できたりします。
+          <br>・ゴーヴァアイコン：ボス敵との戦闘を表します。経験値にはボーナス値を加算できます。基本的には強制ですが、一部はバグで回避できたりします。
+          <br>・ニキータアイコン：買物や船の移動など、ルクを消費する場所です。取得ルクに入力した値がルク総額から引かれます。
+          <br>・育成　　　　　　：レベル上げのための雑魚狩りを行う際に使用します。取得exp、取得ルクに任意の値を入力できます。
+        </p>
+        データミス等お気付きの事がありましたらご連絡ください。
+      </div>
       <p></p>
       <table id="sumexptbl">
         <thead>
@@ -99,6 +111,19 @@
     <input type="radio" name="tab_name" id="tab3">
     <label class="tab_class" for="tab3">攻撃力シミュレータ</label>
     <div class="content_class">
+      <input id="description_calc" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="description_calc">使い方</label>
+      <div class="description_content">
+        <p>キャラ、クラス、装備、アビリティを組み合わせて攻撃力をシミュレートできます。
+          <br>ステータスはレベル99で育成ポイントを全て振り分けた状態のものです。
+          <br>覇竜の加護を発動しながら火事場を発動するなど、あり得ない組み合わせも選択できます。いずれ修正予定です。
+          <br>光クラスと闇クラスのクラスアビリティを同時に選択できますが仕様です。
+          <br>クラスによって覚える固有アビリティが異なりますがすべて表示されるのも仕様です。
+          <br>（分け過ぎるとそれはそれで使いにくかったので…手抜きじゃないよ）
+          <br>
+        </p>
+        レベルや育成ポイント振り分け状態の選択もできるようにしたいですが現状データがないため未対応…。データをお持ちの方は連絡ください。
+      </div>
       <div class="dmgcalchead">
         <div>
           <label>キャラ

@@ -60,6 +60,32 @@ input:checked + .tab_class + .content_class {
   background: #ebf4f4;
 }
 
+/* 説明用 */
+.description {
+  background: #00008b;
+  color: #fff;
+  display: block;
+  height: 1.5em;
+  padding-left: 1em;
+  margin: 0;
+}
+.description_content {
+  background: #006400;
+  color: #fff;
+  height: 0;
+  opacity: 0;
+  transition: .5s;
+  visibility: hidden;
+}
+.description_check:checked + .description + .description_content {
+  height: 15em;
+  padding-top: 0.1em;
+  padding-left: 2em;
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
 /* 概要部 */
 /* ワシの説明 */
 #voyage {
@@ -69,7 +95,7 @@ input:checked + .tab_class + .content_class {
   margin-left: auto;
   color: #ffffff;
   border: double;
-  background: darkgreen;
+  background: #006400;
   padding: 0.5em;
 }
 
