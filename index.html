@@ -46,8 +46,8 @@
       </p>
 
       <p>更新履歴：
+        <br>2021/02/06 RTA向け資料の公開
         <br>2020/12/30 公開
-        <br>随時バグ修正＆機能拡張中
       </p>
 
       <p>連絡先：
@@ -58,17 +58,17 @@
     <label class="tab_class" for="tab2">チャート皮算用</label>
     <div class="content_class">
       <input id="description_chart" class="description_check" style="display: none;" type="checkbox">
-      <label class="description" for="description_chart">使い方</label>
+      <label class="description" for="description_chart">！使い方</label>
       <div class="description_content">
-        <p>滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。
-          <br>「対象」にチェックされている項目が集計されます。
-          <br>・ルクアイコン　　：フィールドで拾えるルクを表します。
-          <br>・ラビアイコン　　：雑魚敵との戦闘を表します。経験値にはボーナス値を加算できます。オレンジ背景は強制戦闘ですが、一部はバグで回避できたりします。
-          <br>・ゴーヴァアイコン：ボス敵との戦闘を表します。経験値にはボーナス値を加算できます。基本的には強制ですが、一部はバグで回避できたりします。
-          <br>・ニキータアイコン：買物や船の移動など、ルクを消費する場所です。取得ルクに入力した値がルク総額から引かれます。
-          <br>・育成　　　　　　：レベル上げのための雑魚狩りを行う際に使用します。取得exp、取得ルクに任意の値を入力できます。
-        </p>
-        データミス等お気付きの事がありましたらご連絡ください。
+        滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。
+        <br>「対象」にチェックされている項目が集計されます。
+        <br>・ルクアイコン　　：フィールドで拾えるルクを表します。
+        <br>・ラビアイコン　　：雑魚敵との戦闘を表します。経験値にはボーナス値を加算できます。オレンジ背景は強制戦闘ですが、一部はバグで回避できたりします。
+        <br>・ゴーヴァアイコン：ボス敵との戦闘を表します。経験値にはボーナス値を加算できます。基本的には強制ですが、一部はバグで回避できたりします。
+        <br>・ニキータアイコン：買物や船の移動など、ルクを消費する場所です。取得ルクに入力した値がルク総額から引かれます。
+        <br>・育成　　　　　　：レベル上げのための雑魚狩りを行う際に使用します。取得exp、取得ルクに任意の値を入力できます。
+        <br>
+        <br>データミス等お気付きの事がありましたらご連絡ください。
       </div>
       <p></p>
       <table id="sumexptbl">
@@ -112,17 +112,16 @@
     <label class="tab_class" for="tab3">攻撃力シミュレータ</label>
     <div class="content_class">
       <input id="description_calc" class="description_check" style="display: none;" type="checkbox">
-      <label class="description" for="description_calc">使い方</label>
+      <label class="description" for="description_calc">！使い方</label>
       <div class="description_content">
-        <p>キャラ、クラス、装備、アビリティを組み合わせて攻撃力をシミュレートできます。
-          <br>ステータスはレベル99で育成ポイントを全て振り分けた状態のものです。
-          <br>覇竜の加護を発動しながら火事場を発動するなど、あり得ない組み合わせも選択できます。いずれ修正予定です。
-          <br>光クラスと闇クラスのクラスアビリティを同時に選択できますが仕様です。
-          <br>クラスによって覚える固有アビリティが異なりますがすべて表示されるのも仕様です。
-          <br>（分け過ぎるとそれはそれで使いにくかったので…手抜きじゃないよ）
-          <br>
-        </p>
-        レベルや育成ポイント振り分け状態の選択もできるようにしたいですが現状データがないため未対応…。データをお持ちの方は連絡ください。
+        キャラ、クラス、装備、アビリティを組み合わせて攻撃力をシミュレートできます。
+        <br>ステータスはレベル99で育成ポイントを全て振り分けた状態のものです。
+        <br>覇竜の加護を発動しながら火事場を発動するなど、あり得ない組み合わせも選択できます。いずれ修正予定です。
+        <br>光クラスと闇クラスのクラスアビリティを同時に選択できます。これは仕様です。
+        <br>クラスによって覚えないアビリティ含めすべて表示されるのも仕様です。
+        <br>（分け過ぎるとそれはそれで使いにくかったので…手抜きじゃないよ）
+        <br>
+        <br>選択したレベルでの強さを反映する機能も付けたいですが現状レベルごとのステータスのデータが取れていないため未対応…。
       </div>
       <div class="dmgcalchead">
         <div>
@@ -780,18 +779,487 @@
 
     </div>
     <input type="radio" name="tab_name" id="tab4">
-    <label class="tab_class" for="tab4">調査物とか</label>
+    <label class="tab_class" for="tab4">RTA向け資料</label>
     <div class="content_class">
-      <div>聖剣伝説3 TRIALS of MANA のダメージに関する調査</div>
-      <p>
+      このゲームのRTAで使えそうな知識を置いておきます。
+      <br>レギュレーションなどは
+      <a href="https://www.speedrun.com" target="_blank" rel="noopener noreferrer">
+        speedrun.com</a>（SRC）の
+      <a href="https://www.speedrun.com/trials_of_mana" target="_blank" rel="noopener noreferrer">
+        Trials of Mana</a>に記載されているものに準拠します。
+      <br>海外サイトのため原文は全て英語ですが、ここでは日本語で記載および補足説明をします。
+      <br>一般的な攻略情報は<a href="https://i-njoy.net/sd3tom_top.html" target="_blank"
+        rel="noopener noreferrer">nJOY</a>さんのところで確認しましょう。SFC版から攻略されている信頼のサイトです。
+      <br><a href="https://store.jp.square-enix.com/item/9784757566347.html" target="_blank"
+        rel="noopener noreferrer">公式攻略本</a>もとても便利です。やり込むなら買って損はないです。
+      <br>
+      <br>
+      <input id="rule" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="rule">・ルールについて</label>
+      <div class="description_content">
+        以下にSRCに記載されているルールの日本語訳と解説を記載します。
+        <br>ルールには明記されていませんが外部ツールによるゲームデータの改ざんは当然禁止です。
+        <br>・RTA計測
+        <br>　ゲーム内時間ではなく、実際にクリアにかかった時間を計測します。
+        <br>・PTメンバーの最終決定でタイマーをスタート
+        <br>　強くてニューゲーム時は「レベルをリセットしますか？」の決定時になります。
+        <br>・ラスボス撃破後の暗転でタイマーストップ
+        <br>・ラビのアクセサリは早期購入特典のため使用禁止
+        <br>・どのラスボスを倒したかを記載する
+        <br>　ラスボスの記載は必要ですが、記録はラスボスによらず同一集計になっています。
+        <br>・PS4を使用する場合は通常版かProか、およびSSDを使用しているかを記載する
+      </div>
+      <input id="category" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="category">・カテゴリについて</label>
+      <div class="description_content">
+        現在のところニューゲーム用のany%とGlitchless、強くてニューゲーム用のNew Game+とNG+ Glitchlessの4つが存在しています。
+        <input id="any" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="any">・any%</label>
+        <div class="sub_description_content">
+          バグ技を含めたあらゆるテクニックを駆使してクリアを目指すカテゴリです。
+          <br>元々はアイテムの種から引いた力の水などのステータス強化アイテムをバグ技で無限に増やして攻略するカテゴリでしたが、
+          <br>2020年11月のアップデート（V1.1.1）により水を使ったステータス強化に上限が設けられました。
+          <br>そのため現時点では壁抜けなど一部のバグ利用に留まり、Glitchlessと大きな差は無くなっています。
+          <br>2021年2月時点での1位の記録（アレルさんの2h17m23s）は水バグ修正前のもので、現バージョンでは達成不可能です。
+          <br>尚アレルさん本人によりV1.1.1環境でのWR（2h36m11s）が達成されています。
+          <br>有志によるダウンパッチ手順が公開されている（<a href="https://www.speedrun.com/trials_of_mana/thread/t974c" target="_blank"
+            rel="noopener noreferrer">リンク</a>）ため現在でも水バグは可能です。
+          <br>1つだけ禁止されているバグ技がありますが、現バージョンでは修正され使用不可のためダウンパッチしない限り考慮不要です。
+        </div>
+        <input id="Glitchless" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="Glitchless">・Glitchless</label>
+        <div class="sub_description_content">
+          現状最大のプレイヤー数を擁するカテゴリです。
+          <br>殆どのバグ技の利用が禁止されていますが、禁止リストに記載の無いものは使えたりします。（詳細は後述）
+          <br>一般的な攻略チャートとしては以下の2つがあります。
+          <br>・途中でレベル上げを行い、ツェンカー撃破直後にクラスチェンジを行う通称前CC
+          <br>・最小限の戦闘で進み、ローラント解放後にクラスチェンジを行う通称後CC
+          <br>前CCは安定する代わりに記録を狙う場合は稼ぎの遅れを取り戻せるだけの高度な技術が必要になります。
+          <br>後CCは前CCと比べ低レベルでの進行が求められるためボス戦の負担が大きいですが、タイムは出しやすいです。
+          <br>現在SRC上の最速記録は後CCですが、私が確認した最速記録は前CCのものでした。
+          <br>タイム上は両者に明確な優劣はないため、やりやすい方で練習しましょう。
+        </div>
+        <input id="New Game+" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="New Game+">・New Game+</label>
+        <div class="sub_description_content">
+          any%の強くてニューゲーム版です。
+          <br>本サイトの攻撃力シミュレータはこのカテゴリを詰めるために作られました。
+          <br>理論上最速タイムが狙えるカテゴリですが、ごく最近追加されたカテゴリな事もあってか現状走者は1名のみです。
+        </div>
+        <input id="NG+ Glitchless" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="NG+ Glitchless">・NG+ Glitchless</label>
+        <div class="sub_description_content">
+          Glitchlessの強くてニューゲーム版です。
+          <br>New Game+と比べるとまだ走者が多いですが、こちらもあまり人気がありません。
+          <br>RTAでノーフューチャーに挑めるのは上記のNew Game+とこのNG+ Glitchlessのみですが、
+          <br>走者が1名（2名？）しかいないため腕自慢のプレイヤーの参戦が期待されています。
+        </div>
+      </div>
+      <input id="Platform" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Platform">・プラットフォームについて</label>
+      <div class="description_content">
+        PC(Steam)、PS4、Switchのいずれでも行えます。集計はプラットフォーム毎です。
+        <input id="Steam" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="Steam">・PC(Steam)</label>
+        <div class="sub_description_content">
+          最速のロード時間、選択可能なフレームレート、機材なしで録画や配信が可能と最も恵まれた条件でRTAが可能なため一番人気があります。
+          <br>120fpsでプレイすると画面描画だけではなく、操作性も大きく向上します。
+          <br>特にany%では120fps動作時のみで実行可能なバグが存在するため事実上PC専用カテゴリになっていたりします。
+          <br>ただし120fpsでのプレイにはそれなりのスペックを要求されるほか、モニタが古いとリフレッシュレートが対応していない場合があります。
+          <br>スペックが足りないとフレームレートが落ちてしまい、操作感が変わってしまうため練習するうえでも大きなハンデになります。
+          <br>Steamの機能でfpsを画面に表示させることができる（Steam→設定→ゲーム中）ため、プレイ中に自分で確認してみるのも手です。
+          <br>平均して100fpsを切ってしまう場合、解像度を妥協するか、Glitchlessなら60fps設定にするのも手です。
+          <br>SRCのGlitchlessで最速記録を持っているしかさんはPCスペックを公開している（
+          <a href="https://www.youtube.com/channel/UCuunibD4mKcU62ZEQTCrQiQ/about" target="_blank"
+            rel="noopener noreferrer">リンク</a>）ため、スペックの参考になるでしょう。
+          <br>但しこれは配信を考えるとギリギリのスペックです。上位勢のほとんどは配信せず録画オンリーなのはこれが理由と思われます。
+          <br>私もほぼ同等のスペックのPCを使っていますが、一部のマップでは90fps程度まで落ち込むためany%では妥協しているポイントがあります。
+          <br>仮にPCを買い替えるなら、解像度よりもフレームレートの安定が重視されるゲーム（フォートナイトなど）向けのモデルを見てみると良いと思います。
+          <br>レイトレーシングには対応していないので最新グラフィックカードではオーバースペックになってしまいます。
+          <br>ただこのゲーム、なんと4k出力にも対応しているので完全に無駄にはならないのが凄いところですが…RTA的には無用です。
+        </div>
+        <input id="PS4" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="PS4">・PS4</label>
+        <div class="sub_description_content">
+          シェア機能でニコニコ動画、Twitch、Youtubeへの配信をサポートしているためPC要らずです。
+          <br>またリモートプレイを利用すればPC経由での配信が可能となります。
+          <br>一見無意味そうですが、PC経由ならタイマーを含めた画面レイアウトにしたり複数サイトへの配信も可能となります。
+          <br>難点としては60fps固定な事とかなり長いロード時間ですが、ロード時間はSSDを使えばある程度はマシになります。
+          <br>それでもSteam版とは10分近い差が出てしまいますが…。
+          <br>PS5にしたらロード時間をさらに短縮できるかどうか検証したかったのですが、PS5が手に入らずまだ実施できていません。
+          <br>もしどなたか確認できたら教えてください！
+        </div>
+        <input id="Switch" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="Switch">・Switch</label>
+        <div class="sub_description_content">
+          配信機能がないためキャプチャボードが必要になります。
+          <br>キャプチャボードにはPC不要のタイプもありますが、多くはPCに取り付けるタイプのため基本的にはPCが必要になります。
+          <br>ロード時間はPS4以上に長く、30fps固定のため操作性も良くないです。RTAには無関係ですが画質もイマイチです。
+          <br>既にSwitchでの録画・配信環境があるがPS4は持っていない、という状況以外ではあまりお勧めできません。
+          <br>スペック差がタイムに影響しない機種のため、本当にタイムを競うなら理想的な環境かもしれませんが…。
+          <br>リースの乳揺れが一番ダイナミックらしいのでRTA以外では実用的かもｒｙ
+        </div>
+      </div>
+      <input id="difficulty" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="difficulty">・難易度について</label>
+      <div class="description_content">
+        難易度によるルールの違いはなく、ランキングの集計が異なるだけです。
+        <br>Beginnerはベリーイージー、Expertはベリーハードに該当します。
+        <br>any%は難易度変更時のオートセーブを利用するテクニックがあるため、表記と異なる難易度を選択して始める場合があります。
+        <br>通常プレイ時はあまり違いが感じられないベリーイージー～ハードですが、RTAだとかなり重い差になります。
+        <br>上級者にとっては誤差レベルになるようですが…。
+        <br>追加難易度は強力なアイテムを湯水のように使う事で通常RTAよりも早く終えられますが、その準備にかなりの時間を要します。
+        <br>余談ですが、追加難易度のExpertとNo Futureは強くてニューゲーム専用なのに全カテゴリに設置されています。
+      </div>
+      <input id="route" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="route">・ルートについて</label>
+      <div class="description_content">
+        SRC上ではArcと記載されていますが、これはArchenemy、日本語で言えば最終ボスの略称です。
+        <input id="archfiend" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="archfiend">・archfiend</label>
+        <div class="sub_description_content">
+          アークデーモン、つまりダークキャッスルルートを表します。
+          <br>途中で立ち寄ることになるナバール、暗闇の洞窟～ダークキャッスルは他のルートと比べて極端に短く、
+          <br>ボスも倒しやすいものが揃っているため最も人気のルート、というか現状ほぼこれ1択です。
+          <br>ラスボスは正攻法だと全ルート中最も強力かつ途中でスキップ不可の形態変化演出が入るため時間がかかるのが難点でしたが、
+          <br>「1回の行動で3連続で魔法を唱えてくるが、この間は形態変化しない」
+          <br>「3連魔法を3セット行った後はバリアチェンジを行い、バリアチェンジから次の3連魔法終了まで形態変化しない」
+          <br>という法則を理解しているとこの形態変化しないタイミングを狙って倒すことができ、全ラスボス中最速で終わる戦闘に早変わりします。
+          <br>更に形態変化前は即死耐性を持たないためデススペル3発（VHでは5発、NFでは6発）で倒せるという抜け道まであります。
+        </div>
+        <input id="DragonLoad" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="DragonLoad">・Dragon Load</label>
+        <div class="sub_description_content">
+          竜帝、つまりドラゴンズホールルートを表します。
+          <br>途中で立ち寄るアルテナ城は広大な地下フィールドの探索が必要で、回避困難な準強制戦闘も豊富です。
+          <br>ルート固有ボスの1人である紅蓮の魔導士はワープ持ちの上、一定HPで確実に青ゲージ行動による遅延を行うため厄介です。
+          <br>ラスボスの竜帝は倒しやすい事で知られていますが、いざ素早く倒そうと思うと飛び回る遅延行為持ちのため大変です。
+          <br>any%ならアルテナ城の地下をスキップできるため大きくタイム短縮できるほか、ドラゴンズホールで強制戦闘の回避もできます。
+        </div>
+        <input id="DarkLich" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="DarkLich">・Dark Lich</label>
+        <div class="sub_description_content">
+          ダークリッチ、つまりミラージュパレスルートです。
+          <br>ビーストキングダム、幻惑のジャングル、ミラージュパレスのいずれも長大かつギミックが豊富で、
+          <br>回避不能の強制戦闘のオンパレードかつ遅延持ちのボスが2体も配置されています。
+          <br>固有ボスは紅蓮の魔導士ほどではないもののどちらも厄介です。
+          <br>ラスボスも回避が難しい行動が多く、ワープまでするため長引きやすいです。
+          <br>はっきり言って地獄です。
+          <br>全ルート中バグ技によるタイム短縮の恩恵が最も大きく、any%向きではあります。
+          <br>短縮してもあんまり速くないのが難点ですが…。
+        </div>
+      </div>
+      <input id="chara" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="chara">・使用キャラについて</label>
+      <div class="description_content">
+        RTAで使われる主な編成を記載します。
+        <br>ルートの項目で触れた通り、バグの有無に関わらずダークキャッスルが一番速いため基本的にリースかホークアイが主人公になります。
+        <br>＜リース（フェンリルナイト）、ケヴィン（デスハンド）、デュラン（ソードマスター）＞
+        <br>RTAの鉄板編成で、リースのプロテクトダウンとデュランのアタックセイバーで強化したケヴィンが全ての敵を殴り倒します。
+        <br>ケヴィンは本人の火力もさることながら、クラス2から敵を拘束するタイプの必殺技が使えることもメリットです。理由は後述します。
+        <br>更にケヴィン使用かつ120fps動作時のみ利用できるバグがあり、any%では火力を抜きにしても必須になっています。
+        <br>ホークアイ（ニンジャマスター）、ケヴィン（デルヴィッシュ）、デュラン（ソードマスター）
+        <br>上記PTの変型版で、NFで使用されます。
+        <br>アタッカーやダウン強化を引き継ぐためリースを控えにし、代わりにホークアイを起用しています。
+        <br>即死ゲーのNFではデルヴィッシュの開幕10秒無敵が有効に働きます。デバフはアイテムで入れます。
+        <br>リース（ドラゴンマスター）、シャルロット（イビルシャーマン）、デュラン（ソードマスター）
+        <br>NG+ Glitchless用の編成で、ケヴィンを利用しない現状唯一の編成です。
+        <br>デュランのアタックセイバーに加えてシャルロットのオール系スキルが乗った竜牙槍で殆どのボスを1撃で粉砕します。
+      </div>
+      <input id="technique" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="technique">・テクニックについて</label>
+      <div class="description_content">
+        SRCのルール上glitchに分類されない動作を便宜上テクニックと呼びます。
+        <br>YAKさんの動画で幾つか解説されているものもあるので（
+        <a href="https://www.nicovideo.jp/watch/sm36952232" target="_blank"
+          rel="noopener noreferrer">リンク</a>）そちらを見ていただくと理解が深まると思います。
+        <br>SRCやディスコードで使われている英語名と日本語名を併記します。
+        <br>一部対応する語が無いものはクエスチョンマークを付けています。
+        <input id="csswap" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="csswap">・Class Strike Swap / CS Swap（CSスワップ、先行入力交代）</label>
+        <div class="sub_description_content">
+          このゲームのRTAにおける最重要テクニックです。
+          <br>最もタイム影響が大きいテクニックですが、発見当時は水バグ全盛だったためかSRC的にはglitch扱いされていません。
+          <br>まずこのゲームの仕様として、モーションの硬直中に別の行動を入力するとその行動が予約された状態になり、
+          <br>現在のモーションが終わり次第予約されている行動が実行される（先行入力）、というものがあります。
+          <br>（攻撃を食らってダウンした仲間にリングコマンドから魔法を使わせると起き上がってから使ってくれたり、
+          <br>　ショートカットから天使の聖杯を連打した時に意図せず複数回使ってしまったりするのはこの行動予約によるものです。）
+          <br>これに対して、操作キャラクターの変更は入力した瞬間に即時実行されます。
+          <br>これらの挙動を組み合わせ、
+          <br>１、操作キャラXの攻撃の硬直中に必殺技を入力し、予約した状態にする
+          <br>２、硬直が解除される前にキャラクターチェンジを行い、操作キャラをYに交代する
+          <br>３、NPCキャラXの攻撃の硬直終わりに予約していた必殺技が発動する
+          <br>とすることで、NPCに任意のタイミングで必殺技を使用させることができます。
+          <br>特に恩恵が大きいのはヒットした際に敵を拘束するタイプの必殺技と組み合わせた時で、
+          <br>敵を拘束しつつ自分は別のキャラを操作して自由に動けるため火力と安全性が大きく向上します。
+          <br>ロックタイプの必殺技を持つキャラが複数いる場合は、XでCSスワップ→YでCSスワップ…
+          <br>とリレーのようにCSスワップを繋げることで延々相手を固めて好き放題殴れる状態になります。
+          <br>ケヴィンの弱弱強や弱弱弱弱強、リースの弱弱弱弱強のように長めのモーションと組み合わせると出しやすいです。
+          <br>慣れてきたら単発強攻撃や空中強攻撃からも繋げることができ、即座に相手を固めたい場面で役に立ちます。
+          <br>注意点として突進するタイプのモーション（クラス2で習得する弱弱弱強など）の直後にスワップすると、
+          <br>敵との位置関係が正しく判定されなくなるのかあらぬ方向に出てしまいがちです。
+          <br>またNPCは攻撃されると回避行動を優先してしまうため、敵の攻撃中にスワップすると回避しようとした向きに出してしまう事があります。
+          <br>ビルベンやゴーヴァのように、「ターゲットに選べない魔法や特技を吸収する判定」を持っているボスは特にすっぽ抜けやすいです。
+          <br>また必殺技使用中のキャラに交代することはできないため、XでCSスワップ→YでCSスワップ→ZでCSスワップ…できない！
+          <br>という事故も慣れた頃にやりがちです。交代先のキャラがやられたり石化している場合も同様です。
+          <br>他にも範囲必殺をスワップで入れて残りの雑魚を掃除するといった使い方も可能なため、
+          <br>RTAのみならずあらゆるプレイ場面で使えるテクニックになっています。
+        </div>
+        <input id="ledgejump" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="ledgejump">・Ledge Skipping and Ledge Jumping（崖上り）</label>
+        <div class="sub_description_content">
+          直訳すると崖から飛び降りる行為を指しそうですが、ここで示しているのは本来登れない段差を登る行為です。
+          <br>ジャンプした後に空中攻撃を出すとキャラが少し滞空しますが、これをジャンプの頂点付近で出すと本来より少し高度を稼ぐことができます。
+          <br>その状態でローリング前進をすることで本来登れない崖の上に乗り上げることができます。
+          <br>空中弱攻撃には高度を維持する効果もあるため、ジャンプの飛距離を伸ばす目的でも使用されます。
+          <br>ジャンプ高度はfpsの影響も受けるため、マナの聖域の崖登りは120fpsでないと困難です。
+          <br>また一部の崖は壁面に足場になる引っかかりがあり、これに乗ることで高い場所に届くようになる場所があります。
+        </div>
+        <input id="ledgeslide" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="ledgeslide">・?ledgeslide/ledgeroll（崖スライディング、崖ローリング）</label>
+        <div class="sub_description_content">
+          上とは逆のテクニックで、崖を降りる際に使用します。
+          <br>ケヴィンのスライディングや回避のローリングは出始めに大きく加速し、一定の距離を移動して減速しながら止まる、という動きをします。
+          <br>但し減速判定があるのは接地している時のみで、空中にいる間は減速しません。
+          <br>この性質を利用し、崖のギリギリでスライディングやローリングを行うのがこのテクニックです。
+          <br>スライディングは着地するまで加速状態が続き、着地する瞬間にジャンプする事で再加速できます。
+          <br>ローリングは転がり切る前に空中攻撃を追加入力してやると着地まで加速を延長できます。
+          <br>手すりなどちょっとした段差も利用できるためあちこちで利用できるテクニックです。
+          <br>但し崖スライディングはできるが崖ローリングはできない段差やその逆もあるため、どこで使えるかは覚える必要があります。
+          <br>ちなみに各キャラの弱弱弱強の突進でも同じ事ができます…が当然コンボ入力分遅くなるのでタイムは稼げません。
+        </div>
+        <input id="subtitle" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="subtitle">・?Subtitle Off Mash（字幕オフ連打）</label>
+        <div class="sub_description_content">
+          イベントシーンはゲームの機能であるシーンスキップにより飛ばすことができますが、
+          <br>オプションで字幕表示をオフにした状態で決定ボタンを連打するとより速く飛ばすことができます。
+          <br>一部のイベントは非常に長く、連射速度によってはスキップした方が速い場合もあります。
+          <br>上記2つのテクニックほどの差は付かないのですが、シーンスキップはイベントシーンの再生が始まってから入力する必要があるのに対し、
+          <br>字幕オフ連打はタイミングを計らなくてよいというメリットがあります。
+          <br>海外コミュニティでは連射機＝不正行為という認識が強いですが、このゲームでは禁止されていないためスキップ用に連射機を使うのもアリです。
+          <br>Steam版はボタンに連射機能を割り当てることができるため、連射機なしでも容易に最速スキップが可能です。
+        </div>
+        <input id="aeriallance" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="aeriallance">・?Aerial Lance Jump（槍高跳び）</label>
+        <div class="sub_description_content">
+          殆どのテクニックやバグ技が海外発の本作ですが、こちらは日本人のあまもりさんによって発明されたテクニックです。
+          <br>飛天槍を使うと実際にリースが高く飛んでから落ちてくることを利用し、本来乗り上げることのできない場所に飛び移ることができます。
+          <br>これを使うとダークキャッスル1Fのスイッチ前の手すりを乗り越えることができます。
+          <br>但し必殺技は戦闘エリア内でしか使えないため、戦闘エリアから壁に向かって強攻撃しながら飛天槍を先行入力、という手順が必要になります。
+          <br>これを使えば色々な場所に乗れそうですが、飛天槍は着地点からバク宙で元の位置に戻るため移動を遮るオブジェが無いと結局元の位置に戻ってしまいます。
+          <br>余談ですが、飛天槍でランドアンバーに乗り上げてしまってそのまま場外押し出しを食らうという事故が稀に報告されています。
+        </div>
+        <input id="aerialground" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="aerialground">・?Aerial Ground Attack（空中地上攻撃）</label>
+        <div class="sub_description_content">
+          地上にいる時とジャンプ時は攻撃動作が変化しますが、ジャンプと同時に攻撃を入力すると浮きながら地上攻撃を出すことができます。
+          <br>同時入力はfpsの影響を受けるため、120fps動作時は比較的出しやすいですが60fpsだとかなり難しくなります。
+          <br>単体では非常に地味なテクニックですが、ある場所で使うととんでもない事になります。トンデもない事に。
+        </div>
+      </div>
+      <input id="glitch" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="glitch">・バグ技について</label>
+      <div class="description_content">
+        ここではSRCでGlitch指定されているバグとそれに付随するテクニックを解説します。
+        <br>ここに記載した以外でもRTAで使われないバグやアップデートによって修正されたバグもあるため、
+        <br>より詳細を知りたい場合は国内バグ研究の第一人者、あまもりさんのブロマガ（
+        <a href="https://www.nicovideo.jp/watch/sm36952232" target="_blank" rel="noopener noreferrer">リンク</a>）で確認してください。
+        <input id="outofbounds" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="outofbounds">・Out of Bounds / OoB（壁抜け）</label>
+        <div class="sub_description_content">
+          Boundsは領域、そのOut of なので直訳すると単に領域外になりますが、ここでは領域外への侵入行為を指します。
+          <br>日本語的には壁抜けがしっくりくるでしょう。
+          <br>SRCにはこのOoBについていろいろ書いてありますが、「ミニマップの境界線を超えてはいけない」という定義が実質機能しているルールです。
+          <br>他の記載も定義通りに取ると崖登りもアウトになってしまうので、ルールとしてはやや不適当な感じがあります。
+          <br>壁抜けを使う事で以下の事が行えます。
+          <br>・ダンジョンのショートカット（天かける道、風の回廊、モールベアの高原、火山島ブッカ、岸辺の洞窟、零下の雪原、アルテナ城、火炎の谷、光の古代遺跡）
+          <br>・ボス戦の回避（マシンゴーレムS）
+          <br>アルテナ城のみ崖登りの手法で壁抜けを行いますが、その他の場所は次に記載するブーストシリーズが主です。
+        </div>
+        <input id="slideboost" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="slideboost">・Slide Boosting（スライドブースト）</label>
+        <div class="sub_description_content">
+          マップ上の特定の場所でケヴィンのスライディングをジャンプと同時に入力（空中地上攻撃）すると、ケヴィンが空高く舞い上がります。
+          <br>fpsが高いほど高く浮き、壁抜けができるほど高度を稼げるのは120fps時のみのためPC版専用のバグ技です。
+          <br>ケヴィン以外のキャラでも同じ場所で空中地上攻撃をすると浮くのですが、壁抜けできるほど浮き上がるのはケヴィンだけです。
+          <br>見た目的には派手でこれぞバグ！といった趣ですが、どれも別の方法で抜けられたり短縮できるタイムが小さかったりします。
+          <br>某ジャンプマンガの影響を強く受けたと思われるケヴィンでしか使えない事もあり、舞空術と言いたい感じがあります。誰も言ってないけど。
+        </div>
+        <input id="rollboost" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="rollboost">・Roll Boosting（ローリングブースト）</label>
+        <div class="sub_description_content">
+          一部の地形ではローリングをすることで浮かび上がれます。
+          <br>スライドブーストほどの高度が稼げず、これでしか抜けられない場所がないためまず使いません。
+          <br>火炎の谷の崖登りで1箇所、ローリングブーストに該当しそうな場所がありますが、現状それで記録が無効になった事はありません。
+          <br>実績がないだけで今後もないとは言えないので、使わない方が安全ではあります。
+          <br>幸いすぐ近くに別の崖登りポイントがあります。
+        </div>
+        <input id="partnerboost" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="partnerboost">・Partner Boosting（パートナーブースト）</label>
+        <div class="sub_description_content">
+          仲間を踏み台にして空中地上攻撃の高度を稼ぐバグ技です。
+          <br>スライドブーストとローリングブーストが行えない地形でも実行可能です。
+          <br>ただし稼げる高度が低く、これで乗り上げられる場所はかなり限られます。
+          <br>岸辺の洞窟ではなんとマップの別階層に移動できますが、非常にシビアです。
+          <br>光の古代遺跡では入り口付近からボス前に直行できるため大きなショートカットになります。
+          <br>但しこの場合は？？？の種が取れないためチャートか運でカバーする必要があります。
+          <br>踏み台にされた人の名前で呼びたい気もするが聖剣でガイアは別のものを指すのでまず定着しないであろう…。
+        </div>
+        <input id="quantumstate" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="quantumstate">・Quantum State（無）</label>
+        <div class="sub_description_content">
+          お馴染みの無です。
+          <br>こちらも旧バージョンでは別の方法で作成していましたが、
+          <br>現行バージョンでは最後の1つのアイテムを使用中にキャンセルさせることで作成します。
+          <br>同じカテゴリのアイテムを持っていると無を選択できなくなるほか、
+          <br>無を作成した際に使用したアイテムを再入手してしまうと無自体が消えてしまいます。
+          <br>作成された無は「直前に操作したアイテムをコピーする」という性質を持つようになり、
+          <br>リングコマンドに同一のアイテムを幾つでもできるようになります。
+          <br>RTA的には滝の洞窟のバットムの超音波を食らいながら作成する方法がお手軽です。
+        </div>
+        <input id="MultiStack" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="MultiStack">・Multi Stack（多重登録）</label>
+        <div class="sub_description_content">
+          これ自体はSRCに記載がありませんが、上記の無を使用しないと使えないためバグ技になります。
+          <br>無を利用して同一のアイテムを複数登録した状態の事で、多重登録されたアイテムは個数が変化しなくなる性質を持ちます。
+          <br>そのため無限に使用できるようになり、幾ら売っても減らないためルクも無限に稼げます。
+          <br>多重登録はリングが許す限り行えるので1つしか持っていないアイテムであれば増殖の代わりにもなりますが、
+          <br>アイテム欄を圧迫するためこれだけで済ませるのは厳しいです。
+          <br>注意点として、多重登録したアイテムを新たに入手しても個数が変化しなくなっているため増えません。
+          <br>在庫を増やしたい場合は一度多重登録を解除する必要があります。
+          <br>また以下の条件でアイテムが0個になると多重登録自体が解除され、個数も減るようになります。
+          <br>・元々1つしか持っていないアイテムを使った時
+          <br>・9個以下のアイテム（NFのみ3個）を戦闘中に使い切った時
+          <br>・全て売却した時
+        </div>
+        <input id="itemduping" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="itemduping">・Item Duping（アイテム増殖）</label>
+        <div class="sub_description_content">
+          読んで字のごとくアイテムを増やすバグ技です。
+          <br>多重登録したアイテムを戦闘以外の場面で使用中にキャンセルされると、使おうとしたアイテムが増殖します。
+          <br>多重登録の性質の関係上、基本的に1つのアイテムを2つに増やす際に使います。
+          <br>2つ以上あるものでもキャンセル後に手動でリングから外すと増殖できるようですが、手間がかかるのでRTA的には使わなそうです。
+          <br>また戦闘中に使うと増殖しない関係で戦闘中しか使えないアイテムを増やすのは極めて困難です。
+          <br>アップデートで修正される前はオートセーブやアビリティを利用した増殖が可能でしたがここでは割愛します。
+          <br>詳細を知りたい場合はあまもりさんのブロマガで確認してください。
+        </div>
+        <input id="earlycycloneclaw" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="earlycycloneclaw">・Early Cyclone Claw（OP武器取得）</label>
+        <div class="sub_description_content">
+          本来OP中は入れないエリアに無理やり侵入し、ゲーム開始直後に強力な武器を入手するというものです。
+          <br>サイクロンクローとしか書いていませんが、恐らくどのキャラの武器取得もGlitch…なのか？
+          <br>ケヴィンとアンジェラは崖登りによるOoBを使用しているのでどの道Glitchになります。
+          <br>リースはOoBせずに武器を取れるのでいいのかも？誰か試して（他力本願
+          <br>ホークアイは宝箱のある部屋に入る方法が見つかっておらず、残念ながらOP取得はできません。
+        </div>
+        <input id="DifficultyChangeSave" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="DifficultyChangeSave">・?Difficulty Change Save（難易度変更セーブ）</label>
+        <div class="sub_description_content">
+          難易度を変更した際に発生するオートセーブをロードすると、難易度変更より前にオートセーブした場所から再開できるというもの。
+          <br>これ自体はSRCでGlitch扱いされていないが、基本的に上記のOP武器取得と組み合わせて使うためこちらで解説。
+          <br>戻るのは場所のみでアイテムやイベントフラグは持ち越せるため、武器を取る→難易度変更→スタート地点から再開、という動きが可能になります。
+          <br>アンジェラはOoBして箱を開けた後戻る手段がないので必須、他のキャラも逆走するよりロードした方が速いです。
+          <br>ホークアイは武器こそ取れないがOPでニキータとの会話後に難易度変更セーブしてロードするとやはり走って戻るより速いです。
+          <br>これがあるため、any%はゲーム開始時の難易度選択と実際にプレイする難易度が異なることが多いです。
+        </div>
+        <input id="cookietimerextension" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="cookietimerextension">・Cookie Timer Extension（クッキー時間延長）</label>
+        <div class="sub_description_content">
+          クッキーの効果時間中にアロマを使うと、何故か経験値アップ効果がアロマの効果時間中にも続いてしまうバグ。
+          <br>通常プレイではそこそこ便利だが、RTAでは多重登録や増殖があるため無用。
+          <br>仮に使うとしてもアロマが入手できるのは種から引けなければワンダーの樹海…。
+        </div>
+        <input id="RingShortcutGlitch" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="RingShortcutGlitch">・Ring Shortcut Glitch（特技ショートカットバグ）</label>
+        <div class="sub_description_content">
+          特技リングコマンドの展開とキャラチェンジを同時に行うと、
+          <br>チェンジ前のキャラのリングが開いたままチェンジ後のキャラのショートカットを操作できてしまうというバグ。
+          <br>RTA的にはダウンとセイバーくらいしか使う特技がなく、
+          <br>前者はダウン強化持ち、後者はアタックセイバー持ちで使うため他のキャラで行うメリットがほとんどありません。
+          <br>また有用な特技のほとんどはアイテム経由で使用でき、マナの奇跡や多重登録と組み合わせれば無限使用が可能です。
+          <br>アイテム経由で使えずかつ他のキャラに持たせるメリットがある特技が見つかればRTAでも使われるようになるかもしれません。
+        </div>
+        <input id="SequenceBreaking" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="SequenceBreaking">・Sequence Breaking（イベント飛ばし）</label>
+        <div class="sub_description_content">
+          必須イベントを経由せずに進めること、だが具体的な行為が記載されていないのでなにが該当するか不明…。
+          <br>風の回廊のスイッチ操作も必須イベントと言われればそういう気もするし…。
+          <br>基本的に次の3つのテクニックや先に紹介したOoBを使って実現しますが、
+          <br>唯一滝の洞窟の入り口で待ち構えているシャルロットはタイミングよくジャンプする事でそのまま洞窟に入れたりします。
+        </div>
+        <input id="WrongRope" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="WrongRope">・Wrong Rope（バグロープ）</label>
+        <div class="sub_description_content">
+          魔法のロープは本来一部のダンジョン内でしか使えませんが、ダンジョンはおろか街中でも使えるようになってしまうバグ。
+          <br>魔法のロープを本来使用可能な場所で多重登録する事で発生します。
+          <br>本来ロープを使えないマップでも使用するとどこかしらの出入口に飛ぶようになっていて、そこが目的地の場合は大きなショートカットになります。
+          <br>注意点としては多重登録後にリング上でロープの場所を入れ替えてしまうと、
+          <br>使用可能フラグが壊れるのか普通のロープとしても使えなくなってしまう点です。
+          <br>ロープ自体を触らずに他のアイテムを登録したり外したりする分には問題ありませんが、取り扱い注意。
+          <br>もし壊れてしまったら一旦多重登録を解除して再度本来使用できる場所で多重登録し直せばOK。
+          <br>幽霊船など、出入り口がないマップで使うと謎空間に送り込まれ詰むためこれも注意。
+          <br>風の太鼓も同様の手順でバグ太鼓にすることができどこでも叩けるようになりますが、
+          <br>ドラゴンズホールなど本来太鼓を叩ける場所が同一ダンジョン内に存在しない場所で叩くとフリーズします。
+          <br>ぴーひゃら笛も同様にバグ笛にできますが、砂浜以外で使っても何も起きないため無意味です。
+        </div>
+        <input id="wwt" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="wwt">・Walk While Talking / WWT（メッセージ保存）</label>
+        <div class="sub_description_content">
+          会話や看板を調べた時に表示されるメッセージテロップを表示したまま動き回れるようにするバグ。
+          <br>テロップが表示されている間はあらゆるイベントやエンカウントが発生しなくなるため、イベント飛ばしに利用できます。
+          <br>指定Glitchではないがイベント飛ばしに使うためどの道Glitch。
+          <br>手順がやや複雑ですが、会話できるNPCや看板の前で
+          <br>１、主人公操作で仲間キャラにアイテムを使わせる
+          <br>２、仲間のアイテム使用モーション中に攻撃操作をする
+          <br>３、主人公の攻撃モーション中に主人公でアイテムを使う
+          <br>とすると、仲間のアイテムモーション解除から主人公の攻撃モーション解除までの間会話が可能な状態になるので、
+          <br>主人公がアイテムを使う前に決定ボタンを連打して会話を割り込ませるとバグ成立。
+          <br>この時会話中に主人公が武器を仕舞い終える前に動こうとすると移動できなくなってしまうため注意。
+          <br>また街中では仲間のモーションが発生しないため上記の方法ではできませんが、
+          <br>会話の吹き出しが表示されない位置で攻撃し、吹き出しが表示される位置に侵入しながら主人公でアイテム使用をするとメッセージ保存できます。
+          <br>特に強力なのは火のマナストーンと水のマナストーン前のボス戦をこれで回避できること。
+          <br>ただしぴーひゃら笛を貰ってから月のマナストーンが目的地になるまでの間はボスの出現判定が残っているため、
+          <br>イベントを飛ばしても帰り道で遭遇してしまいますが…。
+        </div>
+        <input id="BattleRope" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="BattleRope">・Battle Rope（戦闘中ロープ）</label>
+        <div class="sub_description_content">
+          魔法のロープが街中はおろかなんと戦闘中にも使えるようになってしまうバグ。
+          <br>やり方としてはバグロープをショートカットに登録した後、リングコマンドの方から魔法のロープをすべて外すだけ。
+          <br>この状態でオートセーブを挟むとリングコマンドには魔法のロープが存在しないがショートカットには存在する状態になります。
+          <br>後は戦闘中にショートカットのロープを使って強制終了できるようになり、イベント戦闘の場合は再訪しても発生しなくなります。
+          <br>火/水前のボス戦はWWTと組み合わせることで行きはWWTでスルーして帰りに戦闘中ロープで戦闘終了、とすると完全に飛ばせます。
+          <br>ロープの性質上入り口からになりますが、ダンジョンを出てすぐの場所が入り口になっているため移動距離も短いです。
+          <br>一度使用するとリングコマンドに再登録され通常のロープに戻ってしまいますが、リングから外した時に別のアイテムでリングを埋めれば解除されなくなります。
+          <br>これだけ聞くとバグロープの上位互換のように思えますが、バグにバグを重ねて発生する現象のためか非常に不安定です。
+          <br>ふとしたことから使用不能になったり、ショートカットから外れてしまったりします。
+          <br>主人公の戦闘中ロープは極めて壊れやすいので、対策としては仲間に登録する事になります。
+          <br>まあそれでもダメなときは駄目なので、必要な場面以外では極力使わないのが一番の対策です。
+          <br>ちなみにリングから外す関係上多重化が解除されるため、予めロープは必要数分確保しておく必要があります。
+          <br>ミラージュパレスルートでは計4回使用する可能性があるため、多重化分も含めて5個は欲しいです。
+        </div>
+        <input id="TrainingPointUnderflow" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="TrainingPointUnderflow">・Training Point Underflow（バグ育成）</label>
+        <div class="sub_description_content">
+          育成ポイントを無限に振れてしまうバグ。
+          <br>仲間の育成ポイント振り分け画面で振り分けボタンとメニューボタンを同時押しすると、
+          <br>メニューが閉じた後にも育成ポイントを振った際のSEが鳴り続けます。
+          <br>この状態で育成メニューを再度開くと、主人公の育成ポイントが無限に振れるようになっています。
+          <br>幽霊船で主人公が離脱している状態だと他のキャラでも利用できます。
+          <br>但し仲間の育成ポイントが主人公の育成ポイントより多く、かつ力に振れる状態でないと失敗します。
+          <br>仲間の加入直後ならまず確実に条件を満たしているためここで一度バグ育成を行い、
+          <br>以降はCC毎にバグ育成を行えば上記の制限に引っかからずに行うことができます。
+        </div>
+      </div>
+      <input id="extra" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="extra">・おまけ</label>
+      <div class="description_content">
+        <div>聖剣伝説3 TRIALS of MANA のダメージに関する調査</div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Gb4cA4UCw" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
-      </p>
-      <p>
-        レベルが上がるとダメージも増えるというお話。<br>
-      </p>
+      </div>
     </div>
   </div>
 
