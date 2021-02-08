@@ -799,7 +799,7 @@
       <input id="rule" class="description_check" style="display: none;" type="checkbox">
       <label class="description" for="rule">・ルールについて</label>
       <div class="description_content">
-        以下にSRCに記載されているルールの日本語訳と解説を記載します。
+        SRCに記載されているルールの日本語訳と解説です。
         <br>ルールには明記されていませんが外部ツールによるゲームデータの改ざんは当然禁止です。
         <br>・RTA計測
         <br>　ゲーム内時間ではなく、実際にクリアにかかった時間を計測します。
@@ -1323,6 +1323,76 @@
           <br>SRC上は記載がないものの、これを使った記録が却下されたという実績があるためバグ扱い。
           <br>PC版では風の回廊はスライドブーストで抜けられるため不要ですが、PS4やSwitchでも使用できるためこれらの機種でany%をやるなら必須かも。
           <br>ちなみに途中の仕掛けを操作せず空中攻撃ローリングで抜けることは崖登りに該当するためセーフな模様。
+        </div>
+      </div>
+      <input id="bug" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="bug">・不具合？</label>
+      <div class="description_content">
+        RTAプレイ中に出くわす可能性があり、発生条件が不明なバグを記載します。
+        <br>もし起きてしまっても失格にはなりませんが、そもそもプレイヤーにメリットのあるものがほぼないです。
+        <br>知っていればうろたえずに済むかも…。
+        <input id="invincible" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="invincible">・Invincible（無敵化）</label>
+        <div class="sub_description_content">
+          あらゆる攻撃を一切受け付けず、触れる事すらできない無敵状態になるという最強のバグです！
+          <br>
+          <br>…敵が。
+          <br>しかもボスが。
+          <br>ボスのHPゲージを削り切る瞬間とボスの行動がかち合ってしまうと発生するようです。
+          <br>発生が確認されているのはツェンカー（
+          <a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat" target="_blank"
+            rel="noopener noreferrer">リンク</a>）、ビルとベン、マシンゴーレムS、ドラン、フィーグムンド（
+          <a href="https://www.twitch.tv/e_dragoso/clip/BrightWanderingHippoPanicVis" target="_blank"
+            rel="noopener noreferrer">リンク</a>）です。
+          <br>発動した瞬間に無敵になる技（スパソニ、影潜り、スパイラル、クレイドル）を持っているのでまああり得そうですが、
+          <br>マシンゴーレムについてはよく分かりません。Rが無敵になった話も聞かないし。
+          <br>こうなってしまうとリセットする以外に復帰方法が無くなります。
+          <br>ビルベンのみ、黄泉がえりで蘇生されるとまた倒せるようになるため片方が生きていれば詰み回避ができます。
+        </div>
+        <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="lucrelost">・Lucre Lost（ルク消失）</label>
+        <div class="sub_description_content">
+          ボスが落とすはずのルクが得られなくなるバグです。
+          <br>終わりの一瞬だけしか撮れてませんが一応（
+          <a href="https://www.twitch.tv/e_dragoso/clip/DistinctAgitatedGoshawkSuperVinlin" target="_blank"
+            rel="noopener noreferrer">リンク</a>）
+          <br>神獣戦で多くの報告があり、特にフィーグムンドで発生しやすいようです。
+          <br>無敵化と違って原因らしきものに見当もつかず、当然対策もありません。
+          <br>購入予定の装備が買えなくなる場合があるので、保険でルクを多めに取っておくと安心です。
+        </div>
+        <input id="PermanentDown" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="PermanentDown">・Permanent Down（永続ダウン）</label>
+        <div class="sub_description_content">
+          ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ。
+          <br>この中では唯一、プレイヤーにメリットがありますが発生条件が不明。
+          <br>ローラントでも灼熱の砂漠でも確認されています。
+          <br>もし再現方法が判明すれば革命が起きるので、発生したらまず録画を残しておきましょう。
+        </div>
+        <input id="DeathTaxesSting" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="DeathTaxesSting">・Death & Taxes & Sting（必中キルスティンガー）</label>
+        <div class="sub_description_content">
+          ほぼ回避不能のキルスティンガーが飛んでくる恐るべきバグ。
+          <br>キルスティンガーが連続で出た場合に最初のキルスティンガーが残ったままになる事があります。
+          <br>この時残ったキルスティンガーは赤枠と一緒に動くため、タゲられているとまず死にます。
+          <br>RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、
+          <br>対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
+        </div>
+        <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="DirtyNinja">・Dirty Ninja（汚い忍者）</label>
+        <div class="sub_description_content">
+          ビルとベンの使う忍術にはデバフが付いていますが、これが必殺技などの無敵時間でダメージを受けない場面でもデバフ部分を貰ってしまうバグ。
+          <br>更にデバフを貰った仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。
+          <br>合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト（デュラン）の挑発でも避けられません。
+          <br>汚いなさすが忍者きたない
+        </div>
+        <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="InvisibleTarget">・Invisible Target（見えない標的）</label>
+        <div class="sub_description_content">
+          ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。
+          <br>ビルベンバグり過ぎじゃない？
+          <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと吸われることがあります。
+          <br>ゴーヴァはゴーストロードを潰した後に同様の現象が起きます、影の当たり判定が残っているようです。
+          <br>スワップが変な方向に出やすいのもこれが原因と思われます。
         </div>
       </div>
       <input id="extra" class="description_check" style="display: none;" type="checkbox">
