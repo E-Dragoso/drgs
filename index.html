@@ -1331,6 +1331,7 @@
         RTAプレイ中に出くわす可能性があり、発生条件が不明なバグを記載します。
         <br>もし起きてしまっても失格にはなりませんが、そもそもプレイヤーにメリットのあるものがほぼないです。
         <br>知っていればうろたえずに済むかも…。
+        <br>また現バージョンでは未確認のものもあるので、もしかしたらひっそり修正されているかも。
         <input id="invincible" class="sub_description_check" style="display: none;" type="checkbox">
         <label class="sub_description" for="invincible">・Invincible（無敵化）</label>
         <div class="sub_description_content">
@@ -1348,30 +1349,39 @@
           <br>マシンゴーレムについてはよく分かりません。Rが無敵になった話も聞かないし。
           <br>こうなってしまうとリセットする以外に復帰方法が無くなります。
           <br>ビルベンのみ、黄泉がえりで蘇生されるとまた倒せるようになるため片方が生きていれば詰み回避ができます。
+          <br>現バージョンでも絶賛発生中なので、セーブはこまめにしましょう。
         </div>
         <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox">
         <label class="sub_description" for="lucrelost">・Lucre Lost（ルク消失）</label>
         <div class="sub_description_content">
-          ボスが落とすはずのルクが得られなくなるバグです。
+          ボスが落とすはずのルクが得られなくなるバグです。現バージョンでも発生します。
           <br>終わりの一瞬だけしか撮れてませんが一応（
           <a href="https://www.twitch.tv/e_dragoso/clip/DistinctAgitatedGoshawkSuperVinlin" target="_blank"
             rel="noopener noreferrer">リンク</a>）
           <br>神獣戦で多くの報告があり、特にフィーグムンドで発生しやすいようです。
           <br>無敵化と違って原因らしきものに見当もつかず、当然対策もありません。
-          <br>購入予定の装備が買えなくなる場合があるので、保険でルクを多めに取っておくと安心です。
+          <br>ルク計算をきっちりやっているとかなり痛いです。
         </div>
         <input id="PermanentDown" class="sub_description_check" style="display: none;" type="checkbox">
         <label class="sub_description" for="PermanentDown">・Permanent Down（永続ダウン）</label>
         <div class="sub_description_content">
-          ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ。
+          ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ。現バージョンでも発生します。
           <br>この中では唯一、プレイヤーにメリットがありますが発生条件が不明。
           <br>ローラントでも灼熱の砂漠でも確認されています。
           <br>もし再現方法が判明すれば革命が起きるので、発生したらまず録画を残しておきましょう。
         </div>
+        <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox">
+        <label class="sub_description" for="InvisibleTarget">・Invisible Target（見えない標的）</label>
+        <div class="sub_description_content">
+          ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。現バージョンでも発生します。
+          <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと吸われることがあります。
+          <br>ゴーヴァはゴーストロードを潰した後に同様の現象が起きます。どうやら影の当たり判定が残っているようです。
+          <br>こいつらが相手の時にスワップが変な方向に出やすいのもこれが原因？
+        </div>
         <input id="DeathTaxesSting" class="sub_description_check" style="display: none;" type="checkbox">
         <label class="sub_description" for="DeathTaxesSting">・Death & Taxes & Sting（必中キルスティンガー）</label>
         <div class="sub_description_content">
-          ほぼ回避不能のキルスティンガーが飛んでくる恐るべきバグ。
+          ほぼ回避不能のキルスティンガーが飛んでくる恐るべきバグ。現バージョンでは未確認です。
           <br>キルスティンガーが連続で出た場合に最初のキルスティンガーが残ったままになる事があります。
           <br>この時残ったキルスティンガーは赤枠と一緒に動くため、タゲられているとまず死にます。
           <br>RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、
@@ -1380,19 +1390,11 @@
         <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox">
         <label class="sub_description" for="DirtyNinja">・Dirty Ninja（汚い忍者）</label>
         <div class="sub_description_content">
-          ビルとベンの使う忍術にはデバフが付いていますが、これが必殺技などの無敵時間でダメージを受けない場面でもデバフ部分を貰ってしまうバグ。
+          必殺技などの無敵時間で忍術を無効化していてもデバフを貰ってしまうバグ。現バージョンでは未確認です。
           <br>更にデバフを貰った仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。
+          <br>ビルベンバグり過ぎじゃない？
           <br>合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト（デュラン）の挑発でも避けられません。
           <br>汚いなさすが忍者きたない
-        </div>
-        <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox">
-        <label class="sub_description" for="InvisibleTarget">・Invisible Target（見えない標的）</label>
-        <div class="sub_description_content">
-          ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。
-          <br>ビルベンバグり過ぎじゃない？
-          <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと吸われることがあります。
-          <br>ゴーヴァはゴーストロードを潰した後に同様の現象が起きます、影の当たり判定が残っているようです。
-          <br>スワップが変な方向に出やすいのもこれが原因と思われます。
         </div>
       </div>
       <input id="extra" class="description_check" style="display: none;" type="checkbox">
