@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>聖剣3ToM攻略ツール集 チャート皮算用</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="style.css?<?php echo date('Ymd-Hi'); ?>">
+  <script src="chartchiken.js?ver=<?php echo date('Ymd-Hi'); ?>"></script>
+  <script data-ad-client="ca-pub-5842400267762227" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+
+  <h4><a href="index.html">聖剣伝説3 TRIALS of MANA 攻略ツール集</a>　＞　チャート皮算用</h4>
+  <br>
+  <input id="description_chart" class="description_check" style="display: none;" type="checkbox">
+  <label class="description" for="description_chart">！使い方</label>
+  <div class="description_content">
+    滝の洞窟からアークデーモン撃破までの取得経験値とルクを何となく計算できます。
+    <br>「対象」にチェックされている項目が集計されます。
+    <br>　・ルクアイコン：フィールドで拾えるルクを表します。
+    <br>　・ラビアイコン：雑魚敵との戦闘を表します。経験値にはボーナス値を加算できます。
+    <br>　　　　　　　　　オレンジ背景は強制戦闘ですが、一部はバグで回避できたりします。
+    <br>　・ゴーヴァアイコン：ボス敵との戦闘を表します。経験値にはボーナス値を加算できます。
+    <br>　　　　　　　　　　　基本的には強制ですが、一部はバグで回避できたりします。
+    <br>　・ニキータアイコン：買物や船の移動など、ルクを消費する場所です。
+    <br>　　　　　　　　　　　取得ルクに入力した値がルク総額から引かれます。
+    <br>　・「育成」：レベル上げのための雑魚狩りを行う際に使用します。
+    <br>　　　　　　　取得exp、取得ルクに任意の値を入力できます。
+    <br>
+    <br>データミス等お気付きの事がありましたらご連絡ください。
+  </div>
+  <p></p>
+  <table id="sumexptbl">
+    <thead>
+      <tr id="sumexphead">
+        <th id="map">場所</th>
+        <th id="target">対象</th>
+        <th id="type">種別</th>
+        <th id="object">内容</th>
+        <th id="bonus">ﾎﾞｰﾅｽ</th>
+        <th id="getexp">取得exp</th>
+        <th id="principal">主人公</th>
+        <th id="fellow1">仲間１</th>
+        <th id="fellow2">仲間２</th>
+        <th id="lucre">取得ﾙｸ</th>
+        <th id="sumlucre">ﾙｸ総額</th>
+        <th id="exp" hidden=true>exp</th>
+        <th id="sumexppri" hidden=true>exp計主人公</th>
+        <th id="sumexpfel1" hidden=true>exp計仲間１</th>
+        <th id="sumexpfel2" hidden=true>exp計仲間２</th>
+      </tr>
+    </thead>
+  </table>
+  <div class="footer">
+    <div>
+      <label for="zakocheckbox">
+        <input type="checkbox" id="zakocheckbox" onChange="zakocheck()">
+        雑魚敵一括チェック</label>
+      <label for="lucrecheckbox">
+        <input type="checkbox" id="lucrecheckbox" onChange="lucrecheck()">
+        ルク一括チェック</label>
+    </div>
+    <div>
+      幽霊船の生贄は
+      <input type="radio" name="sacrifice" id="sacrifice_part_1" onChange="calc(this.id)">主人公
+      <input type="radio" name="sacrifice" id="sacrifice_part_2" onChange="calc(this.id)">仲間１
+      <input type="radio" name="sacrifice" id="sacrifice_part_3" onChange="calc(this.id)" checked>仲間２
+    </div>
+  </div>
+
+  <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
+    <br>当該コンテンツの転載・配布は禁止いたします。
+    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
+  </p>
+
+</body>
+
+</html>

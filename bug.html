@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>聖剣3ToM攻略ツール集 バグ技集</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="style.css?<?php echo date('Ymd-Hi'); ?>">
+  <script data-ad-client="ca-pub-5842400267762227" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+
+  <h4><a href="index.html">聖剣伝説3 TRIALS of MANA 攻略ツール集</a>　＞　不具合？</h4>
+  <br>
+  RTAプレイ中に出くわす可能性があり、発生条件が不明なバグを記載します。
+  <br>もし起きてしまっても失格にはなりませんが、そもそもプレイヤーにメリットのあるものがほぼないです。
+  <br>知っていればうろたえずに済むかも…。
+  <br>また現バージョンでは未確認のものもあるので、もしかしたらひっそり修正されているかも。
+  <input id="invincible" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="invincible">・Invincible（無敵化）</label>
+  <div class="sub_description_content">
+    あらゆる攻撃を一切受け付けず、触れる事すらできない無敵状態になるという最強のバグです！
+    <br>
+    <br>…敵が。
+    <br>しかもボスが。
+    <br>ボスのHPゲージを削り切る瞬間とボスの行動がかち合ってしまうと発生するようです。
+    <br>発生が確認されているのはツェンカー（
+    <a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat" target="_blank"
+      rel="noopener noreferrer">リンク</a>）、ビルとベン、
+    <br>マシンゴーレムS、ドラン、フィーグムンド（
+    <a href="https://www.twitch.tv/e_dragoso/clip/BrightWanderingHippoPanicVis" target="_blank"
+      rel="noopener noreferrer">リンク</a>）です。
+    <br>こうなってしまうとリセットする以外に復帰方法が無くなります。
+    <br>ビルベンのみ、黄泉がえりで蘇生されると詰み回避ができます。
+    <br>現バージョンでも絶賛発生中なので、セーブはこまめにしましょう。
+  </div>
+  <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="lucrelost">・Lucre Lost（ルク消失）</label>
+  <div class="sub_description_content">
+    ボスが落とすはずのルクが得られなくなるバグです。現バージョンでも発生します。
+    <br>終わりの一瞬だけしか撮れてませんが一応（
+    <a href="https://www.twitch.tv/e_dragoso/clip/DistinctAgitatedGoshawkSuperVinlin" target="_blank"
+      rel="noopener noreferrer">リンク</a>）
+    <br>神獣戦で多くの報告があり、特にフィーグムンドで発生しやすいようです。
+    <br>無敵化と違って原因らしきものに見当もつかず、当然対策もありません。
+    <br>ルク計算をきっちりやっているとかなり痛いです。
+  </div>
+  <input id="PermanentDown" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="PermanentDown">・Permanent Down（永続ダウン）</label>
+  <div class="sub_description_content">
+    ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ。
+    <br>現バージョンでも発生します。
+    <br>このページの中では唯一、プレイヤーにメリットがありますが発生条件が不明。
+    <br>ローラントでも灼熱の砂漠でも確認されています。
+    <br>もし再現方法が判明すれば革命が起きるので、発生したらまず録画を残しておきましょう。
+  </div>
+  <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="InvisibleTarget">・Invisible Target（見えない標的）</label>
+  <div class="sub_description_content">
+    ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。
+    <br>現バージョンでも発生します。
+    <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと吸われることがあります。
+    <br>ゴーヴァはゴーストロードを潰した後に同様の現象が起きます。
+    <br>どうやら影の当たり判定が残っているようです。
+    <br>こいつらが相手の時にスワップすると変な方向に出やすいのもこれが原因？
+  </div>
+  <input id="DeathTaxesSting" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="DeathTaxesSting">・Death & Taxes & Sting（必中キルスティンガー）</label>
+  <div class="sub_description_content">
+    ほぼ回避不能のキルスティンガーが飛んでくる恐るべきバグ。
+    <br>幸い現バージョンでは未確認です。
+    <br>稀にキルスティンガーの判定が残ったまま連続してキルスティンガーが飛んでくることがあり、
+    <br>この時残った判定が赤枠と一緒に動くため、タゲられているとまず死にます。
+    <br>RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、
+    <br>対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
+  </div>
+  <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="DirtyNinja">・Dirty Ninja（汚い忍者）</label>
+  <div class="sub_description_content">
+    必殺技などの無敵時間で忍術を無効化していてもデバフを貰ってしまうバグ。
+    <br>現バージョンでは未確認です。
+    <br>更に仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。
+    <br>ビルベンバグり過ぎじゃない？
+    <br>合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト（デュラン）の挑発でも避けられません。
+    <br>
+    <br>汚いなさすが忍者きたない
+  </div>
+
+  <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
+    <br>当該コンテンツの転載・配布は禁止いたします。
+    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
+  </p>
+
+</body>
+
+</html>

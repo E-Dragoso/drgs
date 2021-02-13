@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>聖剣3ToM攻略ツール集 RTA入門</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="style.css?<?php echo date('Ymd-Hi'); ?>">
+  <script data-ad-client="ca-pub-5842400267762227" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+
+  <div><a href="index.html">聖剣伝説3 TRIALS of MANA 攻略ツール集</a>　＞　RTA入門</div>
+  <br>
+  このゲームのRTAで使えそうな知識を置いておきます。
+  <br>レギュレーションなどは
+  <a href="https://www.speedrun.com" target="_blank" rel="noopener noreferrer">
+    speedrun.com</a>（SRC）の
+  <a href="https://www.speedrun.com/trials_of_mana" target="_blank" rel="noopener noreferrer">
+    Trials of Mana</a>に記載されているものに準拠します。
+  <br>海外サイトのため原文は全て英語ですが、ここでは日本語で記載および補足説明をします。
+  <br>一般的な攻略情報は<a href="https://i-njoy.net/sd3tom_top.html" target="_blank"
+    rel="noopener noreferrer">nJOY</a>さんのところで確認しましょう。SFC版から攻略されている信頼のサイトです。
+  <br><a href="https://store.jp.square-enix.com/item/9784757566347.html" target="_blank"
+    rel="noopener noreferrer">公式攻略本</a>もとても便利です。やり込むなら買って損はないです。
+  <br>
+  <br>
+  <input id="rule" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="rule">・ルールについて</label>
+  <div class="sub_description_content">
+    SRCに記載されているルールの日本語訳と解説です。
+    <br>ルールには明記されていませんが外部ツールによるゲームデータの改ざんは当然禁止です。
+    <br>・RTA計測
+    <br>　　ゲーム内時間ではなく、実際にクリアにかかった時間を計測します。
+    <br>・PTメンバーの最終決定でタイマーをスタート
+    <br>　　強くてニューゲーム時は「レベルをリセットしますか？」の決定時になります。
+    <br>・ラスボス撃破後の暗転でタイマーストップ
+    <br>　　クリア後のシナリオとアニス撃破は含まれません。
+    <br>・ラビのアクセサリは期間限定特典のため使用禁止
+    <br>・どのラスボスを倒したかを記載する
+    <br>　　ラスボスの記載は必要ですが、記録はラスボスによらず同一集計になっています。
+    <br>・PS4を使用する場合は通常版かProか、およびSSDを使用しているかを記載する
+    <br>　　例えば通常版PS4とSSDなら「PS4 + SSD」のような感じです。
+  </div>
+  <input id="category" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="category">・カテゴリについて</label>
+  <div class="sub_description_content">
+    現在のところニューゲーム用のany%とGlitchless、
+    <br>強くてニューゲーム用のNew Game+とNG+ Glitchlessの4つが存在しています。
+    <input id="any" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="any">・any%</label>
+    <div class="description_content">
+      バグ技を含めたあらゆるテクニックを駆使してクリアを目指すカテゴリです。
+      <br>元々は力の水などのステータス強化アイテムをバグ技で無限に増やして攻略するカテゴリでしたが、
+      <br>2020年11月のV1.1.1アップデートにより水を使ったステータス強化に上限が設けられました。
+      <br>現在1位の記録（2h17m23s）は水バグ修正前のもので、V1.1.1以降では達成不可能です。
+      <br>水バグ修正後はボスを普通に倒す必要があるため、Glitchlessと大きな差は無くなっています。
+      <br>尚、有志によるダウンパッチ手順が公開されている（<a href="https://www.speedrun.com/trials_of_mana/thread/t974c" target="_blank"
+        rel="noopener noreferrer">リンク</a>）ため現在でも水バグは可能です。
+      <br>このカテゴリでも別のセーブデータからアイテムを持ち込むバグについては禁止されていますが、
+      <br>現バージョンでは修正され使用不可のためダウンパッチしない限り考慮不要です。
+    </div>
+    <input id="Glitchless" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="Glitchless">・Glitchless</label>
+    <div class="description_content">
+      現状最大のプレイヤー数を擁するカテゴリです。
+      <br>殆どのバグ技の利用が禁止されていますが、
+      <br>禁止リストに記載の無いものは使えたりします。（詳細は<a href="technique.html">こちら</a>）
+      <br>チャートはクラス2になるタイミングの差から以下の2つに大別されます。
+      <br>・途中でレベル上げを行い、ツェンカー撃破直後にクラスチェンジを行う通称前CC
+      <br>・最小限の戦闘で進み、ローラント解放後にクラスチェンジを行う通称後CC
+      <br>前CCは安定する代わりに稼ぎ分タイムは遅くなります。
+      <br>後CCはタイムは出しやすいものの、低レベルでの進行となりボス戦の負担が大きいです。
+      <br>前CCは更に神獣5体撃破でレベル38に到達可能なためクラスチェンジタイミングを早められますが、
+      <br>多くのボスをノーダメージで倒す技術と5個の？？？の種から必要アイテムを得る運も求められます。
+      <br>現在SRC上の最速記録（2h38m50s）は後CCですが、
+      <br>私が確認した範囲での最速記録（2h37m15s）は5神獣CCの前CCでした。
+      <br>タイム上両者に明確な優劣はないため、自分がやりやすい方で練習しましょう。
+    </div>
+    <input id="New Game+" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="New Game+">・New Game+</label>
+    <div class="description_content">
+      any%の強くてニューゲーム版です。
+      <br>本サイトの攻撃力シミュレータはこのカテゴリを詰めるために作られました。
+      <br>理論上最速タイムが狙えるカテゴリですが、
+      <br>ごく最近追加されたカテゴリな事もあってか現状走者は1名のみです。
+    </div>
+    <input id="NG+ Glitchless" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="NG+ Glitchless">・NG+ Glitchless</label>
+    <div class="description_content">
+      Glitchlessの強くてニューゲーム版です。
+      <br>New Game+と比べるとまだ走者が多いですが、こちらもあまり人気がありません。
+      <br>RTAでノーフューチャーに挑めるのは上記のNew Game+とこのNG+ Glitchlessのみですが、
+      <br>走者が1名（2名？）しかいないため腕自慢のプレイヤーの参戦が期待されています。
+    </div>
+  </div>
+  <input id="Platform" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="Platform">・プラットフォームについて</label>
+  <div class="sub_description_content">
+    PC(Steam)、PS4、Switchのいずれでも行えます。記録の集計はプラットフォーム毎です。
+    <input id="Steam" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="Steam">・PC(Steam)</label>
+    <div class="description_content">
+      最速のロード時間、選択可能なフレームレート、
+      <br>録画や配信に機材不要と最も恵まれた条件のため一番人気があります。
+      <br>120fpsでのプレイが可能であり、画面の見やすさに加え操作性やジャンプの高さも向上します。
+      <br>120fps動作時のみ可能なバグがあるため、any%は事実上PC専用カテゴリになっていたりします。
+      <br>ただし120fps動作にはそれなりのマシンスペックを要求されるほか、
+      <br>モニタが古いとリフレッシュレートが対応しておらず正常に表示できない場合があります。
+      <br>スペックが足りないと動作フレームレートが落ちてしまい、
+      <br>操作感が変わってしまうため練習するうえでも大きなハンデになります。
+      <br>Steamの機能で画面に現在のfpsを表示させることができる（Steam→設定→ゲーム中）ため、
+      <br>プレイ中にどのくらいのフレームレートになっているか確認しておくとよいでしょう。
+      <br>スペックが足りない場合は解像度を妥協するか、Glitchlessなら60fps設定にするのも手です。
+      <br>SRCのGlitchlessで最速記録を持っているしかさんは
+      <br>PCスペックを公開している（
+      <a href="https://www.youtube.com/channel/UCuunibD4mKcU62ZEQTCrQiQ/about" target="_blank"
+        rel="noopener noreferrer">リンク</a>）ため参考になるでしょう。
+      <br>但しこれは配信を考えるとギリギリのスペックです。
+      <br>上位勢のほとんどは配信せず録画オンリーなのはこれが理由と思われます。
+      <br>私もほぼ同等のスペックのPCを使っていますが、一部場面では90fps程度まで落ちてしまいます。
+      <br>もしRTA用にPCを新調するのであれば（流石にいない？）、
+      <br>フルHD120fps動作が重要なゲーム（フォートナイトなど）向けのスペックが参考になりそうです。
+      <br>最新グラフィックカードではオーバースペックになってしまいます。
+      <br>ただこのゲーム、なんと4k出力にも対応しているので全く無駄でもないのですが…。
+    </div>
+    <input id="PS4" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="PS4">・PS4</label>
+    <div class="description_content">
+      シェア機能を使えばPCが無くともニコニコ動画・Twitch・Youtubeへの配信が可能です。
+      <br>またPCのリモートプレイを利用すればPC向けの配信ソフトが使用できるため、
+      <br>タイマーを含めた画面レイアウトにしたり複数サイトへの配信も可能となります。
+      <br>難点としては60fps固定な事とかなり長いロード時間ですが、
+      <br>ロード時間はSSDを使えばある程度はマシになります。
+      <br>PS5使用時のロード時間は筆者がPS5を手に入れられなかったため不明です。
+      <br>もしどなたか確認できたら教えてください、それかいっそPS5下さい！！！
+    </div>
+    <input id="Switch" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="Switch">・Switch</label>
+    <div class="description_content">
+      配信機能がないためキャプチャボード（とそれを取り付けるPC）が必要になります。
+      <br>ロード時間はPS4以上に長く、30fps固定のため操作性も良くないです。
+      <br>RTAにはあまり関係ありませんがPS4と比べると画質もイマイチです。
+      <br>既にSwitchでの録画・配信環境があるがPS4は持っていない、
+      <br>という状況以外ではあまりお勧めできません。
+      <br>スペック差がタイムに影響しない機種のため、
+      <br>本当にタイムを競うなら理想的な環境かもしれませんが…。
+      <br>リースの乳揺れが一番ダイナミックらしいので別の用途がｒｙ
+    </div>
+  </div>
+  <input id="difficulty" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="difficulty">・難易度について</label>
+  <div class="sub_description_content">
+    難易度によるルールの違いはなく、ランキングの集計が異なるだけです。
+    <br>Beginnerはベリーイージー、Expertはベリーハードに該当します。
+    <br>any%は難易度変更時のオートセーブを利用するテクニックがあるため、
+    <br>申請されている難易度と異なる難易度を選択して始める場合があります。
+    <br>通常プレイ時はあまり違いが感じられないベリーイージー～ハードですが、
+    <br>RTAだと殆ど防具を買えない関係でかなり重い差になります。
+    <br>上級者にとっては誤差レベルになるようですが…。
+    <br>追加難易度は強力なアイテムを湯水のように使う事で通常RTAよりも早く終えられますが、
+    <br>クラスチェンジアイテムやドリアードの像などを集めるにはかなりの時間を要します。
+    <br>余談ですが、追加難易度のExpertとNo FutureはNG+専用なのに全カテゴリに設置されています。
+  </div>
+  <input id="route" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="route">・ルートについて</label>
+  <div class="sub_description_content">
+    ご存知の通り、選んだ主人公により3パターンのルートがあります。
+    <br>SRC上ではArc（Archenemyの略）と記載されていますが、ラスボスのことです。
+    <input id="archfiend" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="archfiend">・archfiend</label>
+    <div class="description_content">
+      アークデーモン、つまりダークキャッスルルートを表します。
+      <br>途中で立ち寄ることになるナバール、暗闇の洞窟～ダークキャッスルは他のルートと比べて短く、
+      <br>ボスも倒しやすいものが揃っているため最も人気のルート、というか現状ほぼこれ1択です。
+      <br>ラスボスは正攻法だと全ルート中最も強力かつ時間がかかるのが難点でしたが、
+      <br>「形態変化のチェック（HP60％以下）は3回魔法を唱える毎に行われる」
+      <br>という法則を理解していると形態変化しないタイミングを狙って倒すことができ、
+      <br>全ラスボス中最速で終わる戦闘に早変わりします。
+      <br>更に形態変化前は即死耐性を持たないため、
+      <br>デススペル3発（VHでは5発、NFでは6発）で倒せるという抜け道まであります。
+    </div>
+    <input id="DragonLoad" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="DragonLoad">・Dragon Load</label>
+    <div class="description_content">
+      竜帝、つまりドラゴンズホールルートを表します。
+      <br>途中で立ち寄るアルテナ城はマップが広く、回避困難な準強制戦闘も豊富です。
+      <br>ルート固有ボスの1人である紅蓮の魔導士はワープ持ちの上、青ゲージ行動中は無敵になるため厄介です。
+      <br>ラスボスの竜帝は倒しやすい事で知られていますが、飛び回る遅延行為持ちのため瞬殺は難しいです。
+      <br>Glitchlessではダークキャッスルと比べて概ね15分程度時間がかかります。
+      <br>any%ならアルテナ城の地下をスキップできるため大きくタイム短縮できます。
+    </div>
+    <input id="DarkLich" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="DarkLich">・Dark Lich</label>
+    <div class="description_content">
+      ダークリッチ、つまりミラージュパレスルートです。
+      <br>はっきり言って地獄です。
+      <br>ビーストキングダム、幻惑のジャングル、ミラージュパレスのいずれも長大かつギミックが豊富で、
+      <br>道中は強制戦闘のオンパレード、更に遅延持ちのボスが2体も配置されていて固有ボスも曲者揃いです。
+      <br>ラスボスも回避が難しい行動が多く、ワープまでするため長引きやすいです。
+      <br>Glitchlessではダークキャッスルと比べ30分近く遅れます。
+      <br>但し全ルート中バグ技によるタイム短縮の恩恵が最も大きく、any%であれば選択肢に入ります。
+    </div>
+  </div>
+  <input id="chara" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="chara">・PT編成について</label>
+  <div class="sub_description_content">
+    RTAで使われる主な編成を記載します。
+    <br>どの編成でも主人公を変えれば全ルート対応可能です。
+    <input id="RiKeDu" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="RiKeDu">・リース（フェンリルナイト）、ケヴィン（デスハンド）、デュラン（ソードマスター）</label>
+    <div class="description_content">
+      RTAの鉄板編成で、ほぼすべてのカテゴリにおける最適解になっています。
+      <br>クラス1から頭1つ抜けた火力を持つケヴィンをアタッカーに据え、
+      <br>クラス2以降はリースのプロテクトダウンとデュランのアタックセイバーで援護します。
+      <br>ケヴィンは本人の火力もさることながら、敵を拘束するタイプの必殺技が使えることもメリットです。
+      <br>リースのフェンリルナイトとデュランのソードマスターは火力に大きく関わるため必須ですが、
+      <br>ケヴィンはデルヴィッシュでもそれほど差がないため問題なくクリアできます。
+      <br>またケヴィン使用時のみ利用できるバグがあるため、any%にも対応しています。
+    </div>
+    <input id="HaKeDu" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="HaKeDu">・ホークアイ（ニンジャマスター）、ケヴィン（デルヴィッシュ）、デュラン（ソードマスター）</label>
+    <div class="description_content">
+      上記PTの変型版で、New Game+カテゴリの難易度ノーフューチャーで使用されます。
+      <br>リースからアタッカーやダウン強化を引き継ぎ、代わりにホークアイを起用しています。
+      <br>デルヴィッシュはデスハンドと比べると火力が落ちるものの、
+      <br>即死ゲーのNFでは開幕10秒無敵を活用して安全にバフを入れられるメリットが勝ります。
+      <br>ホークアイをニンジャマスターからワンダラーにすると弱点特効が使えなくなりますが、
+      <br>代わりに豊富な補助呪文が使い放題になり、アイテムの事前準備を減らせます。
+    </div>
+    <input id="RiChDu" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="RiChDu">・リース（ドラゴンマスター）、シャルロット（イビルシャーマン）、デュラン（ソードマスター）</label>
+    <div class="description_content">
+      NG+ Glitchless用の編成で、ケヴィンを利用しない現状唯一の編成です。
+      <br>アタックセイバーに加えてオール系スキルが乗った竜牙槍で殆どのボスを1撃で粉砕します。
+      <br>竜牙槍は発生、リーチ、1発辺りの威力の全てに優れた必殺技で、
+      <br>ワンパンゲーのこのカテゴリでは非ロックタイプであることも重要になります。
+      <br>（ロック技は演出終了まで戦闘が終了しなくなるため、ワンパン時は遅くなってしまう）
+      <br>ケヴィンがいないためany%では幾つかのバグが使えないのが難点です。
+    </div>
+  </div>
+
+  <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
+    <br>当該コンテンツの転載・配布は禁止いたします。
+    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
+  </p>
+
+</body>
+
+</html>
