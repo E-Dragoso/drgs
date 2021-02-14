@@ -18,7 +18,7 @@ h1 {
 body {
   max-width: 50em;
   margin: auto;
-  background: linear-gradient(#ffffff, #95d2f6);
+  background: linear-gradient(#ffffff, 90%, #95d2f6);
 }
 
 /* メイン項目 */
