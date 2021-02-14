@@ -23,22 +23,24 @@ body {
 
 /* メイン項目 */
 h2 {
-  margin: 0;
-  background-color: #80ff80;
+  background-color: #bdd5d3;
   padding-left: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid #426579;
+  border-left: 0.5em solid #426579;
 }
 h3 {
   background-color: #bdd5d3;
   padding-left: 0.5em;
   margin: 0;
+  border-bottom: 1px solid #426579;
 }
 .div_h2{
-  margin: 1em;
+  margin: 0.5em;
   padding: 0.2em;
 }
 .div_h3{
   margin: 0.5em;
-  padding: 0.2em;
 }
 h4 {
   margin: 0;
@@ -82,6 +84,7 @@ h4 {
 }
 .sub_description_content {
   border: solid;
+  border-width: 1px;
   height: 0;
   opacity: 0;
   transition: .5s;
@@ -99,7 +102,7 @@ h4 {
 /* 概要部 */
 /* ワシの説明 */
 #voyage {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-right: auto;
   margin-left: auto;
   color: #ffffff;
