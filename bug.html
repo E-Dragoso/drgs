@@ -31,11 +31,13 @@
     <br>発生が確認されているのはツェンカー（
     <a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat" target="_blank"
       rel="noopener noreferrer">リンク</a>）、ビルとベン、
-    <br>マシンゴーレムS、ドラン、フィーグムンド（
+    <br>マシンゴーレムS、フィーグムンド（
     <a href="https://www.twitch.tv/e_dragoso/clip/BrightWanderingHippoPanicVis" target="_blank"
       rel="noopener noreferrer">リンク</a>）です。
+    <br>少し性質が違いますがドランでも無敵化は確認されています（<a href="https://www.twitch.tv/videos/622722108" target="_blank"
+      rel="noopener noreferrer">リンク</a>）。
     <br>こうなってしまうとリセットする以外に復帰方法が無くなりますが、
-    ビルベンのみ黄泉がえりで蘇生されるため詰み回避ができます。
+    ビルベンのみもう片方が生きていれば黄泉がえりで蘇生されるため詰み回避ができます。
     <br>現バージョンでも絶賛発生中なので、セーブはこまめにしましょう。
   </div>
   <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
@@ -62,20 +64,22 @@
   <div class="sub_description_content">
     ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。
     現バージョンでも発生します。
-    <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと吸われることがあり、
-    ゴーヴァはゴーストロードを潰した後に同様の現象が起きます。
-    どうやら影の当たり判定が残っているようです。
-    <br>こいつらが相手の時にスワップすると変な方向に出やすいのもこれが原因？
+    <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと倒した方に吸われることがあり、
+    ゴーヴァはゴーストロードを潰した後に影の当たり判定が残っているらしく、同様の現象が起きることがあります。
+    <br>こいつらが相手の時にスワップすると変な方向に出やすいのもこれが原因かも？
   </div>
   <input id="DeathTaxesSting" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
   <label class="sub_description" for="DeathTaxesSting">・Death & Taxes & Sting（必中キルスティンガー）</label>
   <div class="sub_description_content">
-    ほぼ回避不能のキルスティンガーが飛んでくる恐るべきバグ。
+    キルスティンガーの判定が残ったまま赤枠ごと動き回るという恐るべきバグ。
     幸い現バージョンでは未確認です。
-    <br>稀にキルスティンガーの判定が残ったまま連続してキルスティンガーが飛んでくることがあり、
-    この時残った判定が赤枠と一緒に動木回る状態になります。タゲられているとまず死にます。
+    <br>キルスティンガーが連続で使用された時に稀に発生し、タゲられているとまず死にます（
+    <a href="https://clips.twitch.tv/InquisitiveSavoryClipsmomTheRinger" target="_blank"
+      rel="noopener noreferrer">リンク</a>）。
     <br>RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、
     対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
+    <br>バグとは直接関係ないのですが、キルスティンガーでやられた仲間を即座に蘇生すると起きた瞬間にまたキルスティンガーで即死します。
+    キルスティンガー中は他の攻撃は飛んでこないので、落ち着いてバフ更新などをしながら終了を待ちましょう。
   </div>
   <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
   <label class="sub_description" for="DirtyNinja">・Dirty Ninja（汚い忍者）</label>
