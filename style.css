@@ -135,6 +135,7 @@ input {
 }
 .num {
   text-align: center;
+  width: 4em;
 }
 /* フッタ表示固定 */
 .footer {
@@ -158,20 +159,16 @@ input {
 }
 /* 数値項目 */
 .dmgcalc {
-  width:3em;
+  width:2.5em;
   text-align: center;
-  -webkit-appearance: none;
   margin: 0;
-  -moz-appearance:textfield;
 }
 .dmgcalcres {
-  font-size: 1.1em;
-  width:5em;
+  font-size: 1em;
+  width:4em;
   font-weight: bold;
   text-align: center;
-  -webkit-appearance: none;
   margin: 0;
-  -moz-appearance:textfield;
 }
 /* グループ分け */
 .dmg_group{

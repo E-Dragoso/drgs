@@ -23,11 +23,11 @@
     <div class="description_content">
       組み合わせは無限大！キミだけの最強キャラを作ろう！
       <br>・ステータスはレベル99で育成ポイント振り分け済みのものです。
-      <br>・同時発動不可な組み合わせも選べますが、修正予定です。
-      <br>・別クラスの専用アビリティも表示されるのは仕様です。
+      <br>・武器名に（橙）とあるものはノーフューチャーモード限定で入手できるクラス4用の武器です。
+      <br>・クラスアビリティや固有アビリティがキャラごとに全て表示されます。仕様です。
+      <br>・今のところ同時発動不可な組み合わせも選べます。こちらは修正予定です。
       <br>
-      <br>選んだレベルのステータスが入力されるようにしたいですが、
-      <br>データが集まっていないため未実装です。
+      <br>レベル99以外の計算もできるようにしたいですが、レベルごとのステータスデータが取れていないため未実装です。
       <br>もしデータをお持ちの方がいましたら提供頂けると助かります。
     </div>
     <p></p>
@@ -115,237 +115,237 @@
       <div>
         <label>武器
           <select id="DuranWeapon" onChange="weapon()">
-            <option value=0>ブロンズソード</option>
-            <option value=1>アイアンソード</option>
-            <option value=2>グラディウス</option>
-            <option value=3>ブロードソード</option>
-            <option value=4>サーベル</option>
-            <option value=5>スティールソード</option>
-            <option value=6>バスタードソード</option>
-            <option value=7>シルバーブレード</option>
-            <option value=8>エストック</option>
-            <option value=9>フォールション</option>
-            <option value=10>ブランベルジェ</option>
-            <option value=11>コリシュマルド</option>
-            <option value=12>シャムシール</option>
-            <option value=13>ペイルストーム</option>
-            <option value=14>ミスリルソード</option>
-            <option value=15>カッツバルゲル</option>
-            <option value=16>バルムンク</option>
-            <option value=17>ヴァーラルソード</option>
-            <option value=18>クサナギブレード</option>
-            <option value=19>テュルヴィング</option>
-            <option value=20>ディフェンダー</option>
-            <option value=21>ムラマサブレード</option>
-            <option value=22>クラウ・ソラス</option>
-            <option value=23>エクスカリバー</option>
-            <option value=24>レーヴァテイン</option>
-            <option value=25>ドラゴンベイン</option>
-            <option value=26>ブレイブブレード</option>
-            <option value=27>シグムンド</option>
-            <option value=28 selected>ラグナロク</option>
-            <option value=29>デスブリンガー</option>
-            <option value=30>勝利の剣</option>
-            <option value=31>勝利の剣（橙）</option>
-            <option value=32>フルンティング</option>
-            <option value=33>フルンティング（橙）</option>
+            <option value=0>ブロンズソード(4 / 0)</option>
+            <option value=1>アイアンソード(8 / 5)</option>
+            <option value=2>グラディウス(15 / 10)</option>
+            <option value=3>ブロードソード(22 / 15)</option>
+            <option value=4>サーベル(28 / 20)</option>
+            <option value=5>スティールソード(33 / 24)</option>
+            <option value=6>バスタードソード(37 / 26)</option>
+            <option value=7>シルバーブレード(42 / 40)</option>
+            <option value=8>エストック(44 / 32)</option>
+            <option value=9>フォールション(47 / 33)</option>
+            <option value=10>ブランベルジェ(49 / 33)</option>
+            <option value=11>コリシュマルド(51 / 34)</option>
+            <option value=12>シャムシール(53 / 36)</option>
+            <option value=13>ペイルストーム(55 / 37)</option>
+            <option value=14>ミスリルソード(57 / 40)</option>
+            <option value=15>カッツバルゲル(59 / 42)</option>
+            <option value=16>バルムンク(61 / 42)</option>
+            <option value=17>ヴァーラルソード(63 / 43)</option>
+            <option value=18>クサナギブレード(66 / 46)</option>
+            <option value=19>テュルヴィング(68 / 46)</option>
+            <option value=20>ディフェンダー(70 / 48)</option>
+            <option value=21>ムラマサブレード(74 / 51)</option>
+            <option value=22>クラウ・ソラス(76 / 51)</option>
+            <option value=23>エクスカリバー(78 / 54)</option>
+            <option value=24>レーヴァテイン(82 / 57)</option>
+            <option value=25>ドラゴンベイン(91 / 64)</option>
+            <option value=26>ブレイブブレード(102 / 70)</option>
+            <option value=27>シグムンド(108 / 74)</option>
+            <option value=28 selected>ラグナロク(112 / 76)</option>
+            <option value=29>デスブリンガー(122 / 78)</option>
+            <option value=30>勝利の剣(143 / 92)</option>
+            <option value=31>フルンティング(160 / 97)</option>
+            <option value=32>勝利の剣（橙）(215 / 138)</option>
+            <option value=33>フルンティング（橙）(240 / 146)</option>
           </select>
           <select id="AngelaWeapon" onChange="weapon()">
-            <option value=0>木の杖</option>
-            <option value=1>スタッフ</option>
-            <option value=2>ウィッチスタッフ</option>
-            <option value=3>樫の杖</option>
-            <option value=4>ピューターロッド</option>
-            <option value=5>ルビーの杖</option>
-            <option value=6>クリスタルロッド</option>
-            <option value=7>ソウルロッド</option>
-            <option value=8>バーシュスタッフ</option>
-            <option value=9>カニングスタッフ</option>
-            <option value=10>トネリコの杖</option>
-            <option value=11>ウィルスタッフ</option>
-            <option value=12>トートの杖</option>
-            <option value=13>ラージンの杖</option>
-            <option value=14>ミスリルロッド</option>
-            <option value=15>スカルロッド</option>
-            <option value=16>ミーミルロッド</option>
-            <option value=17>ドルイドの杖</option>
-            <option value=18>妖の杖</option>
-            <option value=19>ネビュラスタッフ</option>
-            <option value=20>世界樹の杖</option>
-            <option value=21>古のロッド</option>
-            <option value=22>ミズナラの杖</option>
-            <option value=23>エターナルロッド</option>
-            <option value=24>ケルヌンノスの杖</option>
-            <option value=25>ケーリュイケオン</option>
-            <option value=26>ガンバンテイン</option>
-            <option value=27>精霊の杖</option>
-            <option value=28 selected>ルーンスタッフ</option>
-            <option value=29>ドラゴンロッド</option>
-            <option value=30>クイーンセプター</option>
-            <option value=31>クイーンセプター（橙）</option>
-            <option value=32>カオスパーサー</option>
-            <option value=33>カオスパーサー（橙）</option>
+            <option value=0>木の杖(3 / 3)</option>
+            <option value=1>スタッフ(6 / 8)</option>
+            <option value=2>ウィッチスタッフ(11 / 16)</option>
+            <option value=3>樫の杖(16 / 23)</option>
+            <option value=4>ピューターロッド(21 / 31)</option>
+            <option value=5>ルビーの杖(25 / 36)</option>
+            <option value=6>クリスタルロッド(28 / 40)</option>
+            <option value=7>ソウルロッド(32 / 45)</option>
+            <option value=8>バーシュスタッフ(33 / 50)</option>
+            <option value=9>カニングスタッフ(34 / 52)</option>
+            <option value=10>トネリコの杖(35 / 54)</option>
+            <option value=11>ウィルスタッフ(36 / 56)</option>
+            <option value=12>トートの杖(37 / 58)</option>
+            <option value=13>ラージンの杖(40 / 60)</option>
+            <option value=14>ミスリルロッド(41 / 62)</option>
+            <option value=15>スカルロッド(42 / 64)</option>
+            <option value=16>ミーミルロッド(43 / 66)</option>
+            <option value=17>ドルイドの杖(45 / 68)</option>
+            <option value=18>妖の杖(46 / 70)</option>
+            <option value=19>ネビュラスタッフ(48 / 72)</option>
+            <option value=20>世界樹の杖(50 / 75)</option>
+            <option value=21>古のロッド(51 / 77)</option>
+            <option value=22>ミズナラの杖(54 / 80)</option>
+            <option value=23>エターナルロッド(56 / 83)</option>
+            <option value=24>ケルヌンノスの杖(57 / 86)</option>
+            <option value=25>ケーリュイケオン(66 / 99)</option>
+            <option value=26>ガンバンテイン(70 / 124)</option>
+            <option value=27>精霊の杖(72 / 126)</option>
+            <option value=28 selected>ルーンスタッフ(74 / 128)</option>
+            <option value=29>ドラゴンロッド(77 / 130)</option>
+            <option value=30>クイーンセプター(88 / 168)</option>
+            <option value=31>カオスパーサー(92 / 168)</option>
+            <option value=32>クイーンセプター（橙）(132 / 252)</option>
+            <option value=33>カオスパーサー（橙）(138 / 252)</option>
           </select>
           <select id="KevinWeapon" onChange="weapon()">
-            <option value=0>レザーグローブ</option>
-            <option value=1>アイアンナックル</option>
-            <option value=2>ニードルグローブ</option>
-            <option value=3>モールベアの爪</option>
-            <option value=4>チェイングローブ</option>
-            <option value=5>バグナグ</option>
-            <option value=6>フィーンズクロー</option>
-            <option value=7>シルバーソーン</option>
-            <option value=8>モーグリの爪</option>
-            <option value=9>キーンナックル</option>
-            <option value=10>パワーグローブ</option>
-            <option value=11>カイザーナックル</option>
-            <option value=12>アシッドクロー</option>
-            <option value=13>サイクロンクロー</option>
-            <option value=14>ミスリルナックル</option>
-            <option value=15>ボーンナックル</option>
-            <option value=16>ケルベロスクロー</option>
-            <option value=17>ダイヤナックル</option>
-            <option value=18>ゴーストハンド</option>
-            <option value=19>ロッククロー</option>
-            <option value=20>グリームグローブ</option>
-            <option value=21>ジャグパンチャー</option>
-            <option value=22>バンパイアクロー</option>
-            <option value=23>オーラグローブ</option>
-            <option value=24>ロトンナックル</option>
-            <option value=25>ドラゴンクロー</option>
-            <option value=26>スパイラルクロー</option>
-            <option value=27>ホーリーグローブ</option>
-            <option value=28 selected>ギガースグローブ</option>
-            <option value=29>スカルディセクト</option>
-            <option value=30>スファライ</option>
-            <option value=31>スファライ（橙）</option>
-            <option value=32>リンドヴルム</option>
-            <option value=33>リンドヴルム（橙）</option>
+            <option value=0>レザーグローブ(4 / 0)</option>
+            <option value=1>アイアンナックル(8 / 6)</option>
+            <option value=2>ニードルグローブ(16 / 11)</option>
+            <option value=3>モールベアの爪(23 / 16)</option>
+            <option value=4>チェイングローブ(31 / 21)</option>
+            <option value=5>バグナグ(36 / 25)</option>
+            <option value=6>フィーンズクロー(40 / 28)</option>
+            <option value=7>シルバーソーン(45 / 32)</option>
+            <option value=8>モーグリの爪(49 / 34)</option>
+            <option value=9>キーンナックル(53 / 35)</option>
+            <option value=10>パワーグローブ(54 / 36)</option>
+            <option value=11>カイザーナックル(56 / 37)</option>
+            <option value=12>アシッドクロー(58 / 38)</option>
+            <option value=13>サイクロンクロー(60 / 40)</option>
+            <option value=14>ミスリルナックル(62 / 42)</option>
+            <option value=15>ボーンナックル(65 / 43)</option>
+            <option value=16>ケルベロスクロー(67 / 43)</option>
+            <option value=17>ダイヤナックル(69 / 46)</option>
+            <option value=18>ゴーストハンド(71 / 47)</option>
+            <option value=19>ロッククロー(73 / 48)</option>
+            <option value=20>グリームグローブ(75 / 51)</option>
+            <option value=21>ジャグパンチャー(77 / 52)</option>
+            <option value=22>バンパイアクロー(79 / 54)</option>
+            <option value=23>オーラグローブ(82 / 58)</option>
+            <option value=24>ロトンナックル(91 / 59)</option>
+            <option value=25>ドラゴンクロー(101 / 68)</option>
+            <option value=26>スパイラルクロー(114 / 76)</option>
+            <option value=27>ホーリーグローブ(118 / 77)</option>
+            <option value=28 selected>ギガースグローブ(130 / 80)</option>
+            <option value=29>スカルディセクト(126 / 78)</option>
+            <option value=30>スファライ(155 / 97)</option>
+            <option value=31>リンドヴルム(172 / 101)</option>
+            <option value=32>スファライ（橙）(233 / 146)</option>
+            <option value=33>リンドヴルム（橙）(258 / 152)</option>
           </select>
           <select id="CharlotteWeapon" onChange="weapon()">
-            <option value=0>殻竿</option>
-            <option value=1>ウッドフレイル</option>
-            <option value=2>ボールチェイン</option>
-            <option value=3>ライトフレイル</option>
-            <option value=4>ウォーハンマー</option>
-            <option value=5>スティールモール</option>
-            <option value=6>ダックの鉄球</option>
-            <option value=7>シルバーフレイル</option>
-            <option value=8>ヘヴィフレイル</option>
-            <option value=9>ハンマーフレイル</option>
-            <option value=10>モーニングスター</option>
-            <option value=11>ヒエロフレイル</option>
-            <option value=12>パペットフレイル</option>
-            <option value=13>ブロックバスター</option>
-            <option value=14>ミスリルモール</option>
-            <option value=15>トロウルモール</option>
-            <option value=16>キュニアルモール</option>
-            <option value=17>ホーリーフレイル</option>
-            <option value=18>シビュラフレイル</option>
-            <option value=19>グラビティモール</option>
-            <option value=20>アルティマモール</option>
-            <option value=21>ブラッドサッカー</option>
-            <option value=22>メテオフレイル</option>
-            <option value=23>ミョルニル</option>
-            <option value=24>サタンフレイル</option>
-            <option value=25>ベルティナモール</option>
-            <option value=26>ジャジメンテス</option>
-            <option value=27>ギガースフレイル</option>
-            <option value=28 selected>死者の槌矛</option>
-            <option value=29>ジャガーノート</option>
-            <option value=30>セイクリッド</option>
-            <option value=31>セイクリッド（橙）</option>
-            <option value=32>ヘルヘイム</option>
-            <option value=33>ヘルヘイム（橙）</option>
+            <option value=0>殻竿(4 / 2)</option>
+            <option value=1>ウッドフレイル(6 / 7)</option>
+            <option value=2>ボールチェイン(12 / 14)</option>
+            <option value=3>ライトフレイル(17 / 20)</option>
+            <option value=4>ウォーハンマー(22 / 26)</option>
+            <option value=5>スティールモール(26 / 30)</option>
+            <option value=6>ダックの鉄球(29 / 34)</option>
+            <option value=7>シルバーフレイル(33 / 38)</option>
+            <option value=8>ヘヴィフレイル(34 / 42)</option>
+            <option value=9>ハンマーフレイル(35 / 43)</option>
+            <option value=10>モーニングスター(36 / 44)</option>
+            <option value=11>ヒエロフレイル(37 / 46)</option>
+            <option value=12>パペットフレイル(38 / 47)</option>
+            <option value=13>ブロックバスター(42 / 48)</option>
+            <option value=14>ミスリルモール(43 / 52)</option>
+            <option value=15>トロウルモール(44 / 53)</option>
+            <option value=16>キュニアルモール(46 / 55)</option>
+            <option value=17>ホーリーフレイル(47 / 57)</option>
+            <option value=18>シビュラフレイル(48 / 58)</option>
+            <option value=19>グラビティモール(51 / 59)</option>
+            <option value=20>アルティマモール(52 / 64)</option>
+            <option value=21>ブラッドサッカー(53 / 65)</option>
+            <option value=22>メテオフレイル(57 / 66)</option>
+            <option value=23>ミョルニル(58 / 71)</option>
+            <option value=24>サタンフレイル(60 / 72)</option>
+            <option value=25>ベルティナモール(68 / 82)</option>
+            <option value=26>ジャジメンテス(70 / 94)</option>
+            <option value=27>ギガースフレイル(74 / 98)</option>
+            <option value=28 selected>死者の槌矛(94 / 99)</option>
+            <option value=29>ジャガーノート(98 / 100)</option>
+            <option value=30>セイクリッド(88 / 126)</option>
+            <option value=31>ヘルヘイム(126 / 126)</option>
+            <option value=32>セイクリッド（橙）(132 / 188)</option>
+            <option value=33>ヘルヘイム（橙）(189 / 189)</option>
           </select>
           <select id="HawkeyeWeapon" onChange="weapon()">
-            <option value=0>フリントナイフ</option>
-            <option value=1>ダガー</option>
-            <option value=2>バゼラード</option>
-            <option value=3>ロンデルダガー</option>
-            <option value=4>シャークティース</option>
-            <option value=5>スティールダガー</option>
-            <option value=6>ミゼリコード</option>
-            <option value=7>カタール</option>
-            <option value=8>マインゴーシュ</option>
-            <option value=9>迦楼羅</option>
-            <option value=10>水晶のダガー</option>
-            <option value=11>エルフの短剣</option>
-            <option value=12>阿修羅</option>
-            <option value=13>ブルーゲイル</option>
-            <option value=14>ミスリルナイフ</option>
-            <option value=15>夜叉</option>
-            <option value=16>ダンシングダガー</option>
-            <option value=17>フィールドダガー</option>
-            <option value=18>毘沙門</option>
-            <option value=19>メルキールダガー</option>
-            <option value=20>シルヴァンナイフ</option>
-            <option value=21>帝釈</option>
-            <option value=22>シェオルの短刀</option>
-            <option value=23>クレセントナイフ</option>
-            <option value=24>不動明王</option>
-            <option value=25>クリムゾングレア</option>
-            <option value=26>オリハルコン</option>
-            <option value=27>マンスローター</option>
-            <option value=28 selected>金剛羅漢</option>
-            <option value=29>デスストローク</option>
-            <option value=30>ファフニール</option>
-            <option value=31>ファフニール（橙）</option>
-            <option value=32>アグニ</option>
-            <option value=33>アグニ（橙）</option>
+            <option value=0>フリントナイフ(4 / 0)</option>
+            <option value=1>ダガー(7 / 6)</option>
+            <option value=2>バゼラード(14 / 13)</option>
+            <option value=3>ロンデルダガー(20 / 19)</option>
+            <option value=4>シャークティース(26 / 25)</option>
+            <option value=5>スティールダガー(30 / 29)</option>
+            <option value=6>ミゼリコード(34 / 32)</option>
+            <option value=7>カタール(38 / 37)</option>
+            <option value=8>マインゴーシュ(40 / 38)</option>
+            <option value=9>迦楼羅(42 / 44)</option>
+            <option value=10>水晶のダガー(44 / 45)</option>
+            <option value=11>エルフの短剣(46 / 46)</option>
+            <option value=12>阿修羅(48 / 48)</option>
+            <option value=13>ブルーゲイル(50 / 49)</option>
+            <option value=14>ミスリルナイフ(52 / 50)</option>
+            <option value=15>夜叉(54 / 52)</option>
+            <option value=16>ダンシングダガー(56 / 53)</option>
+            <option value=17>フィールドダガー(58 / 55)</option>
+            <option value=18>毘沙門(60 / 60)</option>
+            <option value=19>メルキールダガー(62 / 61)</option>
+            <option value=20>シルヴァンナイフ(64 / 63)</option>
+            <option value=21>帝釈(66 / 66)</option>
+            <option value=22>シェオルの短刀(68 / 68)</option>
+            <option value=23>クレセントナイフ(70 / 69)</option>
+            <option value=24>不動明王(72 / 74)</option>
+            <option value=25>クリムゾングレア(81 / 81)</option>
+            <option value=26>オリハルコン(94 / 94)</option>
+            <option value=27>マンスローター(98 / 94)</option>
+            <option value=28 selected>金剛羅漢(100 / 98)</option>
+            <option value=29>デスストローク(103 / 99)</option>
+            <option value=30>ファフニール(129 / 114)</option>
+            <option value=31>アグニ(133 / 126)</option>
+            <option value=32>ファフニール（橙）(194 / 171)</option>
+            <option value=33>アグニ（橙）(200 / 189)</option>
           </select>
           <select id="RieszWeapon" onChange="weapon()">
-            <option value=0>ブロンズランス</option>
-            <option value=1>ロングスピア</option>
-            <option value=2>フラメア</option>
-            <option value=3>コルセスカ</option>
-            <option value=4>パルティザン</option>
-            <option value=5>スティールランス</option>
-            <option value=6>グレイヴ</option>
-            <option value=7>シルバーランス</option>
-            <option value=8>ウィングスピア</option>
-            <option value=9>妖魔の槍</option>
-            <option value=10>プルームランス</option>
-            <option value=11>ダークピアサー</option>
-            <option value=12>トレントスピア</option>
-            <option value=13>ゴールデンスピア</option>
-            <option value=14>ミスリルスピア</option>
-            <option value=15>ブレインレッカー</option>
-            <option value=16>グリフィンランス</option>
-            <option value=17>スタッグホーン</option>
-            <option value=18>ウルヴスファング</option>
-            <option value=19>メイデンリーフ</option>
-            <option value=20>バルキリースピア</option>
-            <option value=21>ミディールの槍</option>
-            <option value=22>ブリューナク</option>
-            <option value=23>グングニル</option>
-            <option value=24>ペイントゥース</option>
-            <option value=25>ブレイズピアサー</option>
-            <option value=26>トゥルースピア</option>
-            <option value=27>スターゲイザー</option>
-            <option value=28 selected>ドラゴンランス</option>
-            <option value=29>巨人の槍</option>
-            <option value=30>ブリュンヒルド</option>
-            <option value=31>ブリュンヒルド（橙）</option>
-            <option value=32>ヴェズルフェルニル</option>
-            <option value=33>ヴェズルフェルニル（橙）</option>
+            <option value=0>ブロンズランス(4 / 0)</option>
+            <option value=1>ロングスピア(7 / 6)</option>
+            <option value=2>フラメア(14 / 12)</option>
+            <option value=3>コルセスカ(20 / 18)</option>
+            <option value=4>パルティザン(26 / 24)</option>
+            <option value=5>スティールランス(30 / 28)</option>
+            <option value=6>グレイヴ(34 / 31)</option>
+            <option value=7>シルバーランス(38 / 35)</option>
+            <option value=8>ウィングスピア(42 / 37)</option>
+            <option value=9>妖魔の槍(45 / 37)</option>
+            <option value=10>プルームランス(46 / 38)</option>
+            <option value=11>ダークピアサー(48 / 40)</option>
+            <option value=12>トレントスピア(50 / 40)</option>
+            <option value=13>ゴールデンスピア(52 / 44)</option>
+            <option value=14>ミスリルスピア(54 / 46)</option>
+            <option value=15>ブレインレッカー(56 / 46)</option>
+            <option value=16>グリフィンランス(58 / 48)</option>
+            <option value=17>スタッグホーン(60 / 50)</option>
+            <option value=18>ウルヴスファング(62 / 50)</option>
+            <option value=19>メイデンリーフ(64 / 53)</option>
+            <option value=20>バルキリースピア(66 / 56)</option>
+            <option value=21>ミディールの槍(68 / 56)</option>
+            <option value=22>ブリューナク(70 / 60)</option>
+            <option value=23>グングニル(72 / 62)</option>
+            <option value=24>ペイントゥース(77 / 62)</option>
+            <option value=25>ブレイズピアサー(86 / 73)</option>
+            <option value=26>トゥルースピア(91 / 77)</option>
+            <option value=27>スターゲイザー(93 / 88)</option>
+            <option value=28 selected>ドラゴンランス(108 / 90)</option>
+            <option value=29>巨人の槍(110 / 95)</option>
+            <option value=30>ブリュンヒルド(118 / 105)</option>
+            <option value=31>ヴェズルフェルニル(147 / 118)</option>
+            <option value=32>ブリュンヒルド（橙）(177 / 158)</option>
+            <option value=33>ヴェズルフェルニル（橙）(221 / 177)</option>
           </select>
         </label>
-        <label>武器物攻 <input type="number" class="dmgcalc" id="weaponatk" readonly></label>
-        <label>武器魔攻 <input type="number" class="dmgcalc" id="weaponmag" readonly></label>
+        <label hidden="true">武器物攻 <input type="text" class="dmgcalc" id="weaponatk" readonly></label>
+        <label hidden="true">武器魔攻 <input type="text" class="dmgcalc" id="weaponmag" readonly></label>
       </div>
       <div>
-        <label>物理攻撃力 <input type="number" class="dmgcalc" id="atk" readonly></label>
-        <label>魔法攻撃力 <input type="number" class="dmgcalc" id="mag" readonly></label>
-        <label>クリティカル確率 <input type="number" class="dmgcalc" id="crit_prob" readonly>%</label>
-        <label>クリティカル倍率 <input type="number" step="0.01" class="dmgcalc" id="crit_magn" readonly>倍</label>
+        <label>物理攻撃力 <input type="text" class="dmgcalc" id="atk" readonly></label>
+        <label>魔法攻撃力 <input type="text" class="dmgcalc" id="mag" readonly></label>
+        <label>クリティカル <input type="text" class="dmgcalc" id="crit_prob" readonly>%
+          <input type="text" class="dmgcalc" id="crit_magn" readonly>倍</label>
       </div>
       <div>
-        <label>物理期待値 <input type="number" step="0.01" class="dmgcalcres" id="atkexpected"
-            style="background-color: lightcoral;" readonly></label>
-        <label>魔法期待値 <input type="number" step="0.01" class="dmgcalcres" id="magexpected"
-            style="background-color: lightblue;" readonly></label>
-        <label>必殺期待値 <input type="number" step="0.01" class="dmgcalcres" id="csexpected" style="background-color: plum;"
+        <label>物理期待値 <input type="text" class="dmgcalcres" id="atkexpected" style="background-color: lightcoral;"
+            readonly></label>
+        <label>魔法期待値 <input type="text" class="dmgcalcres" id="magexpected" style="background-color: lightblue;"
+            readonly></label>
+        <label>必殺期待値 <input type="text" class="dmgcalcres" id="csexpected" style="background-color: plum;"
             readonly></label>
       </div>
     </div>
