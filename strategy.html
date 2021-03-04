@@ -16,44 +16,385 @@
 
   <h4><a href="index.html">聖剣伝説3 TRIALS of MANA 攻略ツール集</a>　＞　完全攻略編</h4>
   <br>
-  <input id="ability" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="ability">よく使われるアビリティ</label>
+  RTA向けの戦術解説です。
+  <br>
+  <input id="map" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="map">進行度毎の考え方</label>
   <div class="sub_description_content">
-    <div>RTAで特に重宝するアビリティを紹介します。
-      <br>・我流奥義（必殺技使用時、攻撃力アップ効果を得る）
-      <br>　必殺技を使うだけでパワーアップ（攻撃力20％アップ）がかかるリンクアビリティです。
-      <br>　これと獣人化によりケヴィンは常に1.44倍の火力で攻撃することが可能になります。
-      <br>　注意点としては、デュラン加入時かつフォルセナ襲撃イベント直後しか入手できない事です。取り忘れると致命的です。
-      <br>　また必殺技が撃てない状況ではバフをかけられないため、開幕のSP量や立ち回りを意識する必要があります。
-      <br>
-      <br>・挑発（敵から狙われやすくなる）
-      <br>　説明だけだと地味そうな効果ですが、きわめて強力なデュランの固有アビリティです。
-      <br>　このスキルを付けていればほとんどの敵の攻撃がまずデュランに向くようになります。
-      <br>　戦闘エリア外にいても有効なのか、雑魚戦ではよくデュランを狙おうとした雑魚が頭に？を浮かべ棒立ちになる光景が見られます。
-      <br>　ボス戦でも開幕行動が安定するほか、移動速度の遅いマシンゴーレムはデュランとの距離が遠いと攻撃せず歩き続けて大きな隙を晒してくれます。
-      <br>　注意点としては、レベル上げなど敵が一斉にこちらに向かってきた方が良い場面では邪魔になる事もあります。
-      <br>　
-      <br>・アタックセイバー/アタックセイバーⅡ（セイバー魔法の消費MPを4(8)アップ、効果中与ダメージを15%(25%)アップ）
-      <br>　またもやデュランの固有アビリティ。厳密にはアタックセイバーⅡは他のキャラも使えますが併用可能なのはデュランだけです。
-      <br>　本来属性を付与するだけのセイバー魔法にダメージアップ効果が乗せられます。
-      <br>　殆どの敵は4属性のどれかが等倍以上で通るため、ダメージアップ目的のためだけにセイバーを唱えます。
-      <br>　セイバー魔法の効果は1分間でリテイン等で延長もできないのですが、ソードマスターになるとこれが40％アップ+全体化。
-      <br>　クラス3の火力で1分以上生き延びる敵はほぼいないのでこの弱点もあってないようなものになります。
-      <br>　注意点としては、MP消費が重くなるため連発できないこと。全体化できないクラス2では誰に何回使うか考える必要があります。
-      <br>　また火、水、土、風に耐性があるビルとベンやこれらを吸収するパワーボルダー相手に使うと悲しい事になります。
-      <br>
-      <br>・獣の咆哮（ボスへの与ダメージを10%アップ）
-      <br>　ケヴィン加入時のみ貰える、対ボス用のリンクアビリティです。
-      <br>　タダで貰えるリンクアビリティとしては我流奥義の次に有用で、どんな場面でも腐らないのがポイントです。
-      <br>　我流奥義と違ってシナリオ上必ず入手することになるため、取り忘れがないのも利点。
-      <br>　数字はやや控えめに見えますが、ケヴィンが装備できる攻撃アビリティの中では最大の効果を持っていたりします。
-      <br>
-      <br>・ダウン強化/ダウン強化Ⅱ（特技のステータスダウン効果を5%(7%)アップ）
-      <br>　ダウン系スキルの効果をアップさせるリンクアビリティ。
-      <br>　ダウン強化無しのプロテクトダウンはダメージを1.25倍、ダウン強化有りのプロテクトダウンはダメージを1.33..倍、ダウン強化ⅠⅡ併用時は1.47倍にします。
-      <br>　文句なしの強力アビリティ…と言いたいところですが、実は後半のボスの殆どにはダウン強化を付けても与ダメージが増えない事がもっさんさんの検証で明らかになったため、
-      残念ながら数字ほどの効果は期待できません。
+    RTA観点でどこで何をしたいかについてまとめていきます。
+    主人公リース、仲間1ケヴィン、仲間2デュランを選択する引継ぎ無しルールについての考察なので、NG+では色々と事情が変わります。
+    <br>全体に言えることとして、慣れるまでは女神像を調べることを習慣づけましょう。
+    このゲームはマップを移動するだけでオートセーブされるため仮にゲームオーバーになっても致命的な事故とはなりませんが、
+    ダンジョンの入り口からやり直しになるよりはボス前復帰ができる方がずっと良いです。
+    特に最終盤のダンジョンは途中でオートセーブが行われないため、最後のボスに負けると最初からやり直しになってしまいます。
+    <input id="opening" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="opening">オープニング～ウィスプ加入まで</label>
+    <div class="description_content">
+      最初のチュートリアル戦闘は指示の通り進めるだけですが、この戦闘のみ敵をダウンさせると大量のSPクリスタルを落とします。
+      タイミングを合わせることで必殺使用後にクリスタルを回収してSP200で本編を始めることができます。
+      <br>暫くは全ての戦闘を回避しながら進めます。道中に落ちているアイテムも拾いながら進めれば買わずに済みます。
+      特に天使の聖杯は買うと300ルクもするので慣れるまでは全回収で良いです。この段階だとアルマの部屋、ラビの森、ウェンデルに落ちています。但し宝箱入りのため回収演出が少し長いです。
+      まんまるドロップも序盤では十分な回復量です。ローラントの宝箱に2つ、アストリア、ラビの森、滝の洞窟、ウェンデルにそれぞれ1つ落ちています。
+      このほか魔法のロープも3つ（攻略順によっては2つ）必要なのでラビの森で取っておきます。
+      またアストリアの宿代6ルクが必要なのでこれも拾っておきます。アストリアに落ちている10ルクをフラグ会話ついでに回収するのが一般的です。
+      <br>滝の洞窟でケヴィンが加入したらすぐに力を4振ってやり、以降はケヴィンで雑魚狩りをしながら進めます。
+      と言ってもやや硬いマイコニドやアーマー持ちのゴブリンは避けた方がよいので、狙うのは入ってすぐのラビ2バットム1か広間のバットム4くらいです。
+      どちらかをこなせばリースのレベルが2になり火力が大きく上がります。加えて力を2振れば中々のものになりますが、クラスチェンジ後のスキル振りに影響が出るためご利用は計画的に。
+      ルクもまとまった金額が落ちているため拾い、アストリアでケヴィンの武器購入に充てます。
+      滝の洞窟の再訪時は夢見草を拾っていきます。こちらは非売品なので取り忘れないように。
+      <input id="FullMetalHugger" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="FullMetalHugger">・フルメタルハガー</label>
+      <div class="description_content">
+        弱点：闇　青ゲージ：なし　有効：目
+        <br>最初のボスだけあって避け易い攻撃ばかりですが、唯一赤枠無しで不意に繰り出してくるパンチはやや避けにくいです。
+        食らってしまうとノーダメージボーナスが得られなくなります。片足を持ち上げたら反対の足に回避で潜り込みましょう。
+        但しダメージ自体は小さく、ノーダメージボーナスで貰える経験値も120なのであまりシビアに考えなくても良さそうです。
+      </div>
     </div>
+    <input id="JadGnom" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="JadGnom">ジャド脱出～ノーム加入まで</label>
+    <div class="description_content">
+      ジャド脱出時にデュランが加入します。育成は後でまとめてすることにして一旦先へ進めます。
+      ここに出現するバウンドウルフは防御力が低く、密集しているため絶好の経験値稼ぎポイントです。
+      最短距離で進んだ場合スイッチの部屋は無視することになりますが、残りを倒していけばケヴィンのレベルが6に上がります。
+      <br>マイアではまんまるドロップと天使の聖杯が拾えます。装備はウェンデルと同じなので更新不要です。
+      <br>黄金の街道は途中にまんまるドロップが1つ、天使の聖杯が2つ落ちています。
+      ジャドと比べると敵が固く、全て倒してもレベルが上がらないので無視してよいです。但し経験値調整のために幾つか倒していくパターンもあります。
+      その辺りを考えるのにうってつけのツール（<a href="chartchiken.html">リンク</a>）があるみたいですよ。
+      <br>大地の裂け目に着いたらケヴィンの力を6、リースの精神を4でペイバック、デュランの運を4で挑発を習得するのが一般的です。
+      デュランは挑発と相性のいい反撃も取れます。こちらも挑発と相性のいいHPアップとどちらを付けるかは悩ましいところ。
+      HPが良い具合に減っていたらケヴィンに火事場を使わせるのも良いです。
+      <br>マシンゴーレム戦の前に夢見草を使って夜にします。橋の縁で仲間に使わせるか、床板（？）3枚目で自キャラに使わせてから駆け込むと演出をカットできます。
+      <input id="MachineGolemR" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="MachineGolemR">・マシンゴーレムR</label>
+      <div class="description_content">
+        弱点：風　青ゲージ：なし　有効：単
+        <br>こいつも正面にいる時に繰り出してくるパンチが厄介です。
+        フルメタルハガーと違って見てからでは避けられないので、常に後ろを取るようにします。
+        またドリルミサイルとロケットランチャーは後方にも判定があり、密着していると後ろにいても巻き込まれます。テロップが見えたら無理せず離れましょう。
+        ノーダメージボーナスで300貰えるため、逃すとそこそこ痛いです。
+        移動が極端に遅いのも特徴で、デュランに挑発を付けて違う敵狙いにしておくと延々歩かせることができます。
+      </div>
+      マシンゴーレムを倒すとレベル8になっているので、この辺りから雑魚狩りを再開します。道中狩りをしていけばケヴィンのレベルを9にでき、ジュエルイーター戦が安定します。
+      <br>ドワーフの村では武器が更新できます。雑魚狩りとルク拾いをしていればギリギリ3人分購入するだけのルクが溜まっています。足りない場合はケヴィンが必須、リースが優先です。
+      <br>ドワーフのトンネルでは重要アイテム不思議のクッキーが手に入るほか、夢見草と魔法のロープの2つ目も落ちています。モールベアも爪がドロップするとオイシイため狙っていきます。
+      <input id="JuwelEater" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="JuwelEater">・ジュエルイーター</label>
+      <div class="description_content">
+        弱点：風　青ゲージ：なし　有効：尻尾
+        <br>弱点の尻尾はダウン後しか攻撃できないため、基本的に次点の頭を巻き込みながら複数部位ヒットを狙います。
+        必殺技を複数回当てられればぶちかまし前にダウンを取れるため、周囲のツボも活用してガンガン撃ち込みましょう。
+        こいつも不意のパンチが避け辛いです。他は比較的避け易いですがグランドスラムは微妙に運が絡みます。
+        胴体付近には「まず」落ちてこないため、キーニュートラルで尻尾に密着していれば「ほぼ」当たりません。
+        ただ確実ではないので、こいつのノーダメージボーナスには期待し過ぎない方が良いかもしれません。
+        また尻尾に貼り付いていてもグランドスラム開始前に殴り始めたり、必殺技のような突進系の攻撃を出すとすり抜けることがあります。
+        こうなってしまうとそのまま前方に押し出され、ハンドスラップを連続で貰って死ぬので注意。
+      </div>
+    </div>
+    <input id="goldenJin" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="goldenJin">黄金の街道～ローラント解放まで</label>
+    <div class="description_content">
+      ここから暫くはボス戦がありませんが、クラスチェンジをツェンカー撃破直後にするかローラント解放後にするかで戦略が大きく分かれます。
+      <br>前者の場合はレベル16付近でツェンカーと戦えるように経験値を調整します。
+      道中狩りだけでは効率が悪いため、3～4湧き編成が密集するモールベアの高原の最初のマップをうろついて経験値を入れます。
+      後者の場合は道中狩りを最低限に抑え、レベル12付近でツェンカーと戦うようにします。
+      どちらの場合でもツェンカー戦にクッキーの効果時間が及ぶように計画しましょう。
+      <br>パロでは一段階上の装備が買えます。但しリースとケヴィンの防具、デュランの武器はすぐ拾えるため買うならリケ武器とデ防具になります。
+      アジトを出たところにケヴィンの頭防具、風の回廊の途中にリースの体防具があります。
+      ブラックマーケットではツェンカー対策のモールベアの爪を買っていくこともお忘れなく。ドロップで複数手に入っていたら不要ですが。
+      <br>ラビの森は敵の強さに対して経験値が見合っておらず、天かける道～風の回廊は経験値はよいものの硬いです。後CCではスルー推奨です。
+      <input id="Harcypete" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Harcypete">・ツェンカー</label>
+      <div class="description_content">
+        弱点：土　青ゲージ：あり　有効：単
+        <br>全ての攻撃が厄介ですが、NPCが苦手とする設置持続系の技「エアスラッシャー」が特に危険です。
+        ノーダメージ難度はやや高いものの700も貰えるため、多少時間がかかっても狙う価値があります。
+        チャートはノーダメージ前提で組み、被弾してしまったら道中で調整するという考え方もできます。
+        タイムについてはスーパーソニックがすぐ来てくれれば素早く倒せますが、HPを同じように削っても使われたり使われなかったりで安定しません。
+        未確認情報ですが羽根飛ばし中に密着してもダメージを貰わない場所があるとか無いとか…？
+      </div>
+      経験値稼ぎをしていたらマナストーンでクラスチェンジをしてから、稼いでいなければそのままローラント城に向かいます。
+      <br>クラスチェンジをする場合は全員闇クラス、リースを知性9精神9でダウン強化、ケヴィンを力9運9で不意打ちⅡを覚えさせます。
+      デュランはまだ覚えられるスキルが無いので後回しで良いです。リースの力を振っていた場合は精神9を優先します。
+      <br>ボス前にデュランの武器とポセイドンの爪があります。前者はともかく後者はジェノア戦で重要になるため回収必須です。
+      <input id="zenoah" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="zenoah">・ジェノア</label>
+      <div class="description_content">
+        弱点：水　青ゲージ：なし　有効：単
+        <br>初見殺しマシーンですが、ポセイドンの爪で水属性を付与して殴り続ければ何もしてこないため安定してノーダメージを狙えます。
+        必殺技は後隙が大きく再点火されてしまうため、開幕とダウン時、緊急回避時以外は封印した方が安定します。
+        風はどうやっても止められないので位置取りと攻撃のタイミングだけ注意。
+      </div>
+      <input id="bilben" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="bilben">・ビルとベン</label>
+      <div class="description_content">
+        弱点：なし（※火水風土を半減）　青ゲージ：なし　有効：単
+        <br>避け損なうと即死の技を2種類持っているうえに、途中から2体同時に相手をすることになります。
+        特に手裏剣はバックステップから繰り出してくるため、後ろから攻撃していると回り込まれてフルヒットの危険が増します。
+        端の方だとエリア境界に沿って位置がずれるためさらに厄介、とにかく「手裏剣を出された時に避けられるか？」を念頭に置きましょう。
+        ジャンプ回避も可能なので、即ジャンプ弱弱で滞空すれば安全だったりします。
+        主要4属性を半減するため、アタックセイバー目当てでのセイバー詠唱はNG。砂漠での再戦時は注意。
+      </div>
+      CCしていなければ風のマナストーンへ、してあればそのままパロへ向かいます。
+    </div>
+    <input id="ghostflute" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="ghostflute">ローラント下山～ぴーひゃら笛入手まで</label>
+    <div class="description_content">
+      ここからは強制戦闘以外での雑魚戦は全て逃げて終わらせます。
+      <br>ローラントクリア後はパロで1段階上の武器が売られています。もう少し進めると更に強力な武器が買えるのでここはスルーで良いです。
+      <br>幽霊船では本の仕掛けを解いた後、1名が暫く離脱します。ここではまだ火力に貢献できないデュランに生贄になってもらいます。
+      <input id="Gova" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Gova">・ゴーヴァ</label>
+      <div class="description_content">
+        弱点：光　青ゲージ：あり　有効：単（本体なし）
+        <br>こいつも割と初見殺し。赤枠攻撃は避け易いですがその他に厄介な攻撃を2種類持っています。
+        両腕を魔法陣から突き出してくる攻撃は移動先を潰すように出してくるため、魔法陣が見えたら逆向きに回避。
+        片腕で顔を隠すようなポーズは回転攻撃の合図です。反時計回りに大きく弧を描くため、向かって右側や後方は安全です。
+        連続ヒットするためうっかり食らってしまうと即ゲームオーバーもあり得ます。
+      </div>
+      幽霊船攻略後は火山島ブッカに漂着します。途中の村ではパロより更に1段階上の武器が買えますが、ボスがいないためここもスルー。
+      <br>フォルセナに戻ってぴーひゃら笛を貰うといよいよ物語も折り返し地点です。タイム的には。マジか。
+    </div>
+    <input id="salund" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="salund">サルタン～ウンディーネ加入まで</label>
+    <div class="description_content">
+      火のマナストーンと水のマナストーンの攻略順は任意ですが、基本的に火を先にクリアします。
+      <br>これ以降は敵の攻撃がかなり厳しくなり、まんまるドロップでは追い付かなくなってくるためぱっくんチョコを大量に買い込みます。
+      50個も買えば十分かと思いますが、この辺りは習熟度と相談。天使の聖杯は在庫と相談ですが、大量に買うくらいなら防具を買って死なないようにした方が良いです。
+      あとは状態異常対策のプイプイ草、これは使う場面が限られているため5個もあれば十分です。最後に魔法のロープを切らしていたら1つ買っておきます。これが一番重要かもしれません。
+      <br>武器も良いものが買えますがまさかの再スルー、実は砂漠に更に上のランクのケヴィン用装備が落ちています。火を先に攻略する理由の一つがこれです。
+      ビルとベンは1戦目とほぼ同じ、というかマップが広がっていてむしろ戦いやすかったりします。マナストーン参拝を済ませたら魔法のロープで脱出。
+      <br>零下の雪原にはデュラン用の防具が落ちています。貴重な頭防具なので取っておきましょう。
+      ボス前で育成を行い、デュランの精神を9にしてサンダーセイバーを取ります。水を後回しにした理由の2つ目です。
+      ケヴィンの次の育成目標は力15ですが、後CCの場合は力15運9振りが可能になるのはルガー撃破後のレベル24時点で、
+      育成ポイントが2ポイント余るためペイバックを取得しても計画は崩さずに済みます。
+      <input id="MachineGolemS" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="MachineGolemS">・マシンゴーレムS</label>
+      <div class="description_content">
+        弱点：風　青ゲージ：なし　有効：単
+        <br>大地の裂け目とは別物なので記載。3体がバラバラに魔法攻撃を連発してくるため慣れないうちは事故率が極めて高いです。
+        ストーンクラウドが特に厄介で、石化は死亡とほぼ同義ですが聖杯では解除できない上にアイコンの判別が難しいため注意。
+        煽り耐性（？）が低く、挑発持ちデュランを入れるとほとんどの攻撃がデュランに向くようになります。
+        そのためデュランを援護のみにして置いておき、巻き込み事故を避けて安全に立ち回るのが主流です。
+        更にリースも援護のみにしてデュランの回復に専念させる方法もあります。
+      </div>
+      2つの精霊を回収したらミントスへ。
+    </div>
+    <input id="lunadriad" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="lunadriad">ミントス～ドリアード加入まで</label>
+    <div class="description_content">
+      ミントスではまた上のランクの装備が買えます。流石に型落ちも良いところなので更新ポイントです。
+      但し次のディオールまで行けば更に良いものが買えるので考慮の余地あり。
+      ケヴィンは拾ったシルバーソーンと大差ないためここでの武器更新は必要ないでしょう。
+      <br>ボス前でデュランの力を9にしてアタックセイバーを取得。以降はデュランがバフ要員になります。
+      リースも知性12でダウンカウントを覚えられます。デバフ管理がちょっとだけ楽になります。
+      <input id="Ludgar" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Ludgar">・獣人ルガー</label>
+      <div class="description_content">
+        弱点：なし　青ゲージ：なし　有効：単
+        <br>小学生のトラウマ。ですが必殺技を当てると高確率で怯むため延々レベル1必殺を当ててハメ殺しのようなこともできます。
+        ハードアタックを付けると更に怯ませやすくなります。火力自体は高いので後半のオーラ状態に注意するくらいか。
+      </div>
+      月のマナストーンを調べたらディオールへ。
+      頭防具が買える貴重な防具屋があり、これ以降は価格インフレが酷く人数分を揃えるのが困難なためここで買っていくのもアリです。
+      <br>ボス前でデュランの精神を12にしてアイスセイバーを習得させます。弱点が突けるわけではないのですが、
+      ここまで順調にきていればウンディーネ曜日のため、アイスセイバーをかけるとダメージがさらに上昇します。
+      ケヴィンに獣の咆哮を付けることもお忘れなく。
+      <input id="Grapplavine" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Grapplavine">・ギルダーバイン</label>
+      <div class="description_content">
+        弱点：なし　青ゲージ：なし　有効：頭
+        <br>それほど厄介な攻撃を持っていませんが、弱点もなく形態変化中無敵になるため時間がかかります。
+        設置持続系のポイズンバブルの他、当たれば大ダメージのかみつきを持つためNPCはよく死にます。
+        ハンマービーンは当たると攻撃と防御両方のデバフを貰うのでさっさと壊しましょう。
+        頭を出すまでは胴体をとにかく殴り、頭が出たら頭に弱弱弱、胴体に向けて強を入れると強攻撃が頭と胴の2ヒットになってダメージを稼げます。
+        足にはほとんどダメージが入らないため単発ヒット系の技が吸われないように注意。
+      </div>
+    </div>
+    <input id="benevodons" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="benevodons">マナの聖域～ペダンまで</label>
+    <div class="description_content">
+      ナバールにはリースの武器、石化を防ぐ大地の腕輪、6000ルクと有用アイテムが雑に置いてあるので回収。いよいよ神獣戦です。
+      <br>1体目を倒すとチキチータとジョセフィーヌが出現、ゴーストハンドは買っておきたいです。
+      4体倒すと品揃えが変わります、がペダン武器がほぼ同じ値段で性能が上という悲しさ。神獣3体に持ち込めるメリットはあるのですが。
+      <br>以下は討伐の推奨順に並べていますが、水は最初に行くとHPがやたら低いためこれを最初にやるのもアリ。
+      曜日がずれていなければザンビエからフィーグムンドまでジン曜日のため、ライトゲイザーからドランまでサンダーセイバーが有効です。
+      途中でレベルアップに合わせて育成ポイントも振り分けます。リースは力を9まで、ケヴィンは精神を9まで、デュランは力15精神15振ります。
+      <input id="XanBie" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="XanBie">・ザンビエ</label>
+      <div class="description_content">
+        弱点：土、水　青ゲージ：あり　有効：単（本体なし）<br>
+        黒焦げ+防御半減のラーヴァウェイブを撒きながらフレイムセイバーで妨害をかけ、時折必殺技を回避する害悪行動の塊。
+        竜巻形態は近寄るだけでダメージ、こちらのダメージを半減、高火力のヒートビーム持ちと碌なことがないため要注意です。
+        祭壇を破壊すると怯んで行動がキャンセルされる性質を利用し、ヒートビームのテロップが見えた瞬間に祭壇を壊すという戦術もあります。
+        開幕でHPを7割くらい削れれば竜巻形態を飛ばしてギガバーンに移行する…と思っていたのですがそうじゃない時もありますね。
+        最悪なのが竜巻→ギガバーンと連続した時で、タイムを大きく食われます。
+        <br>とにかくすべてが厄介なため殆どの人が最初に倒していますが、敢えて最後に残してクラス3の火力で消し飛ばす戦略もあり。
+        火炎の谷に来る前にクラス3にしなければいけないので種ガチャが必須になるものの、形態変化前に倒せるため戦闘自体は安定します。
+      </div>
+      <input id="Lightgazer" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Lightgazer">・ライトゲイザー</label>
+      <div class="description_content">
+        弱点：闇　青ゲージ：あり　有効：目<br>
+        高火力技こそないもののひたすらめんどくさいやつ。
+        弱点は目ですが、ジャンプ攻撃のダメージ効率がよろしくないため普通に地上で戦う事になります。
+        突進と機雷に攻撃デバフが付いているため、気付かず貰ってしまうと余計に時間がかかります。
+        ザンビエと違ってHPが一定量で確実にモードチェンジするため慣れれば安定します。
+      </div>
+      デュランを援護のみにし、ケヴィンに火事場を付けます。
+      <input id="Mispolm" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Mispolm">・ミスポルム</label>
+      <div class="description_content">
+        弱点：風　青ゲージ：なし　有効：単（本体なし）<br>
+        薙ぎ払い触手の判定が見た目と大分ずれていることを除けば極めて真っ当なボス。
+        NPC殺しのポイズンバブル持ちのため仲間はよく転がっています。
+        死因でありがちなのが回避した先に仲間タゲのポイズンバブルやグレネードボムが置かれているパターン。
+        NPCを援護のみにすれば回避は容易なため道中の毒沼で火事場を入れていく事が一般的です。
+        ダウン延長というテクニックを利用できるため、NPCの必殺ゲージを温存しておくことも有効です。
+      </div>
+      <input id="LandUmber" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="LandUmber">・ランドアンバー</label>
+      <div class="description_content">
+        弱点：風、火、自分の魔法　青ゲージ：あり　有効：単（本体なし）<br>
+        魔法攻撃力が非常に高く、無策で挑むと即死もあり得ます。
+        ストーンクラウドの石化も厄介なのでリース主人公ならナバールで拾える大地の腕輪を装備しておくと安全です。
+        右手（向かって左）が魔法に、左手（向かって右）が物理に弱いため編成によっては分業が有効です。
+        両手を破壊してから魔法を反射すると異常なダメージが入って一撃で倒せます。
+      </div>
+      <input id="Dolan" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Dolan">・ドラン</label>
+      <div class="description_content">
+        弱点：なし　青ゲージ：あり　有効：頭<br>
+        難敵だったSFC版から一転して避け易い攻撃ばかりの癒しタイム。
+        グラビトンプレス発動後にスパイラルムーンを使ってきますが、HPが半分以下だと別行動を挟んでからスパイラルムーンになります。
+        ミスポルム同様ダウン延長が利用でき、HP50%付近ならスパイラルムーンのダウンから削り切れるため敢えて遅らせる必要は無さそうです。
+      </div>
+      <input id="Fiegmund" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Fiegmund">・フィーグムンド</label>
+      <div class="description_content">
+        弱点：火　青ゲージ：あり　有効：なし<br>
+        ドランと並んで倒しやすいですが、一定HPでアイスクレイドルを即座に使用するため時間がかかります。
+        前足に張り付くようにすると攻撃が頭と胴体に当たるためダメージが稼げます。
+        尻尾も胴体と同時に攻撃できますがダウン時以外は難しいです。
+      </div>
+      ここでクラスチェンジ。
+      リースは闇、知27でダウン強化Ⅱを習得。
+      デュラン光、力21精神21でアタックセイバーⅡを習得。
+      ケヴィン闇、力27でフィニッシュブローを習得。火事場はもう使わないのでペイバックに。
+      <input id="Dangaard" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Dangaard">・ダンガード</label>
+      <div class="description_content">
+        弱点：土、闇　青ゲージ：あり　有効：なし<br>
+        クラス2で戦うとかなり面倒ですが、青ゲージが乱打系の技に弱いためケヴィンやホークアイのクラス3なら動かさずに倒せます。
+        サンダーボールは1発貰ってしまうと起き上がりに次を当てられて逆にこちらが受けなくなるので要注意。無理そうなら必殺で。
+        2回青ゲージを出す度に飛び去ってかなり長い嫌がらせタイムに入りますが、この間にHPを半分以下にできれば再度青ゲージを2回使ってきます。
+        ダウン終わりに範囲必殺を置いておくなどすればクラス2でも確実にダウンさせられるため、チャートによっては押さえておきたい知識です。
+      </div>
+      ペダンに着いたら最後の装備更新。
+      ルク消失バグを引いていなければケヴィンのロトンナックルともう1人分くらい買えます。ルク回収を多めにしてあれば全員分行けます。
+    </div>
+    <input id="trialsofmana" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="trialsofmana">暗闇の洞窟～黒の貴公子撃破まで</label>
+    <div class="description_content">
+      ペダンで宿泊して朝になっているので夢見草を使用。曜日がずれていなければノーム曜日なのでジェノアとラスボス以外はダイヤセイバーを使います。
+      <input id="ZableFahr" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="ZableFahr">・ゼーブルファー</label>
+      <div class="description_content">
+        弱点：光　青ゲージ：あり　有効：単<br>
+        ランドアンバー同様左が魔法に、右が物理に弱いです。左右の頭は潰しても一定時間で再生されます。
+        再生の後に青ゲージのヘルサザンクロスを使ってきますが、3体揃っていないと使えないため再生終了からヘルサザン発動までに頭を1つでも潰すとキャンセルできます。
+        再生前撃破が安定しない場合はほとんど攻撃してこない右の頭を削り切らずに放置し、再生が終わってから潰すという方法もあります。
+      </div>
+      <input id="Malocchio" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Malocchio">・邪眼の伯爵</label>
+      <div class="description_content">
+        弱点：土、火　青ゲージ：あり　有効：単<br>
+        喋るサンドバッグ。必殺技で怯む上にクラス3の火力ならオーバーキル。アーマーだけは横着せずちゃんと割りましょう。
+        ゴーストゲインは乱打系の技だとフルヒットが困難なため突進で壊しましょう。NFでも突進+1回で壊せます。
+      </div>
+      ケヴィンの力33、デュランの力27振って攻乃型を取ります。
+      再生怪人軍団に襲われますが全て豆腐。闘士の証があればフルメタルハガーに使っても良いです。
+      カニ撃破後にデュランの精神を27にしてアイスセイバー+を習得します。ツェンカー撃破後にリースが力27でアタッカーを取れます。
+      <input id="Belladonna" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Belladonna">・美獣</label>
+      <div class="description_content">
+        弱点：土、水　青ゲージ：あり　有効：単<br>
+        素早く火力も高いですが耐久は低いです。ローズハイクローによるワンパンだけ注意。
+        ラミアンナーガの青ゲージは溜め攻撃を当てると一撃で割れます。
+        またダウンとは別に、頭突き突進中に必殺技を当てると暫く動きが止まります。旋風剣など長めの技を置いておくと狙いやすいです。
+      </div>
+      <input id="Archfiend" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Archfiend">・アークデーモン</label>
+      <div class="description_content">
+        弱点：即死（第一形態のみ）　青ゲージ：あり（第二形態のみ）　有効：単（本体なし）<br>
+        バリアチェンジにより弱点や耐性が変化しますが、開幕は4属性のうち水だけ有効な状態で固定です。
+        HP60%以下で第二形態に変化しますが、HPチェックが行われるのは魔法を3回唱えた直後のみのためタイミングを合わせれば形態変化させずに倒せます。
+        普通に戦うと強敵ですが、設定ミスなのか即死技を使うと9999の固定ダメージが入ります。
+        通常プレイならHP29500のため3発、VHなら1.5倍のため5発、NFなら2倍のため6発で終わります。
+        ゴーストの瞳とルーンの書を用意すればPTによらず実行可能です。
+      </div>
+    </div>
+    <input id="dragonsmaw" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="dragonsmaw">ドラゴンズホールの場合</label>
+    <div class="description_content">
+      <input id="DarkshineKnight" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="DarkshineKnight">・黒曜の騎士</label>
+      <div class="description_content">
+        弱点：風、火、光　青ゲージ：なし　有効：単<br>
+        語れるほど倒していないのである。
+      </div>
+      <input id="CrimsonWizard" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="CrimsonWizard">・紅蓮の魔導士</label>
+      <div class="description_content">
+        弱点：バリアチェンジによる　青ゲージ：あり　有効：単<br>
+        攻撃が避け辛い印象しかない。
+      </div>
+      <input id="DragonLord" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="DragonLord">・ヒュージドラゴン</label>
+      <div class="description_content">
+        弱点：なし　青ゲージ：あり　有効：なし<br>
+        ラスボスの癖に攻撃は優しさの塊ですが、飛び回って遅延をかましてきます。
+        唯一厄介なのは開幕の咆哮。NPCがほぼ吹き飛ばされるためバフを潰されたりして立ち上がりが遅れます。
+        即座にロックタイプの技で拘束しながら範囲外に逃がしてやるなどすれば準備時間を確保できます。
+        HP半分以下で体色とBGMが変わり、この状態でレイジングテンペストを使ってきたら勝ち確。
+      </div>
+    </div>
+    <input id="miragepalace" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="miragepalace">ミラージュパレスの場合</label>
+    <div class="description_content">
+      <input id="Goremand" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="Goremand">・死を食らう男</label>
+      <div class="description_content">
+        弱点：水、光　青ゲージ：あり　有効：単<br>
+        ヘンテコオヤジ！
+      </div>
+      <input id="TaintedSoul" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="TaintedSoul">・堕ちた聖者</label>
+      <div class="description_content">
+        弱点：なし　青ゲージ：あり　有効：単<br>
+        ヒースはさいきょうでち。
+      </div>
+      <input id="DarkLich" class="description_check" style="display: none;" type="checkbox">
+      <label class="description" for="DarkLich">・ダークリッチ</label>
+      <div class="description_content">
+        弱点：光（背景に合わせて変更）　青ゲージ：あり　有効：なし<br>
+        ヒースほどではありまちぇんがこいつもつよいでちね…。
+      </div>
+    </div>
+  </div>
+  <input id="chart" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+  <label class="sub_description" for="chart">チャート集</label>
+  <div class="sub_description_content">
+    考え方に基づいてどこで何を買うとか、育成ポイントはどう振るとか、そういうものを具体化したのがチャートです。
+    <br>以下はすべて自前のものですが、もし自分のチャートも掲載しても良いよという方がいましたら連絡下さい。
+    <br>・Any%用チャート（<a href="http://blog.livedoor.jp/e_dragoso/archives/52010530.html" target="_blank"
+      rel="noopener noreferrer">リンク</a>）
+    <br>・Glitchless用チャート（<a href="http://blog.livedoor.jp/e_dragoso/archives/52004312.html" target="_blank"
+      rel="noopener noreferrer">リンク</a>）
+    <br>・New Game+（No Future）用チャート（<a href="http://blog.livedoor.jp/e_dragoso/archives/52008525.html" target="_blank"
+      rel="noopener noreferrer">リンク</a>）
+    <br>・NG+ Glitchless用チャート（<a href="http://blog.livedoor.jp/e_dragoso/archives/52010159.html" target="_blank"
+      rel="noopener noreferrer">リンク</a>）
   </div>
 
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。

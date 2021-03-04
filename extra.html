@@ -16,70 +16,32 @@
 
   <h4><a href="index.html">聖剣伝説3 TRIALS of MANA 攻略ツール集</a>　＞　おまけ</h4>
   <br>
-  <input id="dmgsurvey" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="dmgsurvey">ダメージに関する調査</label>
-  <div class="sub_description_content">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Gb4cA4UCw" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
-    <div>＜敵に与えるダメージ＞
-      <br>検証より、攻撃力の上昇割合はほぼ正確にダメージに反映されることが確認されています。
-      <br>
-      <br>例：レベル99で攻撃力132のキャラがラビを攻撃すると平均1523ダメージ
-      <br>　　レベル99で攻撃力142のキャラがラビを攻撃すると平均1640ダメージ
-      <br>　　→142 ÷ 132 ≒ 1.08
-      <br>　　1640 ÷ 1523 ≒ 1.08
-      <br>
-      <br>また、ステータスが同じでもレベルが異なると与えるダメージ量が変化することが確認できています。
-      <br>
-      <br>例：レベル4で攻撃力132のキャラがラビを攻撃すると平均132ダメージ
-      <br>
-      <br>よって敵に与えるダメージの計算式は
-      <br>
-      <br>　攻撃力 × レベル補正 ÷ 防御力
-      <br>
-      <br>のようです。
-    </div>
-    <div>＜必殺技のダメージ＞
-      <br>攻撃力が20%アップすると通常攻撃のダメージも20％アップしますが、必殺技はこれより少ない上昇割合になります。
-      <br>
-      <br>例：無想阿修羅拳で攻撃した場合の初段の平均ダメージは268.5
-      <br>　　パワーアップをかけてから攻撃した場合の平均ダメージは302.0
-      <br>　　302.0 ÷ 268.5 ≒ 1.13
-      <br>
-      <br>検証の結果、必殺技は以下のような計算式だったことが確認されました。
-      <br>
-      <br>　(物理攻撃 + 魔法攻撃) ÷ 2 × レベル補正 ÷ 物理防御力
-      <br>
-      <br>また、効果が「ダメージアップ」となっているものは通常攻撃も必殺技も同じ割合で上昇します。
-      <br>
-      <br>例：裁定者を付けた際の平均ダメージは325.5
-      <br>　　325.5 ÷ 268.5 ≒ 1.21
-    </div>
-    <div>＜被ダメージ＞
-      <br>チュートリアルのラビ相手に防御力を調整しながら殴られてみたところ、
-      <br>
-      <br>防御1 → 53.5(100%)
-      <br>防御2 → 26.5(49.5%)
-      <br>防御3 → 17.5(32.7%)
-      <br>防御4 → 12.5(23.4%)
-      <br>
-      <br>と、ここまではほぼ攻撃力 ÷ 防御力の数式通りだったのですが、
-      <br>
-      <br>防御5 → 5.5(10.3%)
-      <br>
-      <br>なんと防御が5になった途端にダメージが期待値の10.7(20%)から半減しました。
-      <br>検証してみたところ、敵の攻撃力に対して防御力が極端に低いと被ダメージが2倍になる仕様があるみたいです。
-      <br>難易度ノーマルとハードの敵攻撃力差は1.3倍なのに、ハードで時折ノーマルの倍以上ダメージを受けるのはこれが原因のようです。
-      <br>
-      <br>また防御0の時の平均ダメージは53.5で、防御1の時と同じでした。
-      <br>このほか、自分のレベルによる減算や、敵のレベルによる加算は確認できませんでした。
-      <br>
-      <br>あまり検証できていませんが、被ダメージだけでなく与ダメージにも同様の計算があるようです。
-      <br>余程の縛りプレイでもしない限りお目にかかれなさそうではありますが。
-    </div>
+  あんまり役には立たない情報。
+  <br>
+  <input id="Provoke" class="description_check" style="display: none;" type="checkbox">
+  <label class="description" for="Provoke">・利敵行動？</label>
+  <div class="description_content">
+    ライトゲイザーのマジックシールドやギルダーバイン（再戦時）のカウンタマジックは何故か味方にかかることがあります。（
+    <a href="https://clips.twitch.tv/OnerousDaintyChowderUncleNox-3wnPKsTk3PwYolib" target="_blank"
+      rel="noopener noreferrer">リンク</a>）
+    どうやらデュランが挑発を付けている際に起こるようです。
+    有用そうに思えますが、ギルダーバインは頭を出してからはスリープフラワーしか魔法を使いません。
+    ライトゲイザーもセイントビームくらい。一応そこそこ痛いので丸っきり無駄ではないですが、立ち回りを詰め切れているとビームを撃たれる前に終わります。
+    ミスポルムでも起こるようですが、ポイズンバブルを反射しているところを見たことがない謎。
   </div>
-
+  <input id="Gova" class="description_check" style="display: none;" type="checkbox">
+  <label class="description" for="Gova">・ゴーヴァの秘密？</label>
+  <div class="description_content">
+    多くのプレイヤーを葬った恐怖の回転攻撃ですが、反時計回りに大きく回転し次第に中央に寄るような動きをします。
+    これは恐らく数字の6、キリスト教圏で不吉とされる獣の数字にちなんだ軌道を描いていると思われます。
+    幽霊船内で宝箱から得られるルクも666だったりします。同じく宝箱から得られる444は航海日死。
+  </div>
+  <input id="bilben" class="description_check" style="display: none;" type="checkbox">
+  <label class="description" for="bilben">・英語名表記？</label>
+  <div class="description_content">
+    ビルとベンの英語表記はBil & Benです。
+    一般的にビルといえば"Bill"ですが"l"が1つ少ないです。ベンと文字数を揃えるためでしょうか？
+  </div>
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
     <br>当該コンテンツの転載・配布は禁止いたします。
     <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
