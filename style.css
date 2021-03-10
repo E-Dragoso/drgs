@@ -23,14 +23,14 @@ body {
 
 /* メイン項目 */
 h2 {
-  background-color: #bdd5d3;
+  background-color: #ddeeff;
   padding-left: 0.5em;
   margin: 0;
   border-bottom: 1px solid #426579;
   border-left: 0.3em solid #426579;
 }
 h3 {
-  background-color: #dce9e8;
+  background-color: #bdd5d3;
   padding-left: 0.5em;
   margin: 0;
   border-bottom: 1px solid #426579;
