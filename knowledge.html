@@ -25,26 +25,32 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/j6Gb4cA4UCw" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
     </iframe>
-    <div>＜敵に与えるダメージ＞
-      <br>検証より、攻撃力の上昇割合はほぼ正確にダメージに反映されることが確認されています。
+    <input id="DmgtoEnemy" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="DmgtoEnemy">敵に与えるダメージ</label>
+    <div class="description_content">
+      検証より、攻撃力の上昇割合はほぼ正確にダメージに反映されることが確認されています。
       <br>
       <br>例：レベル99で攻撃力132のキャラがラビを攻撃すると平均1523ダメージ
       <br>　　レベル99で攻撃力142のキャラがラビを攻撃すると平均1640ダメージ
-      <br>　　→142 ÷ 132 ≒ 1.08
-      <br>　　1640 ÷ 1523 ≒ 1.08
+      <br>　　→142 ÷ 132 ≒ 1.08 （攻撃力の比率）
+      <br>　　1640 ÷ 1523 ≒ 1.08 （ダメージの比率）
       <br>
       <br>また、ステータスが同じでもレベルが異なると与えるダメージ量が変化することが確認できています。
       <br>
       <br>例：レベル4で攻撃力132のキャラがラビを攻撃すると平均132ダメージ
+      <br>　　→ 132 ÷ 132 ＝ 1.00 （攻撃力の比率）
+      <br>　　 1523 ÷ 132 ≒ 11.54 （ダメージの比率）
       <br>
-      <br>よって敵に与えるダメージの計算式は
+      <br>よって敵に与えるダメージは
       <br>
       <br>　攻撃力 × レベル補正 ÷ 防御力
       <br>
-      <br>のようです。
+      <br>でもとめられるようです。
     </div>
-    <div>＜必殺技のダメージ＞
-      <br>攻撃力が20%アップすると通常攻撃のダメージも20％アップしますが、必殺技はこれより少ない上昇割合になります。
+    <input id="CSDmg" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="CSDmg">必殺技のダメージ</label>
+    <div class="description_content">
+      攻撃力が20%アップすると通常攻撃のダメージも20％アップしますが、必殺技はこれより少ない上昇割合になります。
       <br>
       <br>例：無想阿修羅拳で攻撃した場合の初段の平均ダメージは268.5
       <br>　　パワーアップをかけてから攻撃した場合の平均ダメージは302.0
@@ -59,8 +65,10 @@
       <br>例：裁定者を付けた際の平均ダメージは325.5
       <br>　　325.5 ÷ 268.5 ≒ 1.21
     </div>
-    <div>＜被ダメージ＞
-      <br>チュートリアルのラビ相手に防御力を調整しながら殴られてみたところ、
+    <input id="DmgfromEnemy" class="description_check" style="display: none;" type="checkbox">
+    <label class="description" for="DmgfromEnemy">被ダメージ</label>
+    <div class="description_content">
+      チュートリアルのラビ相手に防御力を調整しながら殴られてみたところ、
       <br>
       <br>防御1 → 53.5(100%)
       <br>防御2 → 26.5(49.5%)
