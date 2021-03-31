@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (list_type[i]) {
       // 雑魚
       case "雑魚":
-        type.innerHTML = '<img src="sfc_seikenndennsetu3_rabi.gif">';
+        type.innerHTML = '<img src="rabi.png">';
         bonus.firstChild.hidden = false;
         getexp.firstChild.hidden = false;
         tr.name = "zako";
@@ -112,19 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       // 買物行表示
       case "支出":
-        type.innerHTML = '<img src="sfc_seikenndennsetu3_nikita.png">';
+        type.innerHTML = '<img src="nikita.png">';
         getlucre.firstChild.style.color = "#dc143c";
         objlucre.disabled = false;
         target.firstChild.hidden = true;
         break;
       // ボス行表示
       case "ボス":
-        type.innerHTML = '<img src="sfc_seikenndennsetu3_gova.gif">';
+        type.innerHTML = '<img src="gova.png">';
         bonus.firstChild.hidden = false;
         getexp.firstChild.hidden = false;
         break;
       case "強制":
-        type.innerHTML = '<img src="sfc_seikenndennsetu3_rabi.gif">';
+        type.innerHTML = '<img src="rabi.png">';
         type.style.backgroundColor = "#ffae00";
         bonus.firstChild.hidden = false;
         getexp.firstChild.hidden = false;
