@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteCond %{http_host} ^time-trials-of-mana.herokuapp.com
-RewriteRule ^(.*) https://drgs.app//$1 [R=301,L]
+RewriteRule ^(.*) https://drgs.app$1 [R=301,L]
  
 RewriteCond %{http_host} ^time-trials-of-mana.herokuapp.com
-RewriteRule ^(.*) https://drgs.app//$1 [R=301,L]
+RewriteRule ^(.*) https://drgs.app$1 [R=301,L]
