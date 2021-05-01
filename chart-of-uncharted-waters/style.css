@@ -1,0 +1,118 @@
+/* タイトル */
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow:
+     2px  2px 1px #003366,
+    -2px  2px 1px #003366,
+     2px -2px 1px #003366,
+    -2px -2px 1px #003366,
+     2px  0px 1px #003366,
+     0px  2px 1px #003366,
+    -2px  0px 1px #003366,
+     0px -2px 1px #003366;
+}
+
+body {
+  max-width: 50em;
+  margin: auto;
+  background: #EBD5B8;
+}
+
+/* メイン項目 */
+h2 {
+  background-color: #ddeeff;
+  padding-left: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid #426579;
+  border-left: 0.3em solid #426579;
+}
+h3 {
+  background-color: #bdd5d3;
+  padding-left: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid #426579;
+  border-left: 0.2em solid #426579;
+}
+.div_h2{
+  margin: 0.2em;
+  padding: 0.2em;
+}
+h4 {
+  margin: 0;
+}
+
+/* 説明用 */
+.description {
+  background: #414fa3;
+  color: #fff;
+  display: block;
+  height: 1.7em;
+  padding-top: 0.2em;
+  padding-left: 1em;
+  margin: 0;
+}
+.description_content {
+  background: linear-gradient(#006400, 75%, #000000);
+  border: double;
+  color: #fff;
+  height: 0;
+  opacity: 0;
+  transition: .5s;
+  visibility: hidden;
+}
+.description_check:checked + .description + .description_content {
+  height: auto;
+  padding-top: 0.1em;
+  padding-left: 1em;
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.sub_description {
+  background: #4198a3;
+  color: #fff;
+  display: block;
+  height: 1.7em;
+  padding-top: 0.2em;
+  padding-left: 0.5em;
+  margin: 0;
+  font-weight: bold;
+}
+.sub_description_content {
+  border: solid;
+  border-width: 1px;
+  height: 0;
+  opacity: 0;
+  transition: .5s;
+  visibility: hidden;
+}
+.sub_description_check:checked + .sub_description + .sub_description_content {
+  height: auto;
+  padding-top: 0.1em;
+  padding-left: 0.5em;
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* テーブルレイアウト */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  border: solid 1px;
+  vertical-align: middle;
+  text-align: center;
+  align-content: center;
+}
+td {
+  border: solid 1px;
+  word-break : break-all;
+}
+thead {
+  background:#ffccff;
+}
