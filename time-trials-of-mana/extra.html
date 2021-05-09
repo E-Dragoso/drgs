@@ -6,123 +6,124 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" rel="stylesheet" href="style.css?<?php echo date('Ymd-Hi'); ?>">
+  <link type="text/css" rel="stylesheet" href="/time-trials-of-mana/style.css?<?php echo date('Ymd-Hi'); ?>">
   <link rel="icon" href="/time-trials-of-mana/favicon.ico">
 </head>
 
 <body>
 
   <h4><a href="main.html">聖剣伝説3 TRIALS of MANA 計算機</a>　＞　おまけ</h4>
-  <br>
-  プレイ中に出くわす可能性があり、発生条件が不明なバグを記載します。
-  <br>残念ながらプレイヤーにメリットのあるものはほぼないです。知っていればうろたえずに済むかも…程度。
-  <br>また現バージョンでは未確認のものもあるので、もしかしたらひっそり修正されているかも。
-  <input id="invincible" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="invincible">・Invincible(無敵化)</label>
-  <div class="sub_description_content">
-    極めて強力なバグで、なんとあらゆる攻撃を一切受け付けず、触れる事すらできない無敵状態になってしまいます！
+  <div class="honbun">
+    プレイ中に出くわす可能性があり、発生条件が不明なバグを記載します。
+    <br>残念ながらプレイヤーにメリットのあるものはほぼないです。知っていればうろたえずに済むかも…程度。
+    <br>また現バージョンでは未確認のものもあるので、もしかしたらひっそり修正されているかも。
+    <input id="invincible" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="invincible">・Invincible(無敵化)</label>
+    <div class="sub_description_content">
+      極めて強力なバグで、なんとあらゆる攻撃を一切受け付けず、触れる事すらできない無敵状態になってしまいます！
+      <br>
+      <br>
+      <br>…敵が。
+      <br>
+      <br>しかもボスが。
+      <br>
+      <br>ボスのHPゲージを削り切る瞬間とボスの行動がかち合ってしまうと発生するようです。
+      <br>発生が確認されているのはツェンカー(<a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat"
+        target="_blank" rel="noopener noreferrer">リンク</a>)、ビルとベン、マシンゴーレムS(<a
+        href="https://clips.twitch.tv/ArtisticDirtyButterflyPogChamp" target="_blank"
+        rel="noopener noreferrer">リンク</a>)、フィーグムンド(<a
+        href="https://www.twitch.tv/e_dragoso/clip/BrightWanderingHippoPanicVis" target="_blank"
+        rel="noopener noreferrer">リンク</a>)です。
+      <br>少し性質が違いますがドランでも無敵化は確認されています(<a href="https://www.twitch.tv/videos/622722108" target="_blank"
+        rel="noopener noreferrer">リンク</a>)。
+      <br>こうなってしまうとリセットする以外に復帰方法が無くなりますが、ビルベンのみもう片方が生きていれば黄泉がえりで蘇生されるため詰み回避ができます。
+      <br>現バージョンでも絶賛発生中なので、とにかくセーブはこまめに行いましょう。
+    </div>
+    <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="lucrelost">・Lucre Lost(ルク消失)</label>
+    <div class="sub_description_content">
+      ボスが落とすはずのルクが得られなくなるバグです。現バージョンでも発生します。神獣戦で多くの報告があり、特にフィーグムンドで発生しやすいようです。
+      終わりの一瞬だけしか撮れてませんが一応(<a href="https://www.twitch.tv/e_dragoso/clip/DistinctAgitatedGoshawkSuperVinlin"
+        target="_blank" rel="noopener noreferrer">リンク</a>)。
+      <br>無敵化と違って原因らしきものに見当もつかず、当然対策もありません。
+      ルク計算をきっちりやっているとかなり痛いです。記録狙い以外ではルクを多めに回収するなど、余裕のある資産運用を行いましょう。
+    </div>
+    <input id="InfiniteStun" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="InfiniteStun">・Infinite Stun(永続ダウン)</label>
+    <div class="sub_description_content">
+      ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ(<a
+        href="https://clips.twitch.tv/FancyAntediluvianWalletTTours-R3InTg67e_BSJWs9" target="_blank"
+        rel="noopener noreferrer">リンク</a>)。
+      現バージョンでも発生し、ローラントの初戦時でも灼熱の砂漠の再戦時でも確認されています。
+      <br>このページ内では唯一、プレイヤーにメリットがありますが発生条件は不明。
+      もし再現方法が判明すれば革命が起きるので、発生したらまず録画を残しておきましょう。
+    </div>
+    <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="InvisibleTarget">・Invisible Target?(見えない標的)</label>
+    <div class="sub_description_content">
+      ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。現バージョンでも発生します。
+      <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと倒した方に吸われることがあり、
+      ゴーヴァはゴーストロードを潰した後に影の当たり判定が残っているらしく、同様の現象が起きることがあります。
+      <br>こいつらが相手の時にスワップすると変な方向に出やすいのもこれが原因かも？
+    </div>
+    <input id="SnipingSting" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="SnipingSting">・Sniping Sting?(必中キルスティンガー)</label>
+    <div class="sub_description_content">
+      キルスティンガーの判定が残ったまま動き回るという恐るべきバグ(<a href="https://clips.twitch.tv/InquisitiveSavoryClipsmomTheRinger"
+        target="_blank" rel="noopener noreferrer">リンク</a>)。幸い現バージョンでは未確認です。
+      キルスティンガーが連続で使用された時に稀に発生し、赤枠と一緒にぴったり貼り付いてくるためまず死にます。
+      RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
+      <br>バグとは直接関係ないのですが、キルスティンガーでやられた仲間を即座に蘇生すると起きた瞬間にまたキルスティンガーで即死します。
+      キルスティンガー中は他の攻撃は飛んでこないので、落ち着いてバフ更新などをしながら終了を待ちましょう。
+    </div>
+    <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="DirtyNinja">・Dirty Ninja(汚い忍者)</label>
+    <div class="sub_description_content">
+      必殺技などの無敵時間で忍術を無効化していてもデバフを貰ってしまうバグ。現バージョンでは未確認です。ビルベンバグり過ぎじゃない？
+      更に仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト(デュラン)の挑発でも避けられません。
+      <br>汚いなさすが忍者きたない
+    </div>
     <br>
+    以下はネタ的な情報。
     <br>
-    <br>…敵が。
-    <br>
-    <br>しかもボスが。
-    <br>
-    <br>ボスのHPゲージを削り切る瞬間とボスの行動がかち合ってしまうと発生するようです。
-    <br>発生が確認されているのはツェンカー(<a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat"
-      target="_blank" rel="noopener noreferrer">リンク</a>)、ビルとベン、マシンゴーレムS(<a
-      href="https://clips.twitch.tv/ArtisticDirtyButterflyPogChamp" target="_blank"
-      rel="noopener noreferrer">リンク</a>)、フィーグムンド(<a
-      href="https://www.twitch.tv/e_dragoso/clip/BrightWanderingHippoPanicVis" target="_blank"
-      rel="noopener noreferrer">リンク</a>)です。
-    <br>少し性質が違いますがドランでも無敵化は確認されています(<a href="https://www.twitch.tv/videos/622722108" target="_blank"
-      rel="noopener noreferrer">リンク</a>)。
-    <br>こうなってしまうとリセットする以外に復帰方法が無くなりますが、ビルベンのみもう片方が生きていれば黄泉がえりで蘇生されるため詰み回避ができます。
-    <br>現バージョンでも絶賛発生中なので、とにかくセーブはこまめに行いましょう。
-  </div>
-  <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="lucrelost">・Lucre Lost(ルク消失)</label>
-  <div class="sub_description_content">
-    ボスが落とすはずのルクが得られなくなるバグです。現バージョンでも発生します。神獣戦で多くの報告があり、特にフィーグムンドで発生しやすいようです。
-    終わりの一瞬だけしか撮れてませんが一応(<a href="https://www.twitch.tv/e_dragoso/clip/DistinctAgitatedGoshawkSuperVinlin"
-      target="_blank" rel="noopener noreferrer">リンク</a>)。
-    <br>無敵化と違って原因らしきものに見当もつかず、当然対策もありません。
-    ルク計算をきっちりやっているとかなり痛いです。記録狙い以外ではルクを多めに回収するなど、余裕のある資産運用を行いましょう。
-  </div>
-  <input id="InfiniteStun" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="InfiniteStun">・Infinite Stun(永続ダウン)</label>
-  <div class="sub_description_content">
-    ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ(<a
-      href="https://clips.twitch.tv/FancyAntediluvianWalletTTours-R3InTg67e_BSJWs9" target="_blank"
-      rel="noopener noreferrer">リンク</a>)。
-    現バージョンでも発生し、ローラントの初戦時でも灼熱の砂漠の再戦時でも確認されています。
-    <br>このページ内では唯一、プレイヤーにメリットがありますが発生条件は不明。
-    もし再現方法が判明すれば革命が起きるので、発生したらまず録画を残しておきましょう。
-  </div>
-  <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="InvisibleTarget">・Invisible Target?(見えない標的)</label>
-  <div class="sub_description_content">
-    ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。現バージョンでも発生します。
-    <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと倒した方に吸われることがあり、
-    ゴーヴァはゴーストロードを潰した後に影の当たり判定が残っているらしく、同様の現象が起きることがあります。
-    <br>こいつらが相手の時にスワップすると変な方向に出やすいのもこれが原因かも？
-  </div>
-  <input id="SnipingSting" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="SnipingSting">・Sniping Sting?(必中キルスティンガー)</label>
-  <div class="sub_description_content">
-    キルスティンガーの判定が残ったまま動き回るという恐るべきバグ(<a href="https://clips.twitch.tv/InquisitiveSavoryClipsmomTheRinger" target="_blank"
-      rel="noopener noreferrer">リンク</a>)。幸い現バージョンでは未確認です。
-    キルスティンガーが連続で使用された時に稀に発生し、赤枠と一緒にぴったり貼り付いてくるためまず死にます。
-    RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
-    <br>バグとは直接関係ないのですが、キルスティンガーでやられた仲間を即座に蘇生すると起きた瞬間にまたキルスティンガーで即死します。
-    キルスティンガー中は他の攻撃は飛んでこないので、落ち着いてバフ更新などをしながら終了を待ちましょう。
-  </div>
-  <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="DirtyNinja">・Dirty Ninja(汚い忍者)</label>
-  <div class="sub_description_content">
-    必殺技などの無敵時間で忍術を無効化していてもデバフを貰ってしまうバグ。現バージョンでは未確認です。ビルベンバグり過ぎじゃない？
-    更に仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト(デュラン)の挑発でも避けられません。
-    <br>汚いなさすが忍者きたない
-  </div>
-  <br>
-  以下はネタ的な情報。
-  <br>
-  <input id="Charlotte" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="Charlotte">・シャルロットよ永遠に</label>
-  <div class="sub_description_content">
-    仲間の加入イベントは<a href="glitch.html#WalkWhileTalking">メッセージ保存</a>などを利用する事で回避ができます。
-    基本的に仲間の加入イベントを回避してしまうと進行不能になりますが、3人目かつシャルロットの場合のみ回避しても進行可能なため2人旅ができます。
-    マイアのみフリーズしてしまうイベントがありますが、これもメッセージ保存で回避可能です。この状態でゲームを進めると色々と不思議な現象が起こります。
-    <br>・シャルロットのセリフが用意されているイベントは該当部分だけ飛ばされて進行する(本来シャルロットがずっと喋っているはずの妖精王との会話などは一瞬で終わる)
-    <br>・道中の掛け合いやボス戦時のセリフはいないはずのシャルロットの声がどこからともなく聞こえてくる
-    <br>・街中では仲間面して立っているシャルロットを拝める
-    <br>・このデータを引継ぎ元にした場合はリンクアビリティ「純真の絆」は取得できない
-    <br>・ラスボス撃破後にウェンデルの聖職者(シャルロットを仲間にしてエンディングを迎えた)の実績は解除される(※)
-    <br>※シャルロットの加入回避は実行可能なタイミングが2回あり、1回目が滝の洞窟で初めて出会う際で、2回目が光の神殿の一時離脱後です。
-    実績解除を確認したのは後者のパターンでクリアした時だったため、1回目の加入回避でクリアした場合は実績が解除されない可能性があります。
-  </div>
-  <input id="Provoke" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="Provoke">・利敵行動？</label>
-  <div class="sub_description_content">
-    ライトゲイザーのマジックシールドやギルダーバイン(再戦時)のカウンタマジックは何故か味方にかかることがあります(<a
-      href="https://clips.twitch.tv/OnerousDaintyChowderUncleNox-3wnPKsTk3PwYolib" target="_blank"
-      rel="noopener noreferrer">リンク</a>)。
-    どうやらデュランが挑発を付けている際に起こるようです。ボーナス行動になるためおいしいのですが、
-    ギルダーバインは頭を出してからはスリープフラワーしか魔法を使わないため跳ね返せません。
-    ライトゲイザーのセイントビームが半減するのはそれなりにありがたいですが、あまり使ってきてくれません。
-    ミスポルムもカウンタマジックをこちらにかけてくる事があるようですが、それでポイズンバブルを反射しているところを見たことがない謎。
-  </div>
-  <input id="Gova" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="Gova">・ゴーヴァの秘密？</label>
-  <div class="sub_description_content">
-    多くのプレイヤーを葬った恐怖の回転攻撃ですが、反時計回りに回転し次第に中央に寄る動きをします。
-    これは恐らく数字の6、キリスト教圏で不吉とされる獣の数字にちなんだ軌道を描いていると思われます。
-    幽霊船内で宝箱から得られるルクも666だったりします。同じく宝箱から得られる444は航海日死。
-  </div>
-  <input id="bilben" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-  <label class="sub_description" for="bilben">・英語名表記？</label>
-  <div class="sub_description_content">
-    ビルとベンの英語表記は'Bil & Ben'です。
-    一般的に英語圏の男性名である「ビル」の綴りは'Bill'ですが、このボスの名前は'l'が1つ少ないです。ベンと文字数を揃えるためでしょうか？
+    <input id="Charlotte" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="Charlotte">・シャルロットよ永遠に</label>
+    <div class="sub_description_content">
+      仲間の加入イベントは<a href="glitch.html#WalkWhileTalking">メッセージ保存</a>などを利用する事で回避ができます。
+      基本的に仲間の加入イベントを回避してしまうと進行不能になりますが、3人目かつシャルロットの場合のみ回避しても進行可能なため2人旅ができます。
+      マイアのみフリーズしてしまうイベントがありますが、これもメッセージ保存で回避可能です。この状態でゲームを進めると色々と不思議な現象が起こります。
+      <br>・シャルロットのセリフが用意されているイベントは該当部分だけ飛ばされて進行する(本来シャルロットがずっと喋っているはずの妖精王との会話などは一瞬で終わる)
+      <br>・道中の掛け合いやボス戦時のセリフはいないはずのシャルロットの声がどこからともなく聞こえてくる
+      <br>・街中では仲間面して立っているシャルロットを拝める
+      <br>・このデータを引継ぎ元にした場合はリンクアビリティ「純真の絆」は取得できない
+      <br>・ラスボス撃破後にウェンデルの聖職者(シャルロットを仲間にしてエンディングを迎えた)の実績は解除される(※)
+      <br>※シャルロットの加入回避は実行可能なタイミングが2回あり、1回目が滝の洞窟で初めて出会う際で、2回目が光の神殿の一時離脱後です。
+      実績解除を確認したのは後者のパターンでクリアした時だったため、1回目の加入回避でクリアした場合は実績が解除されない可能性があります。
+    </div>
+    <input id="Provoke" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="Provoke">・利敵行動？</label>
+    <div class="sub_description_content">
+      ライトゲイザーのマジックシールドやギルダーバイン(再戦時)のカウンタマジックは何故か味方にかかることがあります(<a
+        href="https://clips.twitch.tv/OnerousDaintyChowderUncleNox-3wnPKsTk3PwYolib" target="_blank"
+        rel="noopener noreferrer">リンク</a>)。
+      どうやらデュランが挑発を付けている際に起こるようです。ボーナス行動になるためおいしいのですが、
+      ギルダーバインは頭を出してからはスリープフラワーしか魔法を使わないため跳ね返せません。
+      ライトゲイザーのセイントビームが半減するのはそれなりにありがたいですが、あまり使ってきてくれません。
+      ミスポルムもカウンタマジックをこちらにかけてくる事があるようですが、それでポイズンバブルを反射しているところを見たことがない謎。
+    </div>
+    <input id="Gova" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="Gova">・ゴーヴァの秘密？</label>
+    <div class="sub_description_content">
+      多くのプレイヤーを葬った恐怖の回転攻撃ですが、反時計回りに回転し次第に中央に寄る動きをします。
+      これは恐らく数字の6、キリスト教圏で不吉とされる獣の数字にちなんだ軌道を描いていると思われます。
+      幽霊船内で宝箱から得られるルクも666だったりします。同じく宝箱から得られる444は航海日死。
+    </div>
+    <input id="bilben" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label class="sub_description" for="bilben">・英語名表記？</label>
+    <div class="sub_description_content">
+      ビルとベンの英語表記は'Bil & Ben'です。
+      一般的に英語圏の男性名である「ビル」の綴りは'Bill'ですが、このボスの名前は'l'が1つ少ないです。ベンと文字数を揃えるためでしょうか？
+    </div>
   </div>
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
     <br>当該コンテンツの転載・配布は禁止いたします。
