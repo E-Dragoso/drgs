@@ -126,3 +126,9 @@ thead {
 .trade {
   color: #FFFF00;
 }
+.torikesi{
+  text-decoration: line-through;
+}
+.honbun{
+  background: #FFFFFF;
+}

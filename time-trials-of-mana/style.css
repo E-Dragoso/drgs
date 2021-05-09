@@ -177,3 +177,28 @@ input {
 label {
   white-space: nowrap;
 }
+/* チャート用 */
+.box{
+  background: #ABC900;
+}
+.shiny{
+  background: #FFD700;
+}
+.enemy{
+  background: #968ABD;
+}
+.menu{
+  background: #90D7EC;
+}
+.shop{
+  background: #FFA500;
+}
+.caution{
+  color: #FF0000;
+}
+.torikesi{
+  text-decoration: line-through;
+}
+.honbun{
+  background: #FFFFFF;
+}
