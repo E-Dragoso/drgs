@@ -118,13 +118,13 @@ thead {
   color: #FF0000;
 }
 .facility {
-  color: #00FF00;
+  color: #007B43;
 }
 .sea {
   color: #0000FF;
 }
 .trade {
-  color: #FFFF00;
+  background-color: #FFFF00;
 }
 .torikesi{
   text-decoration: line-through;
