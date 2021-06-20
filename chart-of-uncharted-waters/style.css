@@ -18,7 +18,7 @@ h1 {
 body {
   max-width: 50em;
   margin: auto;
-  background-color: #88BFBF;
+  background-color: #78CDD1;
 }
 
 /* メイン項目 */
@@ -134,5 +134,6 @@ thead {
   text-decoration: line-through;
 }
 .honbun{
-  background: radial-gradient(farthest-corner at 10%, #F9EBA9, 90%, #99452B);
+  border: solid 1px;
+  background: radial-gradient(farthest-corner at 10%, #F9EBA9, 95%, #99452B);
 }
