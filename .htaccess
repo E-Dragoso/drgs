@@ -10,6 +10,6 @@ RewriteCond %{HTTPS} on
 RewriteCond %{HTTP_HOST} ^www.drgs.app$
 RewriteRule ^(.*)$ https://drgs.app/$1 [R=301,L]
 
-redirect 301 extra.html https://drgs.app/time-trials-of-mana/extra.html
+RewriteRule ^extra.html$ https://drgs.app/time-trials-of-mana/extra.html/$1 [R=301,L]
 
 ErrorDocument 404 /404.html
