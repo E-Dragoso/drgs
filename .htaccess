@@ -1,14 +1,4 @@
 RewriteEngine On
-RewriteCond %{http_host} ^time-trials-of-mana.herokuapp.com
-RewriteRule ^(.*) https://drgs.app/$1 [R=301,L]
-RewriteRule ^(.*)/+$ $1 [R=301,L]
-
-RewriteCond %{THE_REQUEST} ^.*/index.html
-RewriteRule ^(.*)index.html$ https://drgs.app/$1 [R=301,L]
-
-RewriteCond %{HTTPS} on
-RewriteCond %{HTTP_HOST} ^www.drgs.app$
-RewriteRule ^(.*)$ https://drgs.app/$1 [R=301,L]
-
 RewriteRule ^extra.html$ https://drgs.app/time-trials-of-mana/extra.html/$1 [R=301,L]
 
+ErrorDocument 404 /404.html
