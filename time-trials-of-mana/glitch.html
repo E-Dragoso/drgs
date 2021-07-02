@@ -19,11 +19,31 @@
       target="_blank" rel="noopener noreferrer">Googleドキュメント</a>
     と<a href="https://discordapp.com/channels/144599121292951554/690074747622391814/709357032725020762" target="_blank"
       rel="noopener noreferrer">Discordのチャット欄</a>に具体的な項目が幾つかあります。
-    <br>これ以外でもRTAで使われないバグやアップデートによって修正されたバグもあるため、
-    より多くの事を知りたい場合はあまもりさんのブロマガ(<a href="https://ch.nicovideo.jp/amehurashi/blomaga/ar1899227" target="_blank"
+    <br>これ以外にもバグはあるのですが、RTAでは使われていないものやアップデートによって修正されたものについてはここでは紹介しません。
+    <br>興味がある方はあまもりさんのブロマガ(<a href="https://ch.nicovideo.jp/amehurashi/blomaga/ar1899227" target="_blank"
       rel="noopener noreferrer">リンク</a>)で確認してください。
+    <ul>
+      <li><a href="#outofboundslbl">Out of Bounds / OoB(壁抜け)</a></li>
+      <li><a href="#slideboostlbl">Slide Boosting(スライドブースト)</a></li>
+      <li><a href="#rollboostlbl">Roll Boosting(ローリングブースト)</a></li>
+      <li><a href="#partnerboostlbl">Partner Boosting(パートナーブースト)</a></li>
+      <li><a href="#quantumstatelbl">Quantum State(無)</a></li>
+      <li><a href="#multiStacklbl">Multi Stack(多重登録)</a></li>
+      <li><a href="#itemdupinglbl">Item Duping(アイテム増殖)</a></li>
+      <li><a href="#earlycycloneclawlbl">Early Cyclone Claw(OP武器取得)</a></li>
+      <li><a href="#DifficultyChangeSavelbl">Difficulty Change Load?(難易度変更ロード)</a></li>
+      <li><a href="#cookietimerextensionlbl">Cookie Timer Extension(クッキー時間延長)</a></li>
+      <li><a href="#RingShortcutGlitchlbl">Ring Shortcut Glitch(特技ショートカットバグ)</a></li>
+      <li><a href="#SequenceBreakinglbl">Sequence Breaking(イベント飛ばし)</a></li>
+      <li><a href="#WrongRopelbl">Wrong Rope(バグロープ)</a></li>
+      <li><a href="#wwtlbl">Walk While Talking / WWT(メッセージ保存)</a></li>
+      <li><a href="#BattleRopelbl">Battle Rope(戦闘中ロープ)</a></li>
+      <li><a href="#outofbattlefieldlbl">Out of Battle Field?(エリア外戦闘)</a></li>
+      <li><a href="#TrainingPointUnderflowlbl">Training Point Underflow(バグ育成)</a></li>
+      <li><a href="#CharacterChangeThroughlbl">Character Swapping to run through wind(キャラチェン抜け)</a></li>
+    </ul>
     <input id="outofbounds" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="outofbounds">・Out of Bounds / OoB(壁抜け)</label>
+    <label id="outofboundslbl" class="sub_description" for="outofbounds">・Out of Bounds / OoB(壁抜け)</label>
     <div class="sub_description_content">
       直訳すると単に領域外になりますが、ここでは領域外へ侵入する行為を指します。日本語的には壁抜けがしっくりくるでしょう。
       このOoBについてはいろいろ書いてありますが、「ミニマップの境界線を超えてはいけない」という定義が実質機能しているルールです。
@@ -33,7 +53,7 @@
       <br>アルテナ城のみ崖登りの手法で壁抜けを行いますが、その他の場所は次に記載するブーストシリーズが主です。
     </div>
     <input id="slideboost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="slideboost">・Slide Boosting(スライドブースト)</label>
+    <label id="slideboostlbl" class="sub_description" for="slideboost">・Slide Boosting(スライドブースト)</label>
     <div class="sub_description_content">
       マップ上の特定の場所でケヴィンのスライディングを空中地上攻撃すると、ケヴィンが空を飛びます。
       見た目は派手でこれぞバグ！といった感じですが、このバグで抜けられる場所は別の方法でも抜けられることが多いです。
@@ -41,7 +61,7 @@
       <br>実は前進する攻撃であればどのキャラでも浮けるのですが、壁抜けができるほど高度を稼げるのは120fps時かつケヴィンのスライディングだけです。
     </div>
     <input id="rollboost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="rollboost">・Roll Boosting(ローリングブースト)</label>
+    <label id="rollboostlbl" class="sub_description" for="rollboost">・Roll Boosting(ローリングブースト)</label>
     <div class="sub_description_content">
       一部の地形では回避ローリングをすることで前ではなく上方向にキャラが移動します。
       <br>スライドブーストほどの高度が稼げず、これでしか抜けられない場所がないためまず使いません。
@@ -49,7 +69,7 @@
       実績がないだけで今後もないとは言えないので、使わない方が安全ではあります。幸いすぐ近くに別の崖登りポイントがあります。
     </div>
     <input id="partnerboost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="partnerboost">・Partner Boosting(パートナーブースト)</label>
+    <label id="partnerboostlbl" class="sub_description" for="partnerboost">・Partner Boosting(パートナーブースト)</label>
     <div class="sub_description_content">
       仲間を踏み台にして空中地上攻撃の高度を稼ぐバグ技で、スライドブーストとローリングブーストが行えない地形でも実行可能です。
       ただし稼げる高度が低く、これで乗り上げられる場所はかなり限られます。
@@ -58,7 +78,7 @@
       岸辺の洞窟ではなんとマップの別階層に移動できますが、配置やタイミングが非常にシビアです。
     </div>
     <input id="quantumstate" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="quantumstate">・Quantum State(無)</label>
+    <label id="quantumstatelbl" class="sub_description" for="quantumstate">・Quantum State(無)</label>
     <div class="sub_description_content">
       数々のゲームを破壊してきたお馴染みの無です。と言ってもこのゲームではそれほど悪さはできないようになっています。
       <br>所持数1のアイテムが使用中にキャンセルされると、使おうとしたアイテムが無に変化しています。
@@ -70,8 +90,8 @@
       <br>無は強くてニューゲームで引き継げますが、SRCではバグで作成したアイテム等の引継ぎは禁止されているので開始後に作成しましょう。
       RTA的には滝の洞窟のバットムの超音波を食らいながら作成する方法がお手軽です。
     </div>
-    <input id="MultiStack" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="MultiStack">・Multi Stack(多重登録)</label>
+    <input id="multiStack" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="multiStacklbl" class="sub_description" for="multiStack">・Multi Stack(多重登録)</label>
     <div class="sub_description_content">
       無を利用して同一のアイテムを複数登録した状態の事です。これ自体はSRCに記載がありませんが、上記の無を使用しないと使えないためバグ技になります。
       <br>多重登録されたアイテムは個数が変化しなくなる性質を持ちます。そのため無限に使用できるようになり、売っても減らないためルクも無限に稼げます。
@@ -85,7 +105,7 @@
       また見た目に反して戦闘中に使える回数が増えたりはせず、上限(通常9個、NF3個)まで使うとグレーアウトします。NFでは特にアイテムが重要になるため、乱用は禁物です。
     </div>
     <input id="itemduping" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="itemduping">・Item Duping(アイテム増殖)</label>
+    <label id="itemdupinglbl" class="sub_description" for="itemduping">・Item Duping(アイテム増殖)</label>
     <div class="sub_description_content">
       読んで字のごとくアイテムを増やすバグ技です。
       <br>多重登録したアイテムが戦闘以外の場面で使用中にキャンセルされると、そのアイテムが増殖します。多重登録の性質の関係上、基本的に1つのアイテムを2つに増やす際に使います。
@@ -96,7 +116,7 @@
       詳細を知りたい場合は前述のあまもりさんのブロマガで確認してください。
     </div>
     <input id="earlycycloneclaw" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="earlycycloneclaw">・Early Cyclone Claw(OP武器取得)</label>
+    <label id="earlycycloneclawlbl" class="sub_description" for="earlycycloneclaw">・Early Cyclone Claw(OP武器取得)</label>
     <div class="sub_description_content">
       本来OP中は入れないエリアに無理やり侵入し、ゲーム開始直後に強力な武器を入手するというものです。
       サイクロンクローとしか書いていませんが、恐らくどのキャラの武器取得もバグ技…なのか？
@@ -107,7 +127,8 @@
     </div>
     <input id="DifficultyChangeSave" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
-    <label class="sub_description" for="DifficultyChangeSave">・Difficulty Change Load?(難易度変更ロード)</label>
+    <label id="DifficultyChangeSavelbl" class="sub_description" for="DifficultyChangeSave">・Difficulty Change
+      Load?(難易度変更ロード)</label>
     <div class="sub_description_content">
       難易度を変更してからオートセーブをロードすると、再開場所が難易度変更より前にオートセーブした場所になっているというもの。
       これ自体はSRCでバグ扱いされていませんが、基本的に上記のOP武器取得と組み合わせて使うためこちらで解説。
@@ -121,14 +142,16 @@
     </div>
     <input id="cookietimerextension" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
-    <label class="sub_description" for="cookietimerextension">・Cookie Timer Extension(クッキー時間延長)</label>
+    <label id="cookietimerextensionlbl" class="sub_description" for="cookietimerextension">・Cookie Timer
+      Extension(クッキー時間延長)</label>
     <div class="sub_description_content">
       クッキーの効果時間中にアロマを使うと、経験値アップ効果がアロマの効果時間中に持ち越されるバグ。
       <br>通常プレイではそこそこ便利なバグですが、RTAでは多重登録や増殖があるため無用。いざ使おうとしてもアロマが入手できるのはワンダーの樹海なので…。
-      仮にこれ禁止バグじゃなかったとして使う人はいるんだろうか？
+      仮に禁止バグじゃなかったとして種ガチャチャートでアロマ引いた時くらいしか使えなさそう。
     </div>
     <input id="RingShortcutGlitch" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="RingShortcutGlitch">・Ring Shortcut Glitch(特技ショートカットバグ)</label>
+    <label id="RingShortcutGlitchlbl" class="sub_description" for="RingShortcutGlitch">・Ring Shortcut
+      Glitch(特技ショートカットバグ)</label>
     <div class="sub_description_content">
       別のキャラの特技をショートカットに登録できてしまうバグ。
       特技リングコマンドの展開とキャラチェンジを同時に行うと、チェンジ前のキャラのリングが開いたままチェンジ後のキャラのショートカットを操作できてしまいます。
@@ -138,14 +161,14 @@
       トランスシェイプなど誰が使っても同じ効果の特技を、闇ケヴィンなどMPの使い道のないキャラに渡してやる位でしょうか。
     </div>
     <input id="SequenceBreaking" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="SequenceBreaking">・Sequence Breaking(イベント飛ばし)</label>
+    <label id="SequenceBreakinglbl" class="sub_description" for="SequenceBreaking">・Sequence Breaking(イベント飛ばし)</label>
     <div class="sub_description_content">
       必須イベントを経由せずに進めること…ですが具体的な行為が記載されていないのでなにが該当するかは割とアバウトです。
       <br>基本的に次に紹介する3つのテクニックや先に紹介した壁抜けが該当すると思われますが、
       滝の洞窟の入り口で待ち構えているシャルロットは普通にジャンプするだけで飛ばせてしまったりします。
     </div>
     <input id="WrongRope" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="WrongRope">・Wrong Rope(バグロープ)</label>
+    <label id="WrongRopelbl" class="sub_description" for="WrongRope">・Wrong Rope(バグロープ)</label>
     <div class="sub_description_content">
       魔法のロープがダンジョンはおろか街中でも使えるようになってしまうバグ。魔法のロープを本来使用可能な場所で多重登録する事で発生します。
       どのマップでも使用するとどこかしらの出入口に飛ぶようになっていて、そこが目的地の場合は大きなショートカットになります。
@@ -158,7 +181,8 @@
       <br>ぴーひゃら笛も同様にバグ笛にできますが、砂浜以外で使っても何も起きないため無意味です。
     </div>
     <input id="wwt" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label id="WalkWhileTalking" class="sub_description" for="wwt">・Walk While Talking / WWT(メッセージ保存)</label>
+    <label id="wwtlbl" id="WalkWhileTalking" class="sub_description" for="wwt">・Walk While Talking /
+      WWT(メッセージ保存)</label>
     <div class="sub_description_content">
       会話や看板を調べた時に表示されるメッセージテロップを表示したまま動き回れてしまうバグ。
       テロップが表示されている間はあらゆるイベントやエンカウントが発生しなくなります。指定Glitchではありませんがイベント飛ばしに使うためどの道Glitchに該当します。
@@ -172,12 +196,11 @@
       ただし月のマナストーンが目的地になるまでの間はボスの出現判定が残っているため、この方法でイベントを飛ばしても帰り道で遭遇してしまいますが…。
     </div>
     <input id="BattleRope" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="BattleRope">・Battle Rope(戦闘中ロープ)</label>
+    <label id="BattleRopelbl" class="sub_description" for="BattleRope">・Battle Rope(戦闘中ロープ)</label>
     <div class="sub_description_content">
-      魔法のロープがなんと戦闘中にまで使えるようになってしまうバグ。
-      やり方としてはバグロープをショートカットに登録した後、リングコマンドから魔法のロープをすべて外すだけ。
+      魔法のロープがなんと戦闘中にまで使えるようになってしまうバグ。やり方としてはバグロープをショートカットに登録した後、リングコマンドから魔法のロープをすべて外すだけ。
       戦闘中にショートカットからロープを使うと戦闘が強制終了され、イベント戦闘の場合は再訪しても発生しなくなります。
-      <br>これで全てのボスをカット…と思いきや多くのボスは撃破がフラグになっているため、強制終了すると詰み状態になってしまいます。
+      <br>これで全てのボスをカット…と思いきや多くのボスは撃破が進行のフラグになっているため、強制終了するとシナリオを進められず詰み状態になってしまいます。
       例外は火/水のマナストーン前に戦うビルベン(2回目)とマシンゴーレムSで、ここだけは目的地とボス戦が別のため強制終了しても進行可能です。
       使用後はマップの入り口に戻るため、初回に使うとサルタン/エルランド側から走り直すことになります。そのためまずWWTを使ってスルーしてダンジョンに入り、
       マナストーンを調べて戻ってきた帰り道で戦闘中ロープでボス消滅、とやると今出てきたばかりの火炎の谷/氷壁の迷宮側の入り口からになるためロスが少ないです。
@@ -189,10 +212,20 @@
       まあそれでもダメなときは駄目なので、必要な場面以外では極力使わないのが一番の対策です。
       <br>またリングから外す関係上多重化が解除されるため、予めロープは必要数分確保しておく必要があります。
       火/水クリア後も通常のバグロープ(？)が欲しい場面が続くため、本来の使用場所である火炎の谷or氷壁の迷宮で再多重登録しておきましょう。
+      <br>またマシンゴーレムカットの手法としては後述のエリア外戦闘の方が再登録が必要ない分スマートです。
+    </div>
+    <input id="outofbattlefield" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="outofbattlefieldlbl" class="sub_description" for="outofbattlefield">・Out of Battle Field?(エリア外戦闘)</label>
+    <div class="sub_description_content">
+      こちらは国内勢のあまもりさんによって発明されたバグ。戦闘中に黄色い円に触れ続け外に出ると戦闘終了になりますが、円に触れずに外に出ることで戦闘状態を維持したまま移動が可能になります。
+      この状態でボスエリアに侵入するとボスのムービーが流れた後に雑魚戦が再開されボスが消滅します。前述の再戦ボス2種はこの方法で終了させても進行可能です。
+      <br>発見当初は非常に再現の難しい技でRTAでの実用は困難と思われていたのですが、別の方の研究により地形を利用して円の外に出る方法が発見され実用的になりました。
+      零下の雪原の中央にある金の女神像手前のエンカウントポイントはバトルエリア内に木が生えており、これに乗り上げて更に円の外にジャンプする事で可能になります。
     </div>
     <input id="TrainingPointUnderflow" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
-    <label class="sub_description" for="TrainingPointUnderflow">・Training Point Underflow(バグ育成)</label>
+    <label id="TrainingPointUnderflowlbl" class="sub_description" for="TrainingPointUnderflow">・Training Point
+      Underflow(バグ育成)</label>
     <div class="sub_description_content">
       育成ポイントを無限に振れてしまうバグ(<a href="https://www.youtube.com/watch?v=w1dzzu7V3iA" target="_blank"
         rel="noopener noreferrer">リンク</a>)。
@@ -204,8 +237,8 @@
     </div>
     <input id="CharacterChangeThrough" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
-    <label class="sub_description" for="CharacterChangeThrough">・Character Swapping to run through
-      wind(キャラチェン抜け)</label>
+    <label id="CharacterChangeThroughlbl" class="sub_description" for="CharacterChangeThrough">・Character Swapping to
+      run through wind(キャラチェン抜け)</label>
     <div class="sub_description_content">
       風の回廊で風神像が出す風を、キャラクターチェンジを連打しながら走ると抜けられてしまうバグ(<a href="https://www.youtube.com/watch?v=xf805dqA1bQ" target="_blank"
         rel="noopener noreferrer">リンク</a>)。

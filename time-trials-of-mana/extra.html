@@ -14,11 +14,26 @@
 
   <h3><a href="main.html">聖剣伝説3 TRIALS of MANA 計算機</a>　＞　おまけ</h3>
   <div class="honbun">
-    プレイ中に出くわす可能性があり、発生条件が不明なバグを記載します。
-    <br>残念ながらプレイヤーにメリットのあるものはほぼないです。知っていればうろたえずに済むかも…程度。
+    現在のところ発生条件が不明で、プレイ中に意図せず出くわす可能性があるバグを記載します。
+    <br>残念ながらプレイヤーにメリットのあるものはほぼないですが知っていればうろたえずに済む…？
     <br>また現バージョンでは未確認のものもあるので、もしかしたらひっそり修正されているかも。
+    <ul>
+      <li><a href="#invinciblelbl">Invincible(無敵化)</a></li>
+      <li><a href="#lucrelostlbl">Lucre Lost(ルク消失)</a></li>
+      <li><a href="#InfiniteStunlbl">Infinite Stun(永続ダウン)</a></li>
+      <li><a href="#InvisibleTargetlbl">Invisible Target?(見えない標的)</a></li>
+      <li><a href="#SnipingStinglbl">Sniping Sting?(必中キルスティンガー)</a></li>
+      <li><a href="#DirtyNinjalbl">Dirty Ninja(汚い忍者)</a></li>
+    </ul>
+    以下はネタ的な情報。ページの都合で合わせて記載します。
+    <ul>
+      <li><a href="#Charlottelbl">シャルロットよ永遠に？</a></li>
+      <li><a href="#Provokelbl">利敵行動？</a></li>
+      <li><a href="#Govalbl">ゴーヴァの秘密？</a></li>
+      <li><a href="#bilbenlbl">英語名表記の謎？</a></li>
+    </ul>
     <input id="invincible" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="invincible">・Invincible(無敵化)</label>
+    <label id="invinciblelbl" class="sub_description" for="invincible">・Invincible(無敵化)</label>
     <div class="sub_description_content">
       極めて強力なバグで、なんとあらゆる攻撃を一切受け付けず、触れる事すらできない無敵状態になってしまいます！
       <br>
@@ -40,7 +55,7 @@
       <br>現バージョンでも絶賛発生中なので、とにかくセーブはこまめに行いましょう。
     </div>
     <input id="lucrelost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="lucrelost">・Lucre Lost(ルク消失)</label>
+    <label id="lucrelostlbl" class="sub_description" for="lucrelost">・Lucre Lost(ルク消失)</label>
     <div class="sub_description_content">
       ボスが落とすはずのルクが得られなくなるバグです。現バージョンでも発生します。神獣戦で多くの報告があり、特にフィーグムンドで発生しやすいようです。
       終わりの一瞬だけしか撮れてませんが一応(<a href="https://www.twitch.tv/e_dragoso/clip/DistinctAgitatedGoshawkSuperVinlin"
@@ -49,7 +64,7 @@
       ルク計算をきっちりやっているとかなり痛いです。記録狙い以外ではルクを多めに回収するなど、余裕のある資産運用を行いましょう。
     </div>
     <input id="InfiniteStun" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="InfiniteStun">・Infinite Stun(永続ダウン)</label>
+    <label id="InfiniteStunlbl" class="sub_description" for="InfiniteStun">・Infinite Stun(永続ダウン)</label>
     <div class="sub_description_content">
       ビルとベンで確認されている、ボスがダウン状態になったまま起き上がらなくなるバグ(<a
         href="https://clips.twitch.tv/FancyAntediluvianWalletTTours-R3InTg67e_BSJWs9" target="_blank"
@@ -59,7 +74,7 @@
       もし再現方法が判明すれば革命が起きるので、発生したらまず録画を残しておきましょう。
     </div>
     <input id="InvisibleTarget" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="InvisibleTarget">・Invisible Target?(見えない標的)</label>
+    <label id="InvisibleTargetlbl" class="sub_description" for="InvisibleTarget">・Invisible Target?(見えない標的)</label>
     <div class="sub_description_content">
       ビルベンおよびゴーヴァで、選択できないターゲットに技が吸われてしまうバグ。現バージョンでも発生します。
       <br>ビルベンは片方を倒した後にもう片方に向けて魔法を使うと倒した方に吸われることがあり、
@@ -67,59 +82,56 @@
       <br>こいつらが相手の時にスワップすると変な方向に出やすいのもこれが原因かも？
     </div>
     <input id="SnipingSting" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="SnipingSting">・Sniping Sting?(必中キルスティンガー)</label>
+    <label id="SnipingStinglbl" class="sub_description" for="SnipingSting">・Sniping Sting?(必中キルスティンガー)</label>
     <div class="sub_description_content">
       キルスティンガーの判定が残ったまま動き回るという恐るべきバグ(<a href="https://clips.twitch.tv/InquisitiveSavoryClipsmomTheRinger"
-        target="_blank" rel="noopener noreferrer">リンク</a>)。幸い現バージョンでは未確認です。
+        target="_blank" rel="noopener noreferrer">リンク</a>)。
       キルスティンガーが連続で使用された時に稀に発生し、赤枠と一緒にぴったり貼り付いてくるためまず死にます。
       RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
       <br>バグとは直接関係ないのですが、キルスティンガーでやられた仲間を即座に蘇生すると起きた瞬間にまたキルスティンガーで即死します。
       キルスティンガー中は他の攻撃は飛んでこないので、落ち着いてバフ更新などをしながら終了を待ちましょう。
     </div>
     <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="DirtyNinja">・Dirty Ninja(汚い忍者)</label>
+    <label id="DirtyNinjalbl" class="sub_description" for="DirtyNinja">・Dirty Ninja(汚い忍者)</label>
     <div class="sub_description_content">
       必殺技などの無敵時間で忍術を無効化していてもデバフを貰ってしまうバグ。現バージョンでは未確認です。ビルベンバグり過ぎじゃない？
       更に仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト(デュラン)の挑発でも避けられません。
       <br>汚いなさすが忍者きたない
     </div>
     <br>
-    以下はネタ的な情報。
-    <br>
     <input id="Charlotte" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="Charlotte">・シャルロットよ永遠に</label>
+    <label id="Charlottelbl" class="sub_description" for="Charlotte">・シャルロットよ永遠に</label>
     <div class="sub_description_content">
       仲間の加入イベントは<a href="glitch.html#WalkWhileTalking">メッセージ保存</a>などを利用する事で回避ができます。
-      基本的に仲間の加入イベントを回避してしまうと進行不能になりますが、3人目かつシャルロットの場合のみ回避しても進行可能なため2人旅ができます。
-      マイアのみフリーズしてしまうイベントがありますが、これもメッセージ保存で回避可能です。この状態でゲームを進めると色々と不思議な現象が起こります。
+      仲間がいないとイベントが正常に再生できなくなるため基本的に進行不能になりますが、「3人目に選択したシャルロット」のみ回避しても進行可能なため2人旅ができます。
+      マイアではシャルロットがいないとフリーズしてしまうイベントがありますが、これもメッセージ保存で回避可能です。この状態でゲームを進めると色々と不思議な現象が起こります。
       <br>・シャルロットのセリフが用意されているイベントは該当部分だけ飛ばされて進行する(本来シャルロットがずっと喋っているはずの妖精王との会話などは一瞬で終わる)
       <br>・道中の掛け合いやボス戦時のセリフはいないはずのシャルロットの声がどこからともなく聞こえてくる
-      <br>・街中では仲間面して立っているシャルロットを拝める
+      <br>・街中ではシャルロットが仲間面して立っている姿を拝める
       <br>・このデータを引継ぎ元にした場合はリンクアビリティ「純真の絆」は取得できない
       <br>・ラスボス撃破後にウェンデルの聖職者(シャルロットを仲間にしてエンディングを迎えた)の実績は解除される(※)
       <br>※シャルロットの加入回避は実行可能なタイミングが2回あり、1回目が滝の洞窟で初めて出会う際で、2回目が光の神殿の一時離脱後です。
       実績解除を確認したのは後者のパターンでクリアした時だったため、1回目の加入回避でクリアした場合は実績が解除されない可能性があります。
     </div>
     <input id="Provoke" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="Provoke">・利敵行動？</label>
+    <label id="Provokelbl" class="sub_description" for="Provoke">・利敵行動？</label>
     <div class="sub_description_content">
       ライトゲイザーのマジックシールドやギルダーバイン(再戦時)のカウンタマジックは何故か味方にかかることがあります(<a
         href="https://clips.twitch.tv/OnerousDaintyChowderUncleNox-3wnPKsTk3PwYolib" target="_blank"
-        rel="noopener noreferrer">リンク</a>)。
-      どうやらデュランが挑発を付けている際に起こるようです。ボーナス行動になるためおいしいのですが、
-      ギルダーバインは頭を出してからはスリープフラワーしか魔法を使わないため跳ね返せません。
+        rel="noopener noreferrer">リンク</a>)。どうやらデュランが挑発を付けている際に起こるようです。
+      ボーナス行動になるためおいしいのですが、ギルダーバインは頭を出してからはスリープフラワーしか魔法を使わないため跳ね返せません。
       ライトゲイザーのセイントビームが半減するのはそれなりにありがたいですが、あまり使ってきてくれません。
       ミスポルムもカウンタマジックをこちらにかけてくる事があるようですが、それでポイズンバブルを反射しているところを見たことがない謎。
     </div>
     <input id="Gova" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="Gova">・ゴーヴァの秘密？</label>
+    <label id="Govalbl" class="sub_description" for="Gova">・ゴーヴァの秘密？</label>
     <div class="sub_description_content">
-      多くのプレイヤーを葬った恐怖の回転攻撃ですが、反時計回りに回転し次第に中央に寄る動きをします。
+      ゴーヴァが使用してくる回転攻撃は多段ヒットする性質のため多くのプレイヤーを恐怖に陥れましたが、反時計回りに回転し次第に中央に寄る動きをします。
       これは恐らく数字の6、キリスト教圏で不吉とされる獣の数字にちなんだ軌道を描いていると思われます。
       幽霊船内で宝箱から得られるルクも666だったりします。同じく宝箱から得られる444は航海日死。
     </div>
     <input id="bilben" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label class="sub_description" for="bilben">・英語名表記？</label>
+    <label id="bilbenlbl" class="sub_description" for="bilben">・英語名表記の謎？</label>
     <div class="sub_description_content">
       ビルとベンの英語表記は'Bil & Ben'です。
       一般的に英語圏の男性名である「ビル」の綴りは'Bill'ですが、このボスの名前は'l'が1つ少ないです。ベンと文字数を揃えるためでしょうか？
