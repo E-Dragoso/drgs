@@ -23,7 +23,7 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/CP8T9iUTZ7E" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      <input id="DmgtoEnemy" class="description_check" style="display: none;" type="checkbox">
+      <input id="DmgtoEnemy" class="description_check" style="display: none;" type="checkbox" checked="true">
       <label class="description" for="DmgtoEnemy">敵に与えるダメージ</label>
       <div class="description_content">
         検証より、攻撃力の上昇割合はほぼ正確にダメージに反映されることが確認されています。
@@ -45,7 +45,7 @@
         <br>
         <br>で計算されているようです。
       </div>
-      <input id="CSDmg" class="description_check" style="display: none;" type="checkbox">
+      <input id="CSDmg" class="description_check" style="display: none;" type="checkbox" checked="true">
       <label class="description" for="CSDmg">必殺技のダメージ</label>
       <div class="description_content">
         通常攻撃（と魔法攻撃）は攻撃力が20%アップすればダメージも20％アップします。但し、必殺技のダメージはこの通りには増えません。
@@ -66,7 +66,7 @@
         <br>例：裁定者を付けた際の平均ダメージは325.5
         <br>　　325.5 ÷ 268.5 ≒ 1.21
       </div>
-      <input id="DmgfromEnemy" class="description_check" style="display: none;" type="checkbox">
+      <input id="DmgfromEnemy" class="description_check" style="display: none;" type="checkbox" checked="true">
       <label class="description" for="DmgfromEnemy">被ダメージ</label>
       <div class="description_content">
         チュートリアルのラビ相手に防御力を1ずつ増やしながら殴られてみたところ、平均ダメージは
@@ -169,10 +169,10 @@
         <input id="MPSave" class="description_check" style="display: none;" type="checkbox">
         <label class="description" for="MPSave">・MPアップ/コンバート/MP消費セーブ</label>
         <div class="description_content">
-          MPを増やしたり消費を減らしたりするアビリティ。主にデュランのセイバーの消費を補うために使われます。
+          MPを増やしたり消費を減らしたりするアビリティ。通常RTAでは主にデュランのセイバーの消費を補うために使われます。
           例えばコンバートを付けるとアタックセイバーのMP消費が11→8になり、後CCならルガーと戦う際のデュランはMP31のため1回多く唱えられるようになります。
           ギルダーバイン戦ではMPが34になっていて唱えられる回数に変化がなく、神獣戦が始まるとより効果の大きいMPアップⅡが手に入るためピンポイントではありますが有用です。
-          <br>ホークアイ使用時かつ引継ぎプレイ時限定ですが、消費セーブ2種積みするとMPがほとんど減らなくなります。補助魔法の価値が大きく漆黒の力も使えないNFでは一考の余地あり。
+          <br>ホークアイ使用時かつ引継ぎプレイ時限定ですが、消費MPセーブを2種積みするとMPがほとんど減らなくなります。補助魔法の価値が大きく漆黒の力も使えないNFでは一考の余地あり。
         </div>
         <input id="DownTime" class="description_check" style="display: none;" type="checkbox">
         <label class="description" for="DownTime">・ダウンカウント</label>
@@ -180,12 +180,13 @@
           ダウンの効果時間を1.5倍、60秒から90秒に延長するアビリティです。ダウン強化Ⅱを取る過程で必ず取得できるため殆どの人が採用しています。
           <br>ただしフェンリルナイトはクラス特性でダウン効果永続を持っているためクラス3では基本的に不要だったり、
           バフとデバフを同じタイミングで更新するなら付けていなくても同じだったり…とあれ？な部分も少なくなかったり。
+          <br>とはいえ90秒で倒し切れる相手なら1回分デバフの入力を減らしても良くなるため僅かですがタイム短縮に繋がります。
         </div>
         <input id="Attacker" class="description_check" style="display: none;" type="checkbox">
         <label class="description" for="Attacker">・アタッカー</label>
         <div class="description_content">
           リースが取得するリンクアビリティで、割合ではなく固定値上昇の珍しい効果を持っています。割合上昇が殆どのこのゲームでは固定上昇という事で侮られがちですが、
-          クリアレベル（レベル50でペダン武器を装備したデスハンドケヴィンの攻撃力は300程度）ではそれなりに強いアビリティです。
+          レベル50でペダン武器を装備したデスハンドケヴィンの攻撃力は300程度であり、シナリオクリアレベルまではそれなりに強いアビリティです。
           <br>真価を発揮するのは引継ぎプレイ時で、低レベル時は割合上昇でない事が有利に働き裁定者などよりも強力なスキルになります。
         </div>
         <input id="FinishingBlow" class="description_check" style="display: none;" type="checkbox">
@@ -193,14 +194,14 @@
         <div class="description_content">
           つよそう。に見えますがHPが30％以下になるまで発動しないため0.3 × 0.3 = 0.09、つまり9%アップ相当。
           HP30％以下ならこのスキルを付けていようがいまいが一気に削り切れてしまうため効果を実感しにくいというのも。
-          <br>PTによるごり押しが利かないソロ試練では、攻撃が激しくなる最終盤を楽にできるため有用です。
+          <br>PTによるごり押しが利かないソロ試練では敵の攻撃が激しくなる最終盤を楽にできるため有用です。
           RTAにはクリア後のシナリオは含まれませんが、ラビのスリッパを取るために1度はクリアが必要なため覚えておくと役に立つかも。
         </div>
         <input id="Counter" class="description_check" style="display: none;" type="checkbox">
         <label class="description" for="Counter">・反撃</label>
         <div class="description_content">
           ダメージを受けると攻撃力が上昇するアビリティ。デュランとリースが習得します。
-          デュランは挑発持ちという事もあり発動機会が多いですが、上がるのは物理攻撃力のみで必殺威力はそこまで上がらないのが残念。
+          デュランは挑発持ちという事もあり発動機会が多いですが、NPCの火力が1割増えた程度ではそんなに…。
           とはいえ他に付けるものもないのでとりあえず入れておくことが多いです。
         </div>
         <input id="CritDamage" class="description_check" style="display: none;" type="checkbox">
@@ -217,7 +218,7 @@
           強攻撃のダメージを5%アップするリンクアビリティ。
           クラス1で弱弱強を使う事を想定すると、弱2発と強1発のダメージが大体同じなので火力的には2.5%アップ相当。
           ケヴィンの弱弱強は他キャラの2倍程度の火力がありますがそれでも3%強、必殺には乗らないのでこの辺まで勘定に入れるともう少し落ちます。
-          序盤で取れる貴重な火力スキルではありますが、無視されることも多いです。
+          序盤で取れる貴重な火力スキルではありますが、ほぼタイムに影響しないため無視されることも多いです。
         </div>
         <input id="Pinpoint" class="description_check" style="display: none;" type="checkbox">
         <label class="description" for="Pinpoint">・クリティカルアップ</label>

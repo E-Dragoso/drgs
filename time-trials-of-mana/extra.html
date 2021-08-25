@@ -23,6 +23,7 @@
       <li><a href="#InfiniteStunlbl">Infinite Stun(永続ダウン)</a></li>
       <li><a href="#InvisibleTargetlbl">Invisible Target?(見えない標的)</a></li>
       <li><a href="#SnipingStinglbl">Sniping Sting?(必中キルスティンガー)</a></li>
+      <li><a href="#Freezelbl">硬直化</a></li>
       <li><a href="#DirtyNinjalbl">Dirty Ninja(汚い忍者)</a></li>
     </ul>
     以下はネタ的な情報。ページの都合で合わせて記載します。
@@ -42,14 +43,14 @@
       <br>
       <br>しかもボスが。
       <br>
-      <br>ボスのHPゲージを削り切る瞬間とボスの行動がかち合ってしまうと発生するようです。
-      <br>発生が確認されているのはツェンカー(<a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat"
+      <br>ボスのHPゲージを削り切る瞬間とボスの特定の行動がかち合ってしまうと発生するようです。
+      <br>私が確認したのはツェンカー(<a href="https://www.twitch.tv/e_dragoso/clip/DifferentLovelyWatermelonKeyboardCat"
         target="_blank" rel="noopener noreferrer">リンク</a>)、ビルとベン、マシンゴーレムS(<a
         href="https://clips.twitch.tv/ArtisticDirtyButterflyPogChamp" target="_blank"
         rel="noopener noreferrer">リンク</a>)、フィーグムンド(<a
         href="https://www.twitch.tv/e_dragoso/clip/BrightWanderingHippoPanicVis" target="_blank"
-        rel="noopener noreferrer">リンク</a>)です。
-      <br>少し性質が違いますがドランでも無敵化は確認されています(<a href="https://www.twitch.tv/videos/622722108" target="_blank"
+        rel="noopener noreferrer">リンク</a>)です。ライトゲイザーやダンガードでも発生報告があります。
+      <br>少し性質が違いますがドランでも無敵化を確認しています(<a href="https://www.twitch.tv/videos/622722108" target="_blank"
         rel="noopener noreferrer">リンク</a>)。
       <br>こうなってしまうとリセットする以外に復帰方法が無くなりますが、ビルベンのみもう片方が生きていれば黄泉がえりで蘇生されるため詰み回避ができます。
       <br>現バージョンでも絶賛発生中なので、とにかくセーブはこまめに行いましょう。
@@ -88,8 +89,16 @@
         target="_blank" rel="noopener noreferrer">リンク</a>)。
       キルスティンガーが連続で使用された時に稀に発生し、赤枠と一緒にぴったり貼り付いてくるためまず死にます。
       RTA的には立ち回りを詰め切れていればキルスティンガーを2回使われることはあまりないため、対策としてはとにかく練習してミスポルムを素早く倒すという事になります。
+      <br>現バージョンでも絶賛発生中。倒したツタの蘇生がキルスティンガーと被ると発生するらしい…？
       <br>バグとは直接関係ないのですが、キルスティンガーでやられた仲間を即座に蘇生すると起きた瞬間にまたキルスティンガーで即死します。
       キルスティンガー中は他の攻撃は飛んでこないので、落ち着いてバフ更新などをしながら終了を待ちましょう。
+    </div>
+    <input id="Freeze" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="Freezelbl" class="sub_description" for="Freeze">・硬直化</label>
+    <div class="sub_description_content">
+      戦闘中にNPCが動かなくなってしまうバグ。移動も攻撃もショートカットやリングコマンドからの特技やアイテムも使えなくなります。
+      一旦この状態になってしまうと自操作に切り替えても操作できず、戦闘不能か戦闘終了までこの状態が続きます。
+      永続ダウン並みのレア事象で確認されているのは数件です。
     </div>
     <input id="DirtyNinja" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="DirtyNinjalbl" class="sub_description" for="DirtyNinja">・Dirty Ninja(汚い忍者)</label>
@@ -97,6 +106,7 @@
       必殺技などの無敵時間で忍術を無効化していてもデバフを貰ってしまうバグ。現バージョンでは未確認です。ビルベンバグり過ぎじゃない？
       更に仲間のエフェクトに近寄るだけでダウンを貰ったり、かなりインチキ臭い挙動をします。合体時と再戦時は全体忍術を使ってくるため、謙虚なナイト(デュラン)の挑発でも避けられません。
       <br>汚いなさすが忍者きたない
+      <br>現行パッチではこうした事象は確認できず、解消されているようです。
     </div>
     <br>
     <input id="Charlotte" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
