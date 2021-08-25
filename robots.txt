@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap : https://drgs.app/sitemap.xml
+Sitemap: https://drgs.app/sitemap.xml
