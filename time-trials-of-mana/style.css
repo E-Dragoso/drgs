@@ -148,6 +148,9 @@ input {
 }
 
 /* 攻撃力シミュレータ */
+label {
+  padding: 0.2em;
+}
 /* ヘッダ*/
 .dmgcalchead {
   position: sticky;
