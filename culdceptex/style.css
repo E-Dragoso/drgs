@@ -1,0 +1,48 @@
+/* タイトル */
+h1 {
+  text-align: center;
+  font-size: 2.0em;
+  color: #000000;
+  font-weight: bold;
+}
+
+body {
+  max-width: 50em;
+  margin: auto;
+  background-color: #F9EBA9;
+}
+
+/* メイン項目 */
+h2 {
+  background-color: #FCB869;
+  padding-left: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid #35538e;
+  border-left: 0.3em solid #35538e;
+}
+
+h3 {
+  background-color: #FFC887;
+  padding-left: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid #35538e;
+  border-left: 0.2em solid #35538e;
+}
+
+h4 {
+  border-bottom: 1px solid #35538e;
+}
+
+.div_h2 {
+  margin: 0.2em;
+  padding: 0.2em;
+}
+
+ul li {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.honbun {
+  border: solid 1px;
+}
