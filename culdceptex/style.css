@@ -46,3 +46,7 @@ ul li {
 .honbun {
   border: solid 1px;
 }
+
+.torikesi {
+  text-decoration: line-through;
+}
