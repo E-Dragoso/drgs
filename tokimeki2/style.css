@@ -9,28 +9,28 @@ h1 {
 body {
   max-width: 50em;
   margin: auto;
-  background-color: #24b9317a;
+  background-color: #e9b1e17a;
 }
 
 /* メイン項目 */
 h2 {
-  background-color: #FCB869;
+  background-color: #fcf969;
   padding-left: 0.5em;
   margin: 0;
-  border-bottom: 1px solid #35538e;
-  border-left: 0.3em solid #35538e;
+  border-bottom: 1px solid #808080;
+  border-left: 0.3em solid #808080;
 }
 
 h3 {
   background-color: #FFC887;
   padding-left: 0.5em;
   margin: 0;
-  border-bottom: 1px solid #35538e;
-  border-left: 0.2em solid #35538e;
+  border-bottom: 1px solid #808080;
+  border-left: 0.2em solid #808080;
 }
 
 h4 {
-  border-bottom: 1px solid #35538e;
+  border-bottom: 1px solid #808080;
 }
 
 .div_h2 {
