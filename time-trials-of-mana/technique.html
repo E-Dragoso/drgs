@@ -31,9 +31,12 @@
       <li><a href="#pindownlbl">SPin Down?(ダウン延長)</a></li>
       <li><a href="#aeriallancelbl">Aerial Lance Jump?(槍高跳び)</a></li>
       <li><a href="#tutorialskiplbl">Tutorial Skip(チュートリアルスキップ)</a></li>
+      <li><a href="#tutorialbattleskiplbl">Tutorial Skip(チュートリアル戦闘スキップ)</a></li>
       <li><a href="#aerialgroundlbl">Aerial Ground Attack?(空中地上攻撃)</a></li>
       <li><a href="#elapsetimecansellbl">Elapse Time Cansel?(時間経過キャンセル)</a></li>
+      <li><a href="#BarrierSkiplbl">Barrier Skip(バリアスキップ)</a></li>
     </ul>
+
     <input id="precedeinput" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="precedeinputlbl" id="precedeinputlabel" class="sub_description" for="precedeinput">・Precede Input
       (先行入力)</label>
@@ -50,6 +53,7 @@
       また開幕に複数回の指示を行おうとした際に、敵との距離が近いと攻撃を始めてしまい次の1回しか予約できない場合があります。
       ダンガードなどでしばしば起こるため、1回目の指示を出しながらNPCが別の行動を行っていないか確認しましょう。
     </div>
+
     <input id="csswap" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="csswaplabel" class="sub_description" for="csswap">・Class Strike Swap / CS Swap(CSスワップ、先行入力交代)</label>
     <div class="sub_description_content">
@@ -76,6 +80,7 @@
       石化や死亡時も交代できないため、仲間が身動きを取れる状態か確認しておくことも大事です。
       <br>傍目にはかなりバグ臭い挙動なのですが、発見当時は水バグ全盛だったためかSRCではGlitch扱いされていません。
     </div>
+
     <input id="rolling" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="rollinglbl" class="sub_description" for="rolling">・Rolling Around Run?(ローリング移動)</label>
     <div class="sub_description_content">
@@ -90,6 +95,7 @@
       <br>例外として、武器を出している状態だと移動速度が下がるため、戦闘中は常に回避した方が速く移動できます。
       また後述の崖ローリング後も空中攻撃の関係で着地後しばらくはローリングした方が速くなります。
     </div>
+
     <input id="subtitle" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="subtitleoff" class="sub_description" for="subtitle">・Subtitle Off Mash?(字幕オフ連打)</label>
     <div class="sub_description_content">
@@ -102,6 +108,7 @@
       <br>
       <br>ちなみにシーンスキップ不可で連打でも飛ばせない会話があり、これはどうやっても短縮できないようです。(ボイスオフでもダメ)
     </div>
+
     <input id="ledgejump" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="ledgejumplbl" class="sub_description" for="ledgejump">・Ledge Skipping / Ledge Jumping(崖登り)</label>
     <div class="sub_description_content">
@@ -111,6 +118,7 @@
       <br>
       <br>また火山島ブッカなど一部の崖は壁面に引っかかりがあり、これを足場にすることで登れるようになる場所があります。
     </div>
+
     <input id="ledgeslide" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="ledgeslidelbl" class="sub_description" for="ledgeslide">・ledgeslide? /
       ledgeroll?(崖スライディング、崖ローリング)</label>
@@ -123,6 +131,7 @@
       <br>但し崖スライディングはできるが崖ローリングはできない段差やその逆もあるため、どこでどちらが使えるかは覚える必要があります。
       <br>ちなみに各キャラの弱弱弱強の突進でも同じ事ができます…が当然コンボ入力分遅くなるのでタイム的なメリットはありません。
     </div>
+
     <input id="pindown" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="pindownlbl" class="sub_description" for="pindown">・SPin Down?(ダウン延長)</label>
     <div class="sub_description_content">
@@ -131,6 +140,7 @@
       完全に起き上がるまでダメージ2倍の状態が持続するためかなり美味しいです。
       <br>他のボスは基本的に起き上がり始めた時点でダメージが等倍に戻っていますが、ダウン中にロックタイプの技を当てて拘束する事で疑似的に延長できます。
     </div>
+
     <input id="aeriallance" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="aeriallancelbl" class="sub_description" for="aeriallance">・Aerial Lance Jump?(槍高跳び)</label>
     <div class="sub_description_content">
@@ -140,8 +150,18 @@
       また飛天槍は着弾点からバク宙で元の位置に戻ろうとするため間に水平移動を遮るオブジェクトがないと成立しません。
       <br>余談ですが、飛天槍でランドアンバーに乗り上げて押し出しを食らうという事故が稀に報告されています。
     </div>
+
     <input id="tutorialskip" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label id="tutorialskiplbl" class="sub_description" for="tutorialskip">・Tutorial Skip(チュートリアルスキップ)</label>
+    <label id="tutorialskiplbl" class="sub_description" for="tutorialskip">・Tutorial Skip?(チュートリアルスキップ)</label>
+    <div class="sub_description_content">
+      初めてレベルアップした際にチュートリアルウィンドウが表示されしばらく硬直しますが、表示前にエリア移動を行うと表示を飛ばすことができます。
+      <br>スキル振りとアビリティ装備は本来それらが可能になった瞬間チュートリアルが表示されますが、
+      レベルアップしてからレベルアップチュートリアルが表示されるフラグが建っている間（？）はこれらのチュートリアルも表示されなくなるため、
+      <br>レベルアップ→スキルを振ってアビリティ装備→エリアチェンジと素早く行う事で3つのチュートリアルをスキップできます。
+    </div>
+
+    <input id="tutorialbattleskip" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="tutorialbattleskiplbl" class="sub_description" for="tutorialbattleskip">・Tutorial Battle Skip?(チュートリアル戦闘スキップ)</label>
     <div class="sub_description_content">
       こちらは私が発見したテクニックです(ﾄﾞﾔ
       <br>チュートリアルに登場する雑魚敵は指示通りの行動をしないと倒せないようになっていますが、かいがらハンターに変化させると普通に倒せるようになります(<a href="https://youtu.be/xCbnwCyfTaQ"
@@ -153,6 +173,7 @@
       またブルーザーとカールは同グラフィックの雑魚が存在しますが、イーグル同様状態異常にならないため別モンスター扱いのようです。
       <br>ちなみにアンジェラ(とシャルロット？)はバグ技でチュートリアルエリア自体を避けることができます。
     </div>
+
     <input id="aerialground" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="aerialgroundlbl" class="sub_description" for="aerialground">・Aerial Ground Attack?(空中地上攻撃)</label>
     <div class="sub_description_content">
@@ -162,6 +183,7 @@
       <br>単体では非常に地味なテクニックですが、ある場所で使うととんでもない事になります。
       <br>トンデもない事に。
     </div>
+
     <input id="elapsetimecansel" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="elapsetimecansellbl" class="sub_description" for="elapsetimecansel">・Elapse Time
       Cansel?(時間経過キャンセル)</label>
@@ -172,6 +194,15 @@
       <br>逆に全力で連打すると、時間経過どころかロード画面まで壊れる場合があります(<a href="https://www.twitch.tv/videos/626547180" target="_blank"
         rel="noopener noreferrer">リンク</a>)。
     </div>
+
+    <input id="BarrierSkip" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="BarrierSkiplbl" class="sub_description" for="BarrierSkip">・Barrier Skip(バリアスキップ)</label>
+    <div class="sub_description_content">
+    滝の洞窟に入る際のバリアに弾かれる演出を強制終了させるテクニックで、GlitchlessがNMGに変更された際に許可された技の1つです。
+    <br>バリアに向かって弱弱弱強の突進攻撃を繰り出すことでイベント判定の奥にあるマップ切り替え判定を踏み、イベントを中断させます。
+    <br>突進攻撃は本来クラス2でなければ出すことができませんが、強攻撃の入力とリングコマンドの開閉を被せるとクラス1でも突進攻撃が出せるようになります。
+    <br>こちらは見た目だけで実際の攻撃判定はありませんが、キャラの移動はちゃんと（？）行われるのでバリア抜けに使用できます。
+  </div>
   </div>
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
     <br>当該コンテンツの転載・配布は禁止いたします。

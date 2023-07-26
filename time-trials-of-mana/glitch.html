@@ -38,12 +38,16 @@
       <li><a href="#RingShortcutGlitchlbl">Ring Shortcut Glitch(特技ショートカットバグ)</a></li>
       <li><a href="#SequenceBreakinglbl">Sequence Breaking(イベント飛ばし)</a></li>
       <li><a href="#WrongRopelbl">Wrong Rope(バグロープ)</a></li>
-      <li><a href="#wwtlbl">Walk While Talking / WWT(メッセージ保存)</a></li>
+      <li><a href="#wwtlbl">Walk With Text / WWT(メッセージ保存)</a></li>
       <li><a href="#BattleRopelbl">Battle Rope(戦闘中ロープ)</a></li>
       <li><a href="#outofbattlefieldlbl">Out of Battle Field?(エリア外戦闘)</a></li>
       <li><a href="#TrainingPointUnderflowlbl">Training Point Underflow(バグ育成)</a></li>
       <li><a href="#CharacterChangeThroughlbl">Character Swapping to run through wind(キャラチェン抜け)</a></li>
+      <li><a href="#WrongWarplbl">Wrong Warp(バグワープ)</a></li>
+      <li><a href="#StackWarplbl">Training Stack Warp?(育成スタックワープ)</a></li>
+      <li><a href="#Curselesslbl">Curseless Ghost Ship(幽霊船の呪い回避)</a></li>
     </ul>
+
     <input id="outofbounds" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="outofboundslbl" class="sub_description" for="outofbounds">・Out of Bounds / OoB(壁抜け)</label>
     <div class="sub_description_content">
@@ -54,6 +58,7 @@
       <br>　・マシンゴーレムS戦の回避
       <br>アルテナ城のみ崖登りの手法で壁抜けを行いますが、その他の場所は次に記載するブーストシリーズが主です。
     </div>
+
     <input id="slideboost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="slideboostlbl" class="sub_description" for="slideboost">・Slide Boosting(スライドブースト)</label>
     <div class="sub_description_content">
@@ -62,6 +67,7 @@
       <br>
       <br>実は前進する攻撃であればどのキャラでも浮けるのですが、壁抜けができるほど高度を稼げるのは120fps時かつケヴィンのスライディングだけです。
     </div>
+
     <input id="rollboost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="rollboostlbl" class="sub_description" for="rollboost">・Roll Boosting(ローリングブースト)</label>
     <div class="sub_description_content">
@@ -70,6 +76,7 @@
       <br>火炎の谷の崖登りで1箇所、ローリングブーストに該当しそうな場所がありますが、現状それで記録が無効になった事はありません。
       実績がないだけで今後もないとは言えないので、使わない方が安全ではあります。幸いすぐ近くに別の崖登りポイントがあります。
     </div>
+
     <input id="partnerboost" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="partnerboostlbl" class="sub_description" for="partnerboost">・Partner Boosting(パートナーブースト)</label>
     <div class="sub_description_content">
@@ -79,6 +86,7 @@
       光の古代遺跡では入り口付近からボス前に直行できるため大きなショートカットになります。但しこの場合は？？？の種が取れないためチャートか運でカバーする必要があります。
       岸辺の洞窟ではなんとマップの別階層に移動できますが、配置やタイミングが非常にシビアです。
     </div>
+
     <input id="quantumstate" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="quantumstatelbl" class="sub_description" for="quantumstate">・Quantum State(無)</label>
     <div class="sub_description_content">
@@ -92,6 +100,7 @@
       <br>無は強くてニューゲームで引き継げますが、SRCではバグで作成したアイテム等の引継ぎは禁止されているので開始後に作成しましょう。
       RTA的には滝の洞窟のバットムの超音波を食らいながら作成する方法がお手軽です。
     </div>
+
     <input id="multiStack" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="multiStacklbl" class="sub_description" for="multiStack">・Multi Stack(多重登録)</label>
     <div class="sub_description_content">
@@ -106,6 +115,7 @@
       <br>加えて、多重登録したアイテムを新たに入手しても個数が変化しないため、在庫を増やしたい場合は一度多重登録を解除する必要があります。
       また見た目に反して戦闘中に使える回数が増えたりはせず、上限(通常9個、NF3個)まで使うとグレーアウトします。NFでは特にアイテムが重要になるため、乱用は禁物です。
     </div>
+
     <input id="itemduping" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="itemdupinglbl" class="sub_description" for="itemduping">・Item Duping(アイテム増殖)</label>
     <div class="sub_description_content">
@@ -117,6 +127,7 @@
       <br>旧バージョンではオートセーブやアビリティを利用した増殖が可能でしたが、現行バージョンでは修正され使用不可のためここでは割愛します。
       詳細を知りたい場合は前述のあまもりさんのブロマガで確認してください。
     </div>
+
     <input id="earlycycloneclaw" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="earlycycloneclawlbl" class="sub_description" for="earlycycloneclaw">・Early Cyclone Claw(OP武器取得)</label>
     <div class="sub_description_content">
@@ -127,6 +138,7 @@
       <br>ホークアイは宝箱のある部屋に入る方法が見つかっておらず、今のところOP取得はできません。
       デュランとシャルロットはそもそもOP地点に武器が落ちていないため利用できません。
     </div>
+
     <input id="DifficultyChangeSave" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
     <label id="DifficultyChangeSavelbl" class="sub_description" for="DifficultyChangeSave">・Difficulty Change
@@ -142,6 +154,7 @@
       <br>難易度変更とは直接関係ありませんが、ドラゴンズホールで紅蓮の魔導士がドラゴンを呼び出すイベントの後はオートセーブされるため、
       これをロードしてやると呼び出されたドラゴンが消えてそのまま進めます。
     </div>
+
     <input id="cookietimerextension" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
     <label id="cookietimerextensionlbl" class="sub_description" for="cookietimerextension">・Cookie Timer
@@ -151,6 +164,7 @@
       <br>通常プレイではそこそこ便利なバグですが、RTAでは多重登録や増殖があるため無用。いざ使おうとしてもアロマが入手できるのはワンダーの樹海なので…。
       仮に禁止バグじゃなかったとして種ガチャチャートでアロマ引いた時くらいしか使えなさそう。
     </div>
+
     <input id="RingShortcutGlitch" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="RingShortcutGlitchlbl" class="sub_description" for="RingShortcutGlitch">・Ring Shortcut
       Glitch(特技ショートカットバグ)</label>
@@ -163,6 +177,7 @@
       <br>また有用な特技のほとんどはアイテム経由で使用でき、マナの奇跡や多重登録と組み合わせれば無限使用が可能なためNG+でも今のところ使い道は見つかっていません。
       トランスシェイプなど誰が使っても同じ効果の特技を、闇ケヴィンなどMPの使い道のないキャラに渡してやる位でしょうか。
     </div>
+
     <input id="SequenceBreaking" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="SequenceBreakinglbl" class="sub_description" for="SequenceBreaking">・Sequence Breaking(イベント飛ばし)</label>
     <div class="sub_description_content">
@@ -170,6 +185,7 @@
       <br>基本的に次に紹介する3つのテクニックや先に紹介した壁抜けが該当すると思われますが、
       滝の洞窟の入り口で待ち構えているシャルロットは普通にジャンプするだけで飛ばせてしまったりします。
     </div>
+
     <input id="WrongRope" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="WrongRopelbl" class="sub_description" for="WrongRope">・Wrong Rope(バグロープ)</label>
     <div class="sub_description_content">
@@ -183,8 +199,9 @@
       <br>風の太鼓も同様の手順でバグ太鼓にすることができどこでも叩けるようになりますが、ドラゴンズホールなど本来太鼓を叩ける場所が同一ダンジョン内に存在しない場所で叩くとフリーズします。
       <br>ぴーひゃら笛も同様にバグ笛にできますが、砂浜以外で使っても何も起きないため無意味です。
     </div>
+
     <input id="wwt" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label id="wwtlbl" id="WalkWhileTalking" class="sub_description" for="wwt">・Walk While Talking /
+    <label id="wwtlbl" id="WalkWhileTalking" class="sub_description" for="wwt">・Walk With Text /
       WWT(メッセージ保存)</label>
     <div class="sub_description_content">
       会話や看板を調べた時に表示されるメッセージテロップを表示したまま動き回れてしまうバグ。
@@ -198,6 +215,7 @@
       <br>特に強力なのはビルベン2回目とマシンゴーレムSを回避できること。
       ただし月のマナストーンが目的地になるまでの間はボスの出現判定が残っているため、この方法でイベントを飛ばしても帰り道で遭遇してしまいますが…。
     </div>
+
     <input id="BattleRope" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
     <label id="BattleRopelbl" class="sub_description" for="BattleRope">・Battle Rope(戦闘中ロープ)</label>
     <div class="sub_description_content">
@@ -217,14 +235,16 @@
       火/水クリア後も通常のバグロープ(？)が欲しい場面が続くため、本来の使用場所である火炎の谷or氷壁の迷宮で再多重登録しておきましょう。
       <br>またマシンゴーレムカットの手法としては後述のエリア外戦闘の方が再登録が必要ない分スマートです。
     </div>
+
     <input id="outofbattlefield" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
-    <label id="outofbattlefieldlbl" class="sub_description" for="outofbattlefield">・Out of Battle Field?(エリア外戦闘)</label>
+    <label id="outofbattlefieldlbl" class="sub_description" for="outofbattlefield">・Out of Battle Field(エリア外戦闘)</label>
     <div class="sub_description_content">
       こちらは国内勢のあまもりさんによって発明されたバグ。戦闘中に黄色い円に触れ続け外に出ると戦闘終了になりますが、円に触れずに外に出ることで戦闘状態を維持したまま移動が可能になります。
       この状態でボスエリアに侵入するとボスのムービーが流れた後に雑魚戦が再開されボスが消滅します。前述の再戦ボス2種はこの方法で終了させても進行可能です。
       <br>発見当初は非常に再現の難しい技でRTAでの実用は困難と思われていたのですが、別の方の研究により地形を利用して円の外に出る方法が発見され実用的になりました。
       零下の雪原の中央にある金の女神像手前のエンカウントポイントはバトルエリア内に木が生えており、これに乗り上げて更に円の外にジャンプする事で可能になります。
     </div>
+
     <input id="TrainingPointUnderflow" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
     <label id="TrainingPointUnderflowlbl" class="sub_description" for="TrainingPointUnderflow">・Training Point
@@ -238,6 +258,7 @@
       <br>但し仲間の育成ポイントが主人公の育成ポイントより多く、かつ力に振れる状態でないと失敗します。
       仲間の加入直後ならまず確実に条件を満たしているためここで一度バグ育成を行い、以降はCC毎にバグ育成を行えば上記の制限に引っかからずに行うことができます。
     </div>
+
     <input id="CharacterChangeThrough" class="sub_description_check" style="display: none;" type="checkbox"
       checked="true">
     <label id="CharacterChangeThroughlbl" class="sub_description" for="CharacterChangeThrough">・Character Swapping to
@@ -251,6 +272,46 @@
       <br>とありました。ごめんなさい。というかSRCにもちゃんと書いておいて欲しい…。
       PC版では風の回廊はスライドブーストで抜けられるため不要ですが、このバグはPS4やSwitchでも使用できるためこれらの機種でany%をやるなら必須かも。
     </div>
+
+    <input id="WrongWarp" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="WrongWarplbl" class="sub_description" for="WrongWarp">・Wrong Warp(バグワープ)</label>
+    <div class="sub_description_content">
+      マップ移動処理を魔法のロープの処理で中断し、ロープの移動先を変更するバグ。
+      <br>マップを跨いだ際にはゲーム内のマップ情報が更新されますが、ロープを割り込ませるとキャラは移動前のマップに戻ります。
+      <br>内部的にはマップを跨いだ状態のため、ここでもう一度ロープを使うとあらぬ場所にキャラが飛びます。
+      <br>ゲーム内のマップ情報は「今どのマップにいるか」に加えて「どの出入り口から出入りしたかorどの女神像の前にいるか」というマップ内のインデックスを持っており、
+      マップを跨ぐ瞬間にロープを割り込ませることでインデックス情報を狂わせ、ロープのワープ先を変更しているようです。
+      <br>ただし単にマップを跨ぎながらロープを使ってもダメで、「リースの溜め強攻撃」「攻撃の硬直中に仕込んだ回避」のように別のモーションと同時にロープを使わないと成功しません。
+      <br>リースの溜め強攻撃はタイミングも合わせやすく、この新バグにより更にRTAの申し子であることが判明してしまいました。
+    </div>
+
+    <input id="StackWarp" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="StackWarplbl" class="sub_description" for="StackWarp">・Training Stack Warp?(育成スタックワープ)</label>
+    <div class="sub_description_content">
+      育成メニューを画面に表示したまま移動できる状態にし、マップを跨ぎながら別ロードを読み込ませることでロードしたデータのインデックス情報を狂わせるバグ。
+      <br>バグワープは隣り合ったマップしか使用できませんが、このバグにより別のマップの情報を別データに持ってくることが可能になります。
+      <br>育成メニューでアビリティが2つ連続でとれるスキルラインを選び、2つ目のアビリティを取る直前まで育成ポイントを振って一度確定、
+      <br>アビリティの名前が表示されたらそのまま上を入力しつつ決定（アビリティのウィンドウが閉じ、育成ポイントに1振られる）キャンセル（取得したアビリティを装備するダイアログを閉じる）決定（2つ目のアビリティを取得）
+      と素早く入力することで、2つ目のアビリティが画面に表示された状態のまま育成メニューを閉じることができます。
+      <br>そこでさらに育成メニューを開き直し、別キャラクターの育成メニューに切り替えつつ決定を押すことで「取得したアビリティを装備しますか？」のウィンドウを表示させたままゲームを進められるようになります。
+      <br>この状態でマップを移動しながらセーブデータを読み込み直すと、育成スタックを行っていたデータのマップ情報がロード先に上書きされ、更にそのデータをロードすることで育成スタックを行っていたデータで移動しようとしていたマップにワープすることができます。
+      <br>またこの状態で女神像を調べるとマップ情報を残したままインデックス情報だけ上書きする処理になり、そのオートセーブをロードすることで育成スタックを行っていたデータで移動しようとしていたマップのインデックスが対応する場所にワープが可能になります。
+      <br>上手く説明できてないのでそのうち書き直します。
+    </div>
+
+    <input id="Curseless" class="sub_description_check" style="display: none;" type="checkbox" checked="true">
+    <label id="Curselesslbl" class="sub_description" for="Curseless">・Curseless Ghost Ship(幽霊船の呪い回避)</label>
+    <div class="sub_description_content">
+      幽霊船では本来仲間のうち1人が呪われ、クリアまで離脱してしまいますがこれを回避するバグです。
+      <br>まず「航海日死」の部屋を開けるために4つの本を調べ、オートセーブしてからロードします。
+      <br>航海日死のイベントポイントに移動しながら触る寸前にメニューから「タイトルに戻る」を選択し、即座にメニューを閉じます。
+      <br>するとオートセーブが走ってタイトルに戻るので、そのデータを読み込むとイベントは終わっていますが仲間が3人の状態で進行できます。
+      <br>この時本来はいないはずの3人目の仲間を操作したままゴーヴァ戦を開始すると、開始位置が戦闘エリアの外側になります。
+      <br>航海日死と同様に戦闘エリアに入りつつメニューの開閉を繰り返すとゴーヴァが現れたまま何もしてこなくなることがあります。
+      <br>ゴーヴァが出現する「ゴォー」というSEが鳴り、戦闘中のメニューではなく通常のメニュー（3人が立ち並んでいる）が開けていれば成功です。
+      <br>30fpsの方が成功しやすく、またローリングなどで戦闘エリア内に一気に潜り込む方が成功しやすい…気がします。
+    </div>
+
   </div>
   <p>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
     <br>当該コンテンツの転載・配布は禁止いたします。
