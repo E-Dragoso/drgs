@@ -8,7 +8,7 @@ var hikariCount = 0;
 
 //画像切り替え
 var hikariArr = ["picture/default.jpg", "picture/hikari1.jpg", "picture/hikari2.jpg"];
-var hikariArrCnt = 0;
+var hikariArrIndex = 0;
 
 //クリック検知
 let hikariButton = document.querySelector('#hikari');
@@ -21,11 +21,11 @@ hikariButton.addEventListener('mouseup', (e) => {
             document.getElementById("hikaricount").innerHTML = hikariCount;
             break;
         case 1:
-            hikariArrCnt++;
-            if (hikariArrCnt > 2){
-                hikariArrCnt = 0
+            hikariArrIndex++;
+            if (hikariArrIndex > 2){
+                hikariArrIndex = 0
             }
-            document.getElementById('hikari').src = hikariArr[hikariArrCnt];
+            document.getElementById('hikaripic').src = hikariArr[hikariArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -44,7 +44,7 @@ var kotokoCount = 0;
 
 //画像切り替え
 var kotokoArr = ["picture/default.jpg", "picture/kotoko1.jpg", "picture/kotoko2.jpg"];
-var kotokoArrCnt = 0;
+var kotokoArrIndex = 0;
 
 //クリック検知
 let kotokoButton = document.querySelector('#kotoko');
@@ -57,11 +57,11 @@ kotokoButton.addEventListener('mouseup', (e) => {
             document.getElementById("kotokocount").innerHTML = kotokoCount;
             break;
         case 1:
-            kotokoArrCnt++;
-            if (kotokoArrCnt > 2){
-                kotokoArrCnt = 0
+            kotokoArrIndex++;
+            if (kotokoArrIndex > 2){
+                kotokoArrIndex = 0
             }
-            document.getElementById('kotoko').src = kotokoArr[kotokoArrCnt];
+            document.getElementById('kotokopic').src = kotokoArr[kotokoArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -80,7 +80,7 @@ var maekaCount = 0;
 
 //画像切り替え
 var maekaArr = ["picture/default.jpg", "picture/maeka1.jpg", "picture/maeka2.jpg"];
-var maekaArrCnt = 0;
+var maekaArrIndex = 0;
 
 //クリック検知
 let maekaButton = document.querySelector('#maeka');
@@ -93,11 +93,11 @@ maekaButton.addEventListener('mouseup', (e) => {
             document.getElementById("maekacount").innerHTML = maekaCount;
             break;
         case 1:
-            maekaArrCnt++;
-            if (maekaArrCnt > 2){
-                maekaArrCnt = 0
+            maekaArrIndex++;
+            if (maekaArrIndex > 2){
+                maekaArrIndex = 0
             }
-            document.getElementById('maeka').src = maekaArr[maekaArrCnt];
+            document.getElementById('maekapic').src = maekaArr[maekaArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -116,7 +116,7 @@ var kaedekoCount = 0;
 
 //画像切り替え
 var kaedekoArr = ["picture/default.jpg", "picture/kaedeko1.jpg", "picture/kaedeko2.jpg"];
-var kaedekoArrCnt = 0;
+var kaedekoArrIndex = 0;
 
 //クリック検知
 let kaedekoButton = document.querySelector('#kaedeko');
@@ -129,11 +129,11 @@ kaedekoButton.addEventListener('mouseup', (e) => {
             document.getElementById("kaedekocount").innerHTML = kaedekoCount;
             break;
         case 1:
-            kaedekoArrCnt++;
-            if (kaedekoArrCnt > 2){
-                kaedekoArrCnt = 0
+            kaedekoArrIndex++;
+            if (kaedekoArrIndex > 2){
+                kaedekoArrIndex = 0
             }
-            document.getElementById('kaedeko').src = kaedekoArr[kaedekoArrCnt];
+            document.getElementById('kaedekopic').src = kaedekoArr[kaedekoArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -152,7 +152,7 @@ var kaoriCount = 0;
 
 //画像切り替え
 var kaoriArr = ["picture/default.jpg", "picture/kaori1.jpg", "picture/kaori2.jpg"];
-var kaoriArrCnt = 0;
+var kaoriArrIndex = 0;
 
 //クリック検知
 let kaoriButton = document.querySelector('#kaori');
@@ -165,11 +165,11 @@ kaoriButton.addEventListener('mouseup', (e) => {
             document.getElementById("kaoricount").innerHTML = kaoriCount;
             break;
         case 1:
-            kaoriArrCnt++;
-            if (kaoriArrCnt > 2){
-                kaoriArrCnt = 0
+            kaoriArrIndex++;
+            if (kaoriArrIndex > 2){
+                kaoriArrIndex = 0
             }
-            document.getElementById('kaori').src = kaoriArr[kaoriArrCnt];
+            document.getElementById('kaoripic').src = kaoriArr[kaoriArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -188,7 +188,7 @@ var mahoCount = 0;
 
 //画像切り替え
 var mahoArr = ["picture/default.jpg", "picture/maho1.jpg", "picture/maho2.jpg"];
-var mahoArrCnt = 0;
+var mahoArrIndex = 0;
 
 //クリック検知
 let mahoButton = document.querySelector('#maho');
@@ -201,11 +201,11 @@ mahoButton.addEventListener('mouseup', (e) => {
             document.getElementById("mahocount").innerHTML = mahoCount;
             break;
         case 1:
-            mahoArrCnt++;
-            if (mahoArrCnt > 2){
-                mahoArrCnt = 0
+            mahoArrIndex++;
+            if (mahoArrIndex > 2){
+                mahoArrIndex = 0
             }
-            document.getElementById('maho').src = mahoArr[mahoArrCnt];
+            document.getElementById('mahopic').src = mahoArr[mahoArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -224,7 +224,7 @@ var sumireCount = 0;
 
 //画像切り替え
 var sumireArr = ["picture/default.jpg", "picture/sumire1.jpg", "picture/sumire2.jpg"];
-var sumireArrCnt = 0;
+var sumireArrIndex = 0;
 
 //クリック検知
 let sumireButton = document.querySelector('#sumire');
@@ -237,11 +237,11 @@ sumireButton.addEventListener('mouseup', (e) => {
             document.getElementById("sumirecount").innerHTML = sumireCount;
             break;
         case 1:
-            sumireArrCnt++;
-            if (sumireArrCnt > 2){
-                sumireArrCnt = 0
+            sumireArrIndex++;
+            if (sumireArrIndex > 2){
+                sumireArrIndex = 0
             }
-            document.getElementById('sumire').src = sumireArr[sumireArrCnt];
+            document.getElementById('sumirepic').src = sumireArr[sumireArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -260,7 +260,7 @@ var mihoCount = 0;
 
 //画像切り替え
 var mihoArr = ["picture/default.jpg", "picture/miho1.jpg", "picture/miho2.jpg"];
-var mihoArrCnt = 0;
+var mihoArrIndex = 0;
 
 //クリック検知
 let mihoButton = document.querySelector('#miho');
@@ -273,11 +273,11 @@ mihoButton.addEventListener('mouseup', (e) => {
             document.getElementById("mihocount").innerHTML = mihoCount;
             break;
         case 1:
-            mihoArrCnt++;
-            if (mihoArrCnt > 2){
-                mihoArrCnt = 0
+            mihoArrIndex++;
+            if (mihoArrIndex > 2){
+                mihoArrIndex = 0
             }
-            document.getElementById('miho').src = mihoArr[mihoArrCnt];
+            document.getElementById('mihopic').src = mihoArr[mihoArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -296,7 +296,7 @@ var meiCount = 0;
 
 //画像切り替え
 var meiArr = ["picture/default.jpg", "picture/mei1.jpg", "picture/mei2.jpg"];
-var meiArrCnt = 0;
+var meiArrIndex = 0;
 
 //クリック検知
 let meiButton = document.querySelector('#mei');
@@ -309,11 +309,11 @@ meiButton.addEventListener('mouseup', (e) => {
             document.getElementById("meicount").innerHTML = meiCount;
             break;
         case 1:
-            meiArrCnt++;
-            if (meiArrCnt > 2){
-                meiArrCnt = 0
+            meiArrIndex++;
+            if (meiArrIndex > 2){
+                meiArrIndex = 0
             }
-            document.getElementById('mei').src = meiArr[meiArrCnt];
+            document.getElementById('meipic').src = meiArr[meiArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -332,7 +332,7 @@ var homuraCount = 0;
 
 //画像切り替え
 var homuraArr = ["picture/default.jpg", "picture/homura1.jpg", "picture/homura2.jpg"];
-var homuraArrCnt = 0;
+var homuraArrIndex = 0;
 
 //クリック検知
 let homuraButton = document.querySelector('#homura');
@@ -345,11 +345,11 @@ homuraButton.addEventListener('mouseup', (e) => {
             document.getElementById("homuracount").innerHTML = homuraCount;
             break;
         case 1:
-            homuraArrCnt++;
-            if (homuraArrCnt > 2){
-                homuraArrCnt = 0
+            homuraArrIndex++;
+            if (homuraArrIndex > 2){
+                homuraArrIndex = 0
             }
-            document.getElementById('homura').src = homuraArr[homuraArrCnt];
+            document.getElementById('homurapic').src = homuraArr[homuraArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -368,7 +368,7 @@ var akaneCount = 0;
 
 //画像切り替え
 var akaneArr = ["picture/default.jpg", "picture/akane1.jpg", "picture/akane2.jpg"];
-var akaneArrCnt = 0;
+var akaneArrIndex = 0;
 
 //クリック検知
 let akaneButton = document.querySelector('#akane');
@@ -381,11 +381,11 @@ akaneButton.addEventListener('mouseup', (e) => {
             document.getElementById("akanecount").innerHTML = akaneCount;
             break;
         case 1:
-            akaneArrCnt++;
-            if (akaneArrCnt > 2){
-                akaneArrCnt = 0
+            akaneArrIndex++;
+            if (akaneArrIndex > 2){
+                akaneArrIndex = 0
             }
-            document.getElementById('akane').src = akaneArr[akaneArrCnt];
+            document.getElementById('akanepic').src = akaneArr[akaneArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -404,7 +404,7 @@ var kasumiCount = 0;
 
 //画像切り替え
 var kasumiArr = ["picture/default.jpg", "picture/kasumi1.jpg", "picture/kasumi2.jpg"];
-var kasumiArrCnt = 0;
+var kasumiArrIndex = 0;
 
 //クリック検知
 let kasumiButton = document.querySelector('#kasumi');
@@ -417,11 +417,11 @@ kasumiButton.addEventListener('mouseup', (e) => {
             document.getElementById("kasumicount").innerHTML = kasumiCount;
             break;
         case 1:
-            kasumiArrCnt++;
-            if (kasumiArrCnt > 2){
-                kasumiArrCnt = 0
+            kasumiArrIndex++;
+            if (kasumiArrIndex > 2){
+                kasumiArrIndex = 0
             }
-            document.getElementById('kasumi').src = kasumiArr[kasumiArrCnt];
+            document.getElementById('kasumipic').src = kasumiArr[kasumiArrIndex];
             break;
         case 2:
             //カウントダウン
@@ -440,7 +440,7 @@ var miyukiCount = 0;
 
 //画像切り替え
 var miyukiArr = ["picture/default.jpg", "picture/miyuki1.jpg", "picture/miyuki2.jpg"];
-var miyukiArrCnt = 0;
+var miyukiArrIndex = 0;
 
 //クリック検知
 let miyukiButton = document.querySelector('#miyuki');
@@ -453,11 +453,11 @@ miyukiButton.addEventListener('mouseup', (e) => {
             document.getElementById("miyukicount").innerHTML = miyukiCount;
             break;
         case 1:
-            miyukiArrCnt++;
-            if (miyukiArrCnt > 2){
-                miyukiArrCnt = 0
+            miyukiArrIndex++;
+            if (miyukiArrIndex > 2){
+                miyukiArrIndex = 0
             }
-            document.getElementById('miyuki').src = miyukiArr[miyukiArrCnt];
+            document.getElementById('miyukipic').src = miyukiArr[miyukiArrIndex];
             break;
         case 2:
             //カウントダウン
