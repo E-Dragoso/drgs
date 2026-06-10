@@ -2,9 +2,8 @@
   "version": "0.1.0",
   "configurations": [
     {
-      "type": "firefox",
+      "type": "chrome",
       "request": "launch",
-      "reAttach": true,
       "name": "Launch index.html",
       "file": "${workspaceFolder}/index.html"
     },
@@ -22,13 +21,8 @@
     },
     {
       "name": "Run android on emulator",
-      "type": "cordova",
       "request": "launch",
-      "platform": "android",
-      "target": "emulator",
       "sourceMaps": true,
-      "ionicLiveReload": true,
-      "devServerTimeout": 50000,
       "cwd": "${workspaceRoot}"
     }
   ]

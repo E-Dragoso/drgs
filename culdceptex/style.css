@@ -38,10 +38,13 @@ h4 {
   padding: 0.2em;
 }
 
-ul li {
+li {
   font-weight: bold;
   padding-top: 10px;
+  border-bottom: 2px solid blue;
 }
+
+
 
 .honbun {
   border: solid 1px;
