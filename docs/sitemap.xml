@@ -1,217 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-
-<url>
-  <loc>https://drgs.app/</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/main.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/main.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://drgs.app/culdceptex/main.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://drgs.app/atelier-elie/main.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://drgs.app/tokimeki2/main.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://drgs.app/others.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/chartchiken.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/dmgsimulator.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/speedrunguide.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/knowledge.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/strategy.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/technique.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/glitch.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/any.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/glitchless.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/ngplus.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/ngnf.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/time-trials-of-mana/extra.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/index.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/knowledge.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/hayami.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/map.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Raphael.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Hoodlum.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Lil.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Maria.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Kyotaro.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Udin.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/Tiaru.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/chart-of-uncharted-waters/RaphaelGoldless.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/culdceptex/difference.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/culdceptex/nerfed.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/culdceptex/scenario.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/culdceptex/tier.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/atelier-elie/ed00.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/atelier-elie/ed01.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/atelier-elie/all-ed.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/tokimeki2/all-clear.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/tokimeki2/tips.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://drgs.app/tokimeki2/count.html</loc>
-  <lastmod>2024-05-08T14:29:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+  <url>
+       <loc>https://drgs.app/</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/main.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/main.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/main.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/atelier-elie/main.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/tokimeki2/main.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/others.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/chartchiken.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/dmgsimulator.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/speedrunguide.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/knowledge.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/strategy.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/technique.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/glitch.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/any.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/glitchless.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/ngplus.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/ngnf.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/seiken3tom/extra.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/index.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/knowledge.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/hayami.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/map.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Raphael.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Hoodlum.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Lil.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Maria.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Kyotaro.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Udin.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/Tiaru.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/umiyon/RotaNova.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/difference.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/nerfed.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/scenario.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/tier.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/atelier-elie/ed00.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/atelier-elie/ed01.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/atelier-elie/all-ed.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/tokimeki2/all-clear.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/tokimeki2/tips.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/tokimeki2/count.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/01roka.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/02sneff.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/03karin.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/04goza.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/05kelder.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/06talio.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/07gilman.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/08bisteam.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/09nabath.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://drgs.app/culdceptex/map/10darkabyss.html</loc>
+       <lastmod>2026-09-04T17:01:31+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
 </urlset>
