@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>聖剣伝説3 TRIALS of MANA 計算機 チャート皮算用</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="../style.css?<?php echo date('Ymd-Hi'); ?>">
+  <script src="chartchiken.js?ver=<?php echo date('Ymd-Hi'); ?>"></script>
+  <link rel="icon" href="favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5842400267762227"
+    crossorigin="anonymous"></script>
+</head>
+
+<style>
+  /* カルドセプト画面など、他の画面のbodyの制限（800px）を解除し、
+     この計算機画面だけはテーブルのサイズに合わせてゆったり中央配置にします */
+  body {
+      max-width: 100% !important;   /* 800pxの制限を解除して画面いっぱいに広げます */
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important; /* すべての要素（タイトルやテーブル）を中央に寄せます */
+      padding: 20px 10px !important;
+      box-sizing: border-box !important;
+  }
+
+  /* テーブル自体の横幅をコンテンツの最小限にし、外側を中央揃えにします */
+  #sumexptbl {
+      width: max-content !important; /* テーブルが必要とする幅だけを確保します */
+      margin: 1.5em auto !important; /* 左右の余白を自動調整して完全に中央へ配置します */
+  }
+
+  /* 画面上部の解説枠や、タイトルなども中央に揃えます */
+  h1, h2, h3, h4, .honbun, .div_h2 {
+      width: 100% !important;
+      max-width: 900px !important;   /* テーブルの横幅に合わせた見やすい幅に制限 */
+      box-sizing: border-box !important;
+  }
+</style>
+
+<body class="theme-cat5">
+
+  <nav><a href="main.html">聖剣伝説3 TRIALS of MANA 計算機</a>　＞　チャート皮算用</nav>
+  <br>
+  <input id="description_chart" class="description_check" style="display: none;" type="checkbox">
+  <label class="description" for="description_chart">！使い方</label>
+  <div class="description_content">
+    ・初期状態ではボスと強制戦闘にチェックされています。
+    <br>・必要に応じて「対象」にチェックして下さい。
+    <br>・バグ技での回避を考慮しボスと強制戦闘のチェックも外せます。
+    <br>・種別欄の説明は以下の通りです。
+    <br>
+    <br>　<img src="rabi.webp">：雑魚敵との戦闘を表します。オレンジ背景は強制戦闘です。
+    <br>　<img src="lucre.webp">：フィールドで拾えるルクを表します。
+    <br>　<img src="gova.webp">：ボス敵との戦闘を表します。
+    <br>　<img src="nikita.webp">：買物や船の移動など、入力値がルク総額から引かれます。
+    <br>　「育成」：取得exp、取得ルクに任意の値を入力できます。
+    <br>
+    <br>データミス等お気付きの事がありましたらご連絡ください。
+  </div>
+  
+  <table id="sumexptbl">
+    <thead>
+      <tr id="sumexphead">
+        <th id="map">場所</th>
+        <th id="target">対象</th>
+        <th id="type">種別</th>
+        <th id="object">内容</th>
+        <th id="bonus">ﾎﾞｰﾅｽ</th>
+        <th id="getexp">取得exp</th>
+        <th id="principal" colspan="2">主人公</th>
+        <th id="fellow1" colspan="2">仲間１</th>
+        <th id="fellow2" colspan="2">仲間２</th>
+        <th id="lucre">取得ﾙｸ</th>
+        <th id="sumlucre">ﾙｸ総額</th>
+        <th id="exp" hidden=true>exp</th>
+        <th id="sumexppri" hidden=true>exp計主人公</th>
+        <th id="sumexpfel1" hidden=true>exp計仲間１</th>
+        <th id="sumexpfel2" hidden=true>exp計仲間２</th>
+      </tr>
+    </thead>
+  </table>
+  <div class="footer">
+    <div>
+      <label for="zakocheckbox">
+        <input type="checkbox" id="zakocheckbox" onChange="zakocheck()">
+        雑魚敵一括チェック</label>
+      <label for="lucrecheckbox">
+        <input type="checkbox" id="lucrecheckbox" onChange="lucrecheck()">
+        ルク一括チェック</label>
+    </div>
+    <div>
+      幽霊船の生贄は
+      <input type="radio" name="sacrifice" id="sacrifice_part_1" onChange="calc(this.id)">主人公
+      <input type="radio" name="sacrifice" id="sacrifice_part_2" onChange="calc(this.id)">仲間１
+      <input type="radio" name="sacrifice" id="sacrifice_part_3" onChange="calc(this.id)" checked>仲間２
+    </div>
+  </div>
+
+  
+    <footer>
+    <a href="main.html">聖剣伝説3 TRIALS of MANA 計算機</a>
+    <small>このコンテンツは株式会社スクウェア・エニックスが権利を有する著作物を利用しています。
+    <br>当該コンテンツの転載・配布は禁止いたします。
+    <br>© 1995, 2020 SQUARE ENIX CO., LTD. All Rights Reserved.</small>
+  </footer>
+</body>
+
+</html>

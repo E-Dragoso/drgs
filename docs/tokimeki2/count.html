@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>ときめきメモリアル2　進捗表</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ときめきメモリアル2　進捗表">
+  <link type="text/css" rel="stylesheet" href="../style.css?<?php echo date('Ymd-Hi'); ?>">
+  <link rel="icon" href="favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5842400267762227"
+    crossorigin="anonymous"></script>
+</head>
+
+<style>
+  /* この画面の進捗表テーブルだけに適用するデザイン */
+
+  /* テーブル全体の横幅が広がりすぎるのを防ぎ、中央に寄せます */
+  table {
+      width: max-content !important;
+      margin: 0 auto !important;
+      border-collapse: collapse !important;
+  }
+
+  /* 進捗表のセル幅を画像サイズ（100px）に固定し、余白を消します */
+  td {
+      width: 108px !important;
+      height: 100px !important;
+      padding: 0 4px !important;
+      border: none !important;
+      box-sizing: border-box !important; /* 余白を含めたサイズ計算にします */
+  }
+
+</style>
+
+<body class="theme-cat1">
+  <nav><a href="main.html">ときめきメモリアル2</a>　＞　進捗表</nav>
+  <table>
+    <!-- 1列目 -->
+    <tr>
+      <!-- 光 -->
+      <td>
+        <button id="hikari" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="hikaripic" class="hero-img">
+          <div id="hikaricount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- 琴子 -->
+      <td>
+        <button id="kotoko" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="kotokopic" class="hero-img">
+          <div id="kotokocount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- 舞佳 -->
+      <td>
+        <button id="maeka" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="maekapic" class="hero-img">
+          <div id="maekacount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- 楓子 -->
+      <td>
+        <button id="kaedeko" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="kaedekopic" class="hero-img">
+          <div id="kaedekocount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+    </tr>
+    <!-- 2列目 -->
+    <tr>
+      <!-- 八重さん -->
+      <td>
+        <button id="kaori" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="kaoripic" class="hero-img">
+          <div id="kaoricount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- 真帆 -->
+      <td rowspan="2" colspan="2">
+        <button id="maho" class="maho-btn">
+        <div class="hero-wrapper">
+          <img src="picture/main.webp" id="mahopic" class="hero-img">
+          <div id="mahocount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- すみれ -->
+      <td>
+        <button id="sumire" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="sumirepic" class="hero-img">
+          <div id="sumirecount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+    </tr>
+    <!-- 3列目 -->
+    <tr>
+      <!-- 美帆 -->
+      <td>
+        <button id="miho" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="mihopic" class="hero-img">
+          <div id="mihocount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- メイ様 -->
+      <td>
+        <button id="mei" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="meipic" class="hero-img">
+          <div id="meicount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+    </tr>
+    <!-- 4列目 -->
+    <tr>
+      <!-- ほむら -->
+      <td>
+        <button id="homura" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="homurapic" class="hero-img">
+          <div id="homuracount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- 茜 -->
+      <td>
+        <button id="akane" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="akanepic" class="hero-img">
+          <div id="akanecount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- 先生 -->
+      <td>
+        <button id="kasumi" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="kasumipic" class="hero-img">
+          <div id="kasumicount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+      <!-- ゆっきー -->
+      <td>
+        <button id="miyuki" class="hero-btn">
+        <div class="hero-wrapper">
+          <img src="picture/default.webp" id="miyukipic" class="hero-img">
+          <div id="miyukicount" class="hero-content hero-count"></div>
+        </div>
+      </button>
+      </td>
+    </tr>
+  </table>
+  <div>左クリックでカウントアップ、右クリックでカウントダウン、ホイールクリックで画像切り替え</div>
+
+    <footer>
+    <a href="main.html">ときめきメモリアル2</a>
+    <script src="count.js"></script>
+  </footer>
+</body>
+
+
+
+</html>
