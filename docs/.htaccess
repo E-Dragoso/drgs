@@ -1,0 +1,29 @@
+RewriteEngine On
+
+# ==========================================================================
+# ★ 新しいディレクトリへの301リダイレクト設定 (SEO評価引き継ぎ用)
+# ==========================================================================
+# 聖剣伝説3：time-trials-of-mana -> seiken3tom
+Redirect 301 /time-trials-of-mana/ https://drgs.app
+
+# 大航海時代Ⅳ：chart-of-uncharted-waters -> umiyon
+Redirect 301 /chart-of-uncharted-waters/ https://drgs.app
+
+
+# ==========================================================================
+# 既存の転送設定・リダイレクトルール
+# ==========================================================================
+RewriteCond %{http_host} ^://herokuapp.com
+RewriteRule ^(.*) https://drgs.app [R=301,L]
+RewriteRule ^(.*)/+$ $1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://drgs.app [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www.drgs.app$
+RewriteRule ^(.*)$ https://drgs.app [R=301,L]
+
+redirect 301 https://drgs.app https://drgs.app
+
+ErrorDocument 404 /404.html
